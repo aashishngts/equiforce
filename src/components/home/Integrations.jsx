@@ -1,0 +1,68 @@
+import { FaDropbox, FaPinterest, FaDiscord, FaSpotify } from "react-icons/fa";
+import { SiMailchimp, SiNotion, SiZoom, SiTelegram } from "react-icons/si";
+
+const tools = [
+  { name: "Dropbox", icon: <FaDropbox /> },
+  { name: "Pinterest", icon: <FaPinterest /> },
+  { name: "Discord", icon: <FaDiscord /> },
+  { name: "Telegram", icon: <SiTelegram /> },
+  { name: "Mailchimp", icon: <SiMailchimp /> },
+  { name: "Spotify", icon: <FaSpotify /> },
+  { name: "Zoom", icon: <SiZoom /> },
+  { name: "Disqus", icon: <span className="font-bold">D</span> },
+  { name: "Notion", icon: <SiNotion /> },
+  { name: "Linksters", icon: <span>✱</span> },
+];
+
+const Integrations = () => {
+  return (
+    <section className="py-12 md:py-16 lg:py-20 text-center">
+
+      {/* ✅ Container */}
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Top */}
+        <p className="text-[#7c3aed] text-sm mb-3">
+          100+ Integrations
+        </p>
+
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
+          Seamless Integrations
+        </h2>
+
+        <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-12">
+          Our platform seamlessly integrates with the tools your team already knows
+        </p>
+
+        {/* Pills */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5">
+
+          {tools.map((tool, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full 
+              bg-white/80 backdrop-blur-md border border-gray-200 
+              shadow-sm hover:shadow-md hover:scale-105 transition"
+            >
+
+              {/* Icon */}
+              <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 text-sm">
+                {tool.icon}
+              </div>
+
+              {/* Text */}
+              <span className="text-gray-800 text-xs sm:text-sm font-medium">
+                {tool.name}
+              </span>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Integrations;
