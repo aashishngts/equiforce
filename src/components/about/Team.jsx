@@ -8,23 +8,23 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const team = [
   {
-    name: "Walter D. Gonzales",
-    role: "CEO & Founder",
+    name: "Managing Director",
+    role: "Investment Operations & Strategy",
     img: img1,
   },
   {
-    name: "Arnold T. Madden",
-    role: "UX/UI Designer",
+    name: "Head of Product",
+    role: "Investment Technology Solutions",
     img: img2,
   },
   {
-    name: "Paul C. Lattimore",
-    role: "Digital Marketer",
+    name: "Head of Analytics",
+    role: "Performance Measurement & Reporting",
     img: img3,
   },
   {
-    name: "Jimmy J. Johnson",
-    role: "Web Developer",
+    name: "Technology Lead",
+    role: "AI & Data Engineering",
     img: img4,
   },
 ];
@@ -33,17 +33,17 @@ const Team = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <p className="text-[#7c3aed] text-sm mb-3">
-          Professional Team Member
+          Leadership Team
         </p>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-10 md:mb-14">
-          We’re 50+ individuals and <br className="hidden sm:block" />
-          professional members
+          Experienced Professionals Driving <br className="hidden sm:block" />
+          Investment Innovation
         </h2>
 
         {/* Cards */}

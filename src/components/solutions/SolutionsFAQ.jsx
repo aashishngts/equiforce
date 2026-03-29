@@ -4,24 +4,28 @@ import faqImg from "../../assets/images/faqs.webp";
 
 const faqs = [
   {
-    q: "What is a task management platform?",
-    a: "A task management platform helps teams organize, track, and manage their work efficiently.",
+    q: "How does EquiForce support end-to-end investment operations?",
+    a: "EquiForce provides a unified platform covering performance measurement, composite management, fund accounting, reconciliation, and reporting — ensuring seamless data flow across the entire investment lifecycle.",
   },
   {
-    q: "Who can use this platform?",
-    a: "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations — all in a clean, intuitive interface.",
+    q: "Can the solution be customized for our specific workflows?",
+    a: "Yes, our platform is highly configurable. We tailor workflows, reporting structures, and integrations to align with your firm’s operational requirements and business processes.",
   },
   {
-    q: "Can I collaborate with my team in real time?",
-    a: "Yes, you can collaborate in real time with your team easily.",
+    q: "How does EquiForce ensure data accuracy and consistency?",
+    a: "Our system uses automated validation, reconciliation processes, and AI-driven anomaly detection to maintain high levels of data accuracy and consistency across systems.",
   },
   {
-    q: "Does it integrate with other tools?",
-    a: "Yes, it integrates with multiple tools like Slack, Google Drive, etc.",
+    q: "What integrations are supported within the platform?",
+    a: "EquiForce integrates with custodians, fund administrators, market data providers, and internal systems through secure APIs and flexible data pipelines.",
   },
   {
-    q: "Is my data secure?",
-    a: "We use industry-grade security to keep your data safe.",
+    q: "Is the platform scalable for large and complex portfolios?",
+    a: "Absolutely. Our solutions are built to handle large volumes of data and complex multi-asset portfolios while maintaining performance and reliability.",
+  },
+  {
+    q: "What level of support and implementation assistance is provided?",
+    a: "We offer end-to-end onboarding, including system setup, data migration, training, and ongoing support through dedicated account management.",
   },
 ];
 
@@ -31,28 +35,28 @@ const SolutionsFAQ = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* 🔥 Inner Box */}
+        {/* Inner Box */}
         <div className="text-center bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg">
 
-          {/* 🔥 Badge */}
+          {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
             <span className="bg-[#7c3aed] text-white px-2 py-1 rounded-full text-xs">
               FAQ
             </span>
-            Asked Questions
+            Solutions & Capabilities
           </div>
 
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-            Still Curious? Find Your <br className="hidden sm:block" />
-            Answers Below
+            Everything You Need to Know <br className="hidden sm:block" />
+            About Our Solutions
           </h2>
 
           <p className="text-gray-500 mb-10 md:mb-12 max-w-2xl mx-auto">
-            We’ve gathered the most common inquiries to help you get started quickly.
+            Explore how EquiForce delivers scalable, secure, and intelligent solutions for modern investment management firms.
           </p>
 
           {/* Grid */}
@@ -111,7 +115,7 @@ const SolutionsFAQ = () => {
               <div className="bg-white rounded-2xl p-3 md:p-4 shadow-md">
                 <img
                   src={faqImg}
-                  alt="faq"
+                  alt="equiforce faq"
                   className="rounded-xl w-full h-auto object-cover"
                 />
               </div>

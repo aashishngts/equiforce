@@ -45,31 +45,31 @@ const Home = () => {
               <span className="bg-[#00C2CB] text-white px-2 py-1 rounded-full text-xs">
                 SaaS
               </span>
-              Manage Investments. Master Precision.
+              Manage Investments. Deliver Precision.
             </div>
 
             {/* Heading */}
             <h1 className=" text-3xl sm:text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6">
-              Ultimate Platform to Manage Investments, Funds & Reporting
+              Precision-Engineered Technology for Modern Investment Management
             </h1>
 
             {/* Description */}
             <p className="text-gray-600 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-              EquiForce Solutions empowers investment management firms with
-              precision-engineered technology for performance measurement,
-              fund accounting, reconciliation, and investment reporting.
+              EquiForce Solutions empowers investment management firms with purpose-built
+              solutions for performance measurement, composite management, fund accounting,
+              reconciliation, and investment reporting — enhanced by AI-driven intelligence.
             </p>
 
             {/* Input */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <input
                 type="email"
-                placeholder="Enter email"
+                placeholder="Enter your work email"
                 className="px-5 py-3 bg-white rounded-xl w-full sm:w-80 outline-none text-gray-800 shadow-md border border-gray-200"
               />
 
               <button className="w-full sm:w-auto bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
-                Subscribe Now
+                Get Started
               </button>
             </div>
 

@@ -1,22 +1,22 @@
-import dashboardImg from "../../assets/images/dashboard-banner.webp";
+import dashboardImg from "../../assets/images/dashboard-banner.png";
 import wave from "../../assets/images/bg-wave.png";
 
 const steps = [
   {
-    title: "Create Your Account & Unlock Possibilities",
-    desc: "Take the first step towards a seamless experience creating your account today.",
+    title: "Data Integration & Ingestion",
+    desc: "Seamlessly integrate data from multiple sources including custodians, fund administrators, and internal systems.",
   },
   {
-    title: "Seamless Real-Time Collaboration",
-    desc: "With real-time collaboration, ideas flow instantly, tasks move faster, and everyone stays aligned.",
+    title: "Automated Processing & Validation",
+    desc: "Process and validate large volumes of financial data with precision-engineered workflows to ensure accuracy.",
   },
   {
-    title: "Track Progress & Stay Organized",
-    desc: "Easily monitor your progress and keep everything on track with clear insights.",
+    title: "Reconciliation & Compliance",
+    desc: "Identify discrepancies and ensure data consistency across systems while maintaining compliance with industry standards.",
   },
   {
-    title: "Analyze & Optimize for Growth",
-    desc: "Gain deeper insights into your performance with powerful analytics.",
+    title: "Reporting & AI-Driven Insights",
+    desc: "Generate detailed investment reports and leverage AI-driven insights to support smarter decision-making.",
   },
 ];
 
@@ -29,18 +29,18 @@ const HowItWorks = () => {
 
         {/* Label */}
         <p className="text-[#007CF0] text-sm mb-3">
-          How does it work
+          How It Works
         </p>
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          No Setup Hassle — Just <br className="hidden sm:block" />
-          Start Working
+          From Data to Insights — <br className="hidden sm:block" />
+          Simplified Investment Operations
         </h2>
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          No complex setup or training required — our platform is ready to use right out of the box.
+          EquiForce streamlines the entire investment lifecycle — from data aggregation to reporting — delivering accuracy, efficiency, and intelligent insights.
         </p>
 
         {/* Main Box */}
@@ -78,7 +78,7 @@ const HowItWorks = () => {
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
             <img
               src={dashboardImg}
-              alt="dashboard"
+              alt="Investment dashboard preview"
               className="w-full h-auto object-cover"
             />
           </div>

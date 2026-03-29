@@ -14,15 +14,15 @@ const AboutIntro = () => {
           </p>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 font-bold mb-4 md:mb-6">
-            Transforming the way you manage tasks
+            A Strategic Partner for Modern Investment Management
           </h2>
 
           <p className="text-gray-600 mb-6 leading-relaxed max-w-lg mx-auto md:mx-0">
-            Our platform helps teams organize work efficiently and collaborate better.
+            EquiForce Solutions is more than a technology provider — we are a strategic partner to investment management firms. With nearly three decades of industry expertise, we deliver precision-engineered solutions that streamline operations, enhance accuracy, and drive better investment outcomes.
           </p>
 
           <button className="w-full sm:w-auto bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">
-            Get 14-day Free Trial
+            Request a Demo
           </button>
 
         </div>
@@ -32,7 +32,7 @@ const AboutIntro = () => {
           <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl p-3 md:p-4 shadow-md">
             <img 
               src={aboutImg} 
-              alt="about"
+              alt="about equiforce"
               className="rounded-xl w-full h-auto object-cover"
             />
           </div>

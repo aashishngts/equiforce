@@ -1,39 +1,39 @@
 const testimonials = [
   {
-    name: "Sarah Linda",
-    role: "Designer, Creative Studio",
+    name: "Head of Operations",
+    role: "Global Asset Management Firm",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
-    text: "We’ve tried multiple tools, but this one hits the sweet spot between simplicity and powerful features.",
+    text: "EquiForce has significantly improved our performance measurement and reporting accuracy. The operational efficiency we’ve gained is remarkable.",
   },
   {
-    name: "James Bond",
-    role: "Freelance Consultant",
+    name: "Senior Fund Accountant",
+    role: "Investment Management Company",
     image: "https://randomuser.me/api/portraits/men/2.jpg",
-    text: "I love how easy it is to organize tasks, assign roles, and track progress. It helps me stay on top of everything.",
+    text: "Reconciliation used to be time-consuming and error-prone. With EquiForce, our processes are now automated and highly reliable.",
   },
   {
-    name: "Priya Donald",
-    role: "UX Designer, TaskHive",
+    name: "Director of Investments",
+    role: "Institutional Investment Firm",
     image: "https://randomuser.me/api/portraits/women/3.jpg",
-    text: "The integration options and the clean interface make this the best task management tool we’ve used so far.",
+    text: "The platform provides deep visibility into our investment data along with insights that support better strategic decisions.",
   },
   {
-    name: "Elena Rossi",
-    role: "Marketing Director, BrightPath",
+    name: "Compliance Manager",
+    role: "Wealth Management Firm",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
-    text: "After testing countless apps, this one finally balances ease of use with the depth our team needs.",
+    text: "Maintaining compliance and audit readiness has become seamless. The system ensures transparency and control across operations.",
   },
   {
-    name: "Anna Carter",
-    role: "Team Lead, CloudShift",
+    name: "Portfolio Analytics Lead",
+    role: "Hedge Fund",
     image: "https://randomuser.me/api/portraits/women/5.jpg",
-    text: "It’s rare to find a tool that’s both intuitive and packed with everything a growing team requires.",
+    text: "The reporting and analytics capabilities have enhanced how we deliver insights to stakeholders and clients.",
   },
   {
-    name: "Maria Lopez",
-    role: "Product Manager, FlowSync",
+    name: "Technology Head",
+    role: "Financial Services Organization",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
-    text: "From setup to daily use, it delivers exactly what we need — clean, smart, and incredibly efficient.",
+    text: "Integration with our systems was smooth, and the scalability of the platform aligns perfectly with our long-term growth plans.",
   },
 ];
 
@@ -41,20 +41,20 @@ const Testimonials = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top */}
         <p className="text-[#7c3aed] text-sm mb-3">
-          Positive Feedback
+          Trusted by Investment Professionals
         </p>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Clients Testimonials
+          What Our Clients Say
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          Our users are at the heart of everything we do and their feedback says it all.
+          Investment firms rely on EquiForce to deliver accuracy, compliance, and intelligent operational insights.
         </p>
 
         {/* Cards */}

@@ -1,45 +1,43 @@
 import { useState } from "react";
 
 const Pricing = () => {
-  const [yearly, setYearly] = useState(false);
-
   const plans = [
     {
-      name: "Starter – Basic Package",
-      price: yearly ? "$10" : "$13",
-      desc: "Perfect plan for Single or small teams",
+      name: "Essential",
+      price: "Custom Pricing",
+      desc: "Ideal for small to mid-sized investment teams starting their digital transformation",
       features: [
-        "Up to 3 Task Projects",
-        "5 Team Members includes",
-        "Basic Task Management",
-        "Real-Time Collaboration",
-        "Calendar View & email support",
+        "Performance Measurement Tools",
+        "Basic Fund Accounting",
+        "Standard Reporting Capabilities",
+        "Core Reconciliation Support",
+        "Email Support",
       ],
       highlight: false,
     },
     {
-      name: "Pro – Standard Package",
-      price: yearly ? "$38" : "$48",
-      desc: "Ideal for growing teams, 8 persons",
+      name: "Professional",
+      price: "Custom Pricing",
+      desc: "Designed for growing firms requiring advanced operational capabilities",
       features: [
-        "Unlimited Projects & Tasks",
-        "Unlimited (8) Team Members",
-        "Advanced Task Organization",
-        "Time Tracking File Attachments",
-        "Integration with Slack, Google Drive",
+        "Advanced Performance & Composite Management",
+        "Full Fund Accounting Suite",
+        "Automated Reconciliation Workflows",
+        "Custom Investment Reporting",
+        "Priority Support & Integrations",
       ],
       highlight: true,
     },
     {
-      name: "Elite – Custom Package",
-      price: yearly ? "$80" : "$96",
-      desc: "Tailored for large organizations",
+      name: "Enterprise",
+      price: "Tailored Solution",
+      desc: "Built for large institutions with complex investment operations",
       features: [
-        "All Professional Features",
-        "Custom Workflows & Permissions",
-        "Dedicated Account Manager",
-        "Advanced Security & Compliance",
-        "Single Sign-On (SSO)",
+        "End-to-End Investment Lifecycle Management",
+        "AI-Driven Insights & Automation",
+        "Custom Workflows & Compliance Controls",
+        "Dedicated Account Management",
+        "Enterprise Security & API Integrations",
       ],
       highlight: false,
     },
@@ -48,43 +46,21 @@ const Pricing = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <p className="text-[#007CF0] text-sm mb-3">
-          Pricing Package
+          Engagement Models
         </p>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Transparent Pricing Plan
+          Flexible Solutions Tailored to Your Needs
         </h2>
 
-        <p className="text-gray-600 mb-8 md:mb-10">
-          Flexible pricing for teams of all sizes
+        <p className="text-gray-600 mb-8 md:mb-10 max-w-2xl mx-auto">
+          We offer customized engagement models based on your operational complexity, scale, and business requirements.
         </p>
-
-        {/* Toggle */}
-        <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-12 md:mb-16">
-          <span className="text-gray-600 text-sm">Monthly</span>
-
-          <div
-            onClick={() => setYearly(!yearly)}
-            className={`w-14 h-7 flex items-center rounded-full p-1 cursor-pointer transition
-            ${yearly ? "bg-purple-600" : "bg-gray-300"}`}
-          >
-            <div
-              className={`bg-white w-5 h-5 rounded-full shadow-md transform transition
-              ${yearly ? "translate-x-7" : "translate-x-0"}`}
-            />
-          </div>
-
-          <span className="text-gray-600 text-sm">Yearly</span>
-
-          <span className="bg-gray-600 text-white text-xs px-2 py-1 rounded-full">
-            Save 23%
-          </span>
-        </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -104,17 +80,14 @@ const Pricing = () => {
               {/* Badge */}
               {plan.highlight && (
                 <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
-                  Popular Package
+                  Most Popular
                 </div>
               )}
 
               {/* Top */}
               <div className="text-left mb-6">
-                <p className="text-3xl md:text-4xl font-bold">
+                <p className="text-2xl md:text-3xl font-bold">
                   {plan.price}
-                  <span className="text-xs md:text-sm font-normal">
-                    {" "} /per month
-                  </span>
                 </p>
 
                 <h3 className="mt-2 font-semibold text-base md:text-lg">
@@ -132,7 +105,7 @@ const Pricing = () => {
 
               {/* Features */}
               <div className="text-left mb-6 flex-grow">
-                <p className="font-semibold mb-3">Included Features:</p>
+                <p className="font-semibold mb-3">Included Capabilities:</p>
 
                 <ul className="space-y-2 text-sm">
                   {plan.features.map((f, idx) => (
@@ -153,7 +126,7 @@ const Pricing = () => {
                     : "bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white"
                 }`}
               >
-                Choose Package
+                Request Proposal
               </button>
 
               {/* Footer */}
@@ -162,7 +135,7 @@ const Pricing = () => {
                   plan.highlight ? "text-white/70" : "text-gray-500"
                 }`}
               >
-                ✕ No hidden charge included
+                ✔ Tailored to your business requirements
               </p>
 
             </div>

@@ -1,37 +1,37 @@
-import { FaDropbox, FaPinterest, FaDiscord, FaSpotify } from "react-icons/fa";
-import { SiMailchimp, SiNotion, SiZoom, SiTelegram } from "react-icons/si";
+import { Database, ShieldCheck, Link, BarChart3, Layers, Server } from "lucide-react";
 
 const tools = [
-  { name: "Dropbox", icon: <FaDropbox /> },
-  { name: "Pinterest", icon: <FaPinterest /> },
-  { name: "Discord", icon: <FaDiscord /> },
-  { name: "Telegram", icon: <SiTelegram /> },
-  { name: "Mailchimp", icon: <SiMailchimp /> },
-  { name: "Spotify", icon: <FaSpotify /> },
-  { name: "Zoom", icon: <SiZoom /> },
-  { name: "Disqus", icon: <span className="font-bold">D</span> },
-  { name: "Notion", icon: <SiNotion /> },
-  { name: "Linksters", icon: <span>✱</span> },
+  { name: "Custodian Banks", icon: <ShieldCheck /> },
+  { name: "Fund Administrators", icon: <Layers /> },
+  { name: "Market Data Providers", icon: <BarChart3 /> },
+  { name: "Internal Systems", icon: <Server /> },
+  { name: "Data Warehouses", icon: <Database /> },
+  { name: "APIs & Data Feeds", icon: <Link /> },
+  { name: "Portfolio Management Systems", icon: <Layers /> },
+  { name: "Accounting Systems", icon: <Database /> },
+  { name: "Reporting Tools", icon: <BarChart3 /> },
+  { name: "Cloud Infrastructure", icon: <Server /> },
 ];
 
 const Integrations = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top */}
         <p className="text-[#7c3aed] text-sm mb-3">
-          100+ Integrations
+          Seamless Integrations
         </p>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Seamless Integrations
+          Built to Integrate Across <br className="hidden sm:block" />
+          Your Investment Ecosystem
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-12">
-          Our platform seamlessly integrates with the tools your team already knows
+          EquiForce seamlessly connects with custodians, fund administrators, and internal systems — ensuring smooth data flow across your entire investment infrastructure.
         </p>
 
         {/* Pills */}

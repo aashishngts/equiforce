@@ -1,15 +1,15 @@
 import { useState } from "react";
 import wave from "../../assets/images/bg-wave.png";
-import benefitImg from "../../assets/images/image-tab1.webp";
+import benefitImg from "../../assets/images/image-tab1.png";
 
-import { Layers, Clock, Smartphone, Shield, Wand2 } from "lucide-react";
+import { Shield, CheckCircle, Zap, Brain, BarChart3 } from "lucide-react";
 
 const tabs = [
-  { name: "Smart task organization", icon: Layers },
-  { name: "Built-in time tracking", icon: Clock },
-  { name: "Mobile-optimized access", icon: Smartphone },
-  { name: "Secure and reliable", icon: Shield },
-  { name: "User-friendly design", icon: Wand2 },
+  { name: "Operational Accuracy", icon: CheckCircle },
+  { name: "Efficiency & Automation", icon: Zap },
+  { name: "Data Security & Compliance", icon: Shield },
+  { name: "AI-Powered Intelligence", icon: Brain },
+  { name: "Better Decision Making", icon: BarChart3 },
 ];
 
 const Benefits = () => {
@@ -29,18 +29,18 @@ const Benefits = () => {
 
         {/* Label */}
         <p className="text-[#007CF0] text-sm mb-3">
-          How it benefits
+          Key Benefits
         </p>
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          What Makes Our Users <br className="hidden sm:block" />
-          Stick With Us
+          Delivering Accuracy, Efficiency <br className="hidden sm:block" />
+          & Intelligent Investment Operations
         </h2>
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          Our clients love how effortless task management becomes with our platform.
+          EquiForce enables investment firms to operate with confidence by combining automation, compliance, and AI-driven insights.
         </p>
 
         {/* Tabs */}
@@ -95,21 +95,22 @@ const Benefits = () => {
           {/* Left */}
           <div className="text-left">
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-              Tame the Chaos with <br /> Smart Task Organization
+              Achieve Precision & Confidence in Investment Operations
             </h3>
 
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Organizing your work has never been easier. Break projects into
-              subtasks, assign priorities, and meet deadlines with clarity.
+              With EquiForce, investment firms gain full control over their operations — ensuring data accuracy, regulatory compliance, and streamlined workflows powered by intelligent automation.
             </p>
 
             <ul className="text-gray-600 text-sm space-y-2 mb-6">
-              <li>✔ Transforming Complexity Into Clarity</li>
-              <li>✔ Unlock Efficiency, Scale Faster, Work Smarter</li>
+              <li>✔ Ensure data accuracy across all systems</li>
+              <li>✔ Reduce operational risk and manual effort</li>
+              <li>✔ Maintain compliance with industry standards</li>
+              <li>✔ Leverage AI for smarter investment decisions</li>
             </ul>
 
             <button className="w-full sm:w-auto bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
-              Get 14-day Free Trial
+              Request a Demo
             </button>
           </div>
 
@@ -122,7 +123,7 @@ const Benefits = () => {
             {/* Image */}
             <img
               src={benefitImg}
-              alt="benefits"
+              alt="investment benefits"
               className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px] rounded-2xl shadow-xl 
               animate-[float_6s_ease-in-out_infinite] 
               hover:scale-105 transition duration-500"

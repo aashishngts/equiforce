@@ -1,4 +1,4 @@
-import dashboardImg from "../../assets/images/dashboard-banner.webp";
+import dashboardImg from "../../assets/images/dashboard-banner.png";
 import wave from "../../assets/images/bg-wave.png";
 
 const logos = ["Jotform", "Quora", "Dropbox", "Medium", "HubSpot", "Zillow"];

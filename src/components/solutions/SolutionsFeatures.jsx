@@ -1,55 +1,55 @@
-import f1 from "../../assets/images/features1.webp";
-import f2 from "../../assets/images/features2.webp";
-import f3 from "../../assets/images/features3.webp";
-import f4 from "../../assets/images/features4.webp";
-import f5 from "../../assets/images/features5.webp";
-import f6 from "../../assets/images/features6.webp";
+import f1 from "../../assets/images/features1.svg";
+import f2 from "../../assets/images/features2.svg";
+import f3 from "../../assets/images/features3.svg";
+import f4 from "../../assets/images/features4.svg";
+import f5 from "../../assets/images/features5.svg";
+import f6 from "../../assets/images/features6.svg";
 
 import {
-  Sparkles,
-  Plug,
-  LayoutDashboard,
-  TrendingUp,
-  Users,
   BarChart3,
+  Layers,
+  Calculator,
+  RefreshCcw,
+  FileText,
+  BrainCircuit,
 } from "lucide-react";
 
 const features = [
   {
     img: f1,
-    title: "AI-power generated apps",
-    desc: "Our intelligent platform uses AI to automate task prioritization and predict deadlines.",
-    icon: Sparkles,
+    title: "Performance Measurement",
+    desc: "Deliver precise and compliant performance calculations aligned with global investment standards for accurate reporting.",
+    icon: BarChart3,
   },
   {
     img: f2,
-    title: "Build-in Integrations",
-    desc: "Platform offers seamless built-in integrations with all the tools you rely on daily.",
-    icon: Plug,
+    title: "Composite Management",
+    desc: "Automate composite creation and maintenance while ensuring adherence to industry standards and regulatory requirements.",
+    icon: Layers,
   },
   {
     img: f3,
-    title: "User-interface design",
-    desc: "Our UI is crafted with clarity, simplicity, and efficiency in mind.",
-    icon: LayoutDashboard,
+    title: "Fund Accounting",
+    desc: "Streamline accounting workflows with scalable solutions designed for accuracy, transparency, and audit readiness.",
+    icon: Calculator,
   },
   {
     img: f4,
-    title: "Track Your Success",
-    desc: "Stay in control with real-time insights that help you measure what matters.",
-    icon: TrendingUp,
+    title: "Reconciliation",
+    desc: "Automate reconciliation across multiple data sources to minimize discrepancies and improve operational efficiency.",
+    icon: RefreshCcw,
   },
   {
     img: f5,
-    title: "Real-time Collaborations",
-    desc: "Users can share updates and collaborate seamlessly in real time.",
-    icon: Users,
+    title: "Investment Reporting",
+    desc: "Generate customizable, data-driven reports that provide clear insights to stakeholders and support informed decisions.",
+    icon: FileText,
   },
   {
     img: f6,
-    title: "Track Your Productivity",
-    desc: "Gain full visibility into how your time and tasks are being managed.",
-    icon: BarChart3,
+    title: "AI-Driven Intelligence",
+    desc: "Leverage AI to identify anomalies, enhance accuracy, and optimize investment operations with predictive insights.",
+    icon: BrainCircuit,
   },
 ];
 
@@ -61,21 +61,21 @@ const SolutionsFeatures = () => {
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#007CF0] text-white px-2 py-1 rounded-full text-xs">
-            Features
+          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+            Solutions
           </span>
-          Included
+          Core Capabilities
         </div>
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Powerful Features to Boost <br className="hidden sm:block" />
-          Your Productivity
+          Comprehensive Solutions for <br className="hidden sm:block" />
+          Investment Management Operations
         </h2>
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          Stay ahead with features built for performance and scalable SaaS growth.
+          EquiForce provides end-to-end solutions across performance measurement, fund accounting, reconciliation, and reporting — enabling firms to operate with precision and confidence.
         </p>
 
         {/* Grid */}
@@ -94,7 +94,7 @@ const SolutionsFeatures = () => {
                 <div className="bg-[#f8fafc] p-3 md:p-4">
                   <img
                     src={item.img}
-                    alt="feature"
+                    alt="solution feature"
                     className="w-full h-[140px] md:h-[160px] object-cover rounded-xl"
                   />
                 </div>
@@ -102,7 +102,7 @@ const SolutionsFeatures = () => {
                 {/* Content */}
                 <div className="p-4 md:p-6 text-left">
 
-                  {/* ✅ ICON FIX */}
+                  {/* Icon */}
                   <div className="w-10 h-10 mb-4 rounded-lg bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] flex items-center justify-center text-white">
                     <Icon size={18} />
                   </div>

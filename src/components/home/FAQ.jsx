@@ -3,24 +3,28 @@ import { ArrowUp, ArrowRight } from "lucide-react";
 
 const faqs = [
   {
-    q: "How is this different from other task management tools?",
-    a: "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations — all in a clean, intuitive interface.",
+    q: "How does EquiForce integrate with our existing systems?",
+    a: "EquiForce is designed to seamlessly integrate with custodians, fund administrators, and internal systems through secure APIs and flexible data ingestion methods.",
   },
   {
-    q: "Do I need technical skills to use this platform?",
-    a: "No technical skills required. Our platform is designed for everyone with an easy-to-use interface.",
+    q: "Is the platform compliant with industry standards?",
+    a: "Yes, our solutions are built to align with global investment and performance standards, ensuring compliance, audit readiness, and regulatory transparency.",
   },
   {
-    q: "Can I invite team members to my workspace?",
-    a: "Yes, you can invite and manage your team easily with role-based access.",
+    q: "Can the platform handle large volumes of investment data?",
+    a: "Absolutely. EquiForce is built for scalability and can efficiently process large datasets across complex investment portfolios without compromising performance.",
   },
   {
-    q: "What happens if I reach the limit of my plan?",
-    a: "You can upgrade anytime to continue using additional features.",
+    q: "How secure is our financial and investment data?",
+    a: "We implement enterprise-grade security protocols, including data encryption, access controls, and compliance frameworks to ensure your data remains secure and protected.",
   },
   {
-    q: "Do you offer a trial for premium features?",
-    a: "Yes, we offer a free trial so you can explore all premium features.",
+    q: "Do you offer customization based on our operational needs?",
+    a: "Yes, we provide tailored solutions including custom workflows, reporting formats, and integrations based on your firm’s specific requirements.",
+  },
+  {
+    q: "What kind of support and onboarding do you provide?",
+    a: "Our team offers dedicated onboarding, training, and ongoing support to ensure a smooth transition and long-term success with the platform.",
   },
 ];
 
@@ -30,21 +34,21 @@ const FAQ = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
 
-      {/* ✅ Container */}
+      {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top */}
         <p className="text-[#7c3aed] text-sm mb-3">
-          Asked Questions
+          Frequently Asked Questions
         </p>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Still Curious? Find Your <br className="hidden sm:block" />
-          Answers Below
+          Everything You Need to Know <br className="hidden sm:block" />
+          Before Getting Started
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          We’ve gathered the most common inquiries to help you get started quickly.
+          We address the most common questions from investment firms regarding integration, security, scalability, and implementation.
         </p>
 
         {/* Accordion Wrapper */}
