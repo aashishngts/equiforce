@@ -3,10 +3,9 @@ import { FiMapPin, FiMail, FiPhone } from "react-icons/fi";
 const ContactHero = () => {
   return (
     <section className="py-24">
-      {/* MAIN CONTAINER */}
-      <div className="max-w-6xl mx-auto px-6 rounded-3xl p-10 ">
+      <div className="max-w-6xl mx-auto px-6 rounded-3xl p-10">
 
-        {/* TOP HEADING */}
+        {/* 🔹 TOP */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
             <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
@@ -20,13 +19,14 @@ const ContactHero = () => {
           </h2>
 
           <p className="text-gray-500 max-w-xl mx-auto">
-            Connect with our team to explore how EquiForce can streamline your performance measurement, fund accounting, and reporting processes.
+            Connect with our team to explore how EquiForce can streamline performance measurement, fund accounting, reconciliation, and reporting.
           </p>
         </div>
 
+        {/* 🔹 GRID */}
         <div className="grid md:grid-cols-2 gap-10">
 
-          {/* LEFT SIDE */}
+          {/* 🔵 LEFT */}
           <div className="bg-white rounded-2xl p-8 shadow-md space-y-10">
 
             {/* Address */}
@@ -53,8 +53,12 @@ const ContactHero = () => {
                 <h4 className="font-semibold text-gray-800 mb-1">
                   Business Inquiries
                 </h4>
-                <p className="text-gray-500 text-sm">contact@equiforce.com</p>
-                <p className="text-gray-500 text-sm">www.equiforce.com</p>
+                <p className="text-gray-500 text-sm">
+                  contact@equiforce.com
+                </p>
+                <p className="text-gray-500 text-sm">
+                  www.equiforce.com
+                </p>
               </div>
             </div>
 
@@ -67,21 +71,29 @@ const ContactHero = () => {
                 <h4 className="font-semibold text-gray-800 mb-1">
                   Speak to Our Team
                 </h4>
-                <p className="text-gray-500 text-sm">+1 (234) 5678 9900</p>
-                <p className="text-gray-500 text-sm">Mon – Fri, 9AM – 6PM</p>
+                <p className="text-gray-500 text-sm">
+                  +1 (234) 5678 9900
+                </p>
+                <p className="text-gray-500 text-sm">
+                  Mon – Fri, 9AM – 6PM
+                </p>
               </div>
             </div>
 
           </div>
 
-          {/* RIGHT SIDE FORM */}
+          {/* 🟣 RIGHT FORM */}
           <div className="bg-white rounded-2xl p-8 shadow-md">
 
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
               Request a Demo
             </h2>
 
-            {/* Inputs */}
+            <p className="text-sm text-gray-500 text-center mb-6">
+              Tell us about your firm and requirements — our experts will get in touch with you.
+            </p>
+
+            {/* Row 1 */}
             <div className="grid md:grid-cols-2 gap-4 mb-4">
               <input
                 className="p-3 rounded-lg bg-gray-100 outline-none text-black"
@@ -93,31 +105,48 @@ const ContactHero = () => {
               />
             </div>
 
+            {/* Row 2 */}
             <div className="grid md:grid-cols-2 gap-4 mb-4">
-              <input
-                className="p-3 rounded-lg bg-gray-100 outline-none text-black"
-                placeholder="Phone Number"
-              />
               <input
                 className="p-3 rounded-lg bg-gray-100 outline-none text-black"
                 placeholder="Company Name"
               />
+              <input
+                className="p-3 rounded-lg bg-gray-100 outline-none text-black"
+                placeholder="Phone Number"
+              />
             </div>
 
+            {/* Row 3 */}
+            {/* <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <input
+                className="p-3 rounded-lg bg-gray-100 outline-none text-black"
+                placeholder="Your Role (e.g. Portfolio Manager)"
+              />
+              <select className="p-3 rounded-lg bg-gray-100 outline-none text-black">
+                <option>Assets Under Management (AUM)</option>
+                <option>$0 - $100M</option>
+                <option>$100M - $1B</option>
+                <option>$1B - $10B</option>
+                <option>$10B+</option>
+              </select>
+            </div> */}
+
+            {/* Message */}
             <textarea
               rows="4"
               className="w-full p-3 rounded-lg bg-gray-100 outline-none mb-5 text-black"
-              placeholder="Tell us about your requirements"
+              placeholder="Tell us about your investment operations requirements"
             ></textarea>
 
-            {/* Button */}
+            {/* CTA */}
             <button className="w-full py-3 rounded-xl font-medium text-white bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] hover:scale-105 transition">
               Request Demo
             </button>
 
-            {/* Trust Line */}
+            {/* Trust */}
             <p className="text-xs text-gray-500 mt-4 text-center">
-              ✔ No obligation • ✔ Secure & confidential • ✔ Expert consultation
+              ✔ No obligation consultation • ✔ Secure & confidential • ✔ Expert guidance
             </p>
 
           </div>

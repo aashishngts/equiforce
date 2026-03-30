@@ -1,4 +1,11 @@
-import { Database, ShieldCheck, Link, BarChart3, Layers, Server } from "lucide-react";
+import {
+  Database,
+  ShieldCheck,
+  Link,
+  BarChart3,
+  Layers,
+  Server,
+} from "lucide-react";
 
 const tools = [
   { name: "Custodian Banks", icon: <ShieldCheck /> },
@@ -16,14 +23,15 @@ const tools = [
 const Integrations = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
-
       {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Top */}
-        <p className="text-[#7c3aed] text-sm mb-3">
-          Seamless Integrations
-        </p>
+
+        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
+          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+            Seamless Integrations
+          </span>
+        </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
           Built to Integrate Across <br className="hidden sm:block" />
@@ -31,12 +39,13 @@ const Integrations = () => {
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-12">
-          EquiForce seamlessly connects with custodians, fund administrators, and internal systems — ensuring smooth data flow across your entire investment infrastructure.
+          EquiForce seamlessly connects with custodians, fund administrators,
+          and internal systems — ensuring smooth data flow across your entire
+          investment infrastructure.
         </p>
 
         {/* Pills */}
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5">
-
           {tools.map((tool, i) => (
             <div
               key={i}
@@ -44,7 +53,6 @@ const Integrations = () => {
               bg-white/80 backdrop-blur-md border border-gray-200 
               shadow-sm hover:shadow-md hover:scale-105 transition"
             >
-
               {/* Icon */}
               <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 text-sm">
                 {tool.icon}
@@ -54,12 +62,9 @@ const Integrations = () => {
               <span className="text-gray-800 text-xs sm:text-sm font-medium">
                 {tool.name}
               </span>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

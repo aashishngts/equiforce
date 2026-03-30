@@ -1,9 +1,9 @@
-import f1 from "../../assets/images/features1.svg";
-import f2 from "../../assets/images/features2.svg";
-import f3 from "../../assets/images/features3.svg";
-import f4 from "../../assets/images/features4.svg";
-import f5 from "../../assets/images/features5.svg";
-import f6 from "../../assets/images/features6.svg";
+import f1 from "../../assets/images/features1.jpg";
+import f2 from "../../assets/images/features2.jpg";
+import f3 from "../../assets/images/features3.jpg";
+import f4 from "../../assets/images/features4.jpg";
+import f5 from "../../assets/images/features5.jpg";
+import f6 from "../../assets/images/features6.jpg";
 
 import {
   BarChart3,
@@ -55,7 +55,7 @@ const features = [
 
 const SolutionsFeatures = () => {
   return (
-    <section className="pt-28 md:pt-32 lg:pt-36 pb-12 md:pb-16 lg:pb-20">
+    <section className="pt-18 md:pt-20 lg:pt-25 pb-12 md:pb-16 lg:pb-20">
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 

@@ -1,17 +1,14 @@
-import dashboard from "../../assets/images/dashboard-3-1024x729.png";
+import dashboard from "../../assets/images/dashboard-banner1.png";
 import stat1 from "../../assets/images/benefit-image-left.png";
 import stat2 from "../../assets/images/benefit-image-right2.png";
 
 const Newsletter = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
-
       {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Background Box */}
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12 py-12 md:py-16 lg:py-20 text-center">
-
           {/* Floating Shapes */}
           <div className="hidden sm:block absolute top-10 left-10 animate-[float_6s_ease-in-out_infinite]">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-orange-400 rounded-lg rotate-12 shadow-md"></div>
@@ -31,22 +28,24 @@ const Newsletter = () => {
 
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto">
-
-            <p className="text-[#7c3aed] text-sm mb-3">
-              Get Started with EquiForce
-            </p>
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
+              <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+                Get Started with EquiForce
+              </span>
+            </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
               Transform Your Investment Operations Today
             </h2>
 
             <p className="text-gray-600 mb-8 md:mb-10">
-              Discover how EquiForce can streamline performance measurement, fund accounting, reconciliation, and reporting — all powered by intelligent automation.
+              Discover how EquiForce can streamline performance measurement,
+              fund accounting, reconciliation, and reporting — all powered by
+              intelligent automation.
             </p>
 
             {/* CTA Box */}
             <div className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
-
               <p className="text-sm text-gray-600 mb-4">
                 Schedule a personalized demo with our experts
               </p>
@@ -68,13 +67,11 @@ const Newsletter = () => {
                 <span>✔ Tailored Solutions</span>
                 <span>✔ Expert Guidance</span>
               </div>
-
             </div>
           </div>
 
           {/* Dashboard + Floating Cards */}
           <div className="relative mt-12 md:mt-16 flex justify-center">
-
             <img
               src={dashboard}
               className="w-full max-w-[500px] md:max-w-[700px] rounded-2xl shadow-xl"
@@ -89,9 +86,7 @@ const Newsletter = () => {
               src={stat2}
               className="hidden md:block absolute -right-10 bottom-6 w-40 lg:w-52 rounded-xl shadow-lg animate-[float_6s_ease-in-out_infinite]"
             />
-
           </div>
-
         </div>
       </div>
     </section>

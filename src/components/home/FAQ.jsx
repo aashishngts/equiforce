@@ -33,14 +33,15 @@ const FAQ = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
-
       {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Top */}
-        <p className="text-[#7c3aed] text-sm mb-3">
-          Frequently Asked Questions
-        </p>
+
+        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
+          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+            Frequently Asked Questions
+          </span>
+        </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
           Everything You Need to Know <br className="hidden sm:block" />
@@ -48,24 +49,22 @@ const FAQ = () => {
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          We address the most common questions from investment firms regarding integration, security, scalability, and implementation.
+          We address the most common questions from investment firms regarding
+          integration, security, scalability, and implementation.
         </p>
 
         {/* Accordion Wrapper */}
         <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 space-y-4 shadow-md">
-
           {faqs.map((item, i) => (
             <div
               key={i}
               className="border border-gray-200 rounded-xl p-4 md:p-5 text-left transition"
             >
-
               {/* Header */}
               <div
                 onClick={() => setOpen(open === i ? null : i)}
                 className="flex justify-between items-center gap-4 cursor-pointer"
               >
-
                 {/* Question */}
                 <h4 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
                   {i + 1}. {item.q}
@@ -81,9 +80,12 @@ const FAQ = () => {
                       : "bg-gray-100 text-gray-600"
                   }`}
                 >
-                  {open === i ? <ArrowUp size={16} /> : <ArrowRight size={16} />}
+                  {open === i ? (
+                    <ArrowUp size={16} />
+                  ) : (
+                    <ArrowRight size={16} />
+                  )}
                 </div>
-
               </div>
 
               {/* Answer */}
@@ -98,12 +100,9 @@ const FAQ = () => {
                   </p>
                 </div>
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

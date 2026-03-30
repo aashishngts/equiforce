@@ -42,12 +42,19 @@ const Navbar = () => {
             }`}
           >
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <img src={logo} className="h-8 md:h-10" />
-              <span className="text-lg md:text-xl font-semibold text-gray-800">
-                EquiForce
-              </span>
-            </div>
+
+              <div className="flex flex-col leading-tight">
+                <span className="text-lg md:text-xl font-semibold text-gray-800">
+                  EquiForce
+                </span>
+
+                <span className="text-[10px] md:text-xs text-gray-500 -mt-1">
+                  Solutions
+                </span>
+              </div>
+            </Link>
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-6 lg:gap-8 text-gray-700 font-medium">
@@ -63,7 +70,7 @@ const Navbar = () => {
                 onClick={() => setOpenModal(true)}
                 className="bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-5 py-2 rounded-xl font-medium shadow-md hover:scale-105 transition"
               >
-                Get a Demo
+                Request Demo
               </button>
             </div>
 
@@ -81,11 +88,18 @@ const Navbar = () => {
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200 shadow-md animate-scaleIn">
             <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4 text-gray-700 font-medium">
-              
-              <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-              <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-              <Link to="/services" onClick={() => setMenuOpen(false)}>Solutions</Link>
-              <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>
+                About
+              </Link>
+              <Link to="/services" onClick={() => setMenuOpen(false)}>
+                Solutions
+              </Link>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                Contact
+              </Link>
 
               <button
                 onClick={() => {
@@ -94,19 +108,15 @@ const Navbar = () => {
                 }}
                 className="mt-2 bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-5 py-3 rounded-xl font-medium"
               >
-                Get a Demo
+                Request Demo
               </button>
-
             </div>
           </div>
         )}
       </div>
 
       {/* Modal */}
-      <DemoModal
-        isOpen={openModal}
-        onClose={() => setOpenModal(false)}
-      />
+      <DemoModal isOpen={openModal} onClose={() => setOpenModal(false)} />
     </>
   );
 };

@@ -34,16 +34,14 @@ const SolutionsFAQ = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20">
-
       {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Inner Box */}
         <div className="text-center bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg">
-
           {/* Badge */}
+
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-            <span className="bg-[#7c3aed] text-white px-2 py-1 rounded-full text-xs">
+            <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
               FAQ
             </span>
             Solutions & Capabilities
@@ -56,15 +54,14 @@ const SolutionsFAQ = () => {
           </h2>
 
           <p className="text-gray-500 mb-10 md:mb-12 max-w-2xl mx-auto">
-            Explore how EquiForce delivers scalable, secure, and intelligent solutions for modern investment management firms.
+            Explore how EquiForce delivers scalable, secure, and intelligent
+            solutions for modern investment management firms.
           </p>
 
           {/* Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center">
-
             {/* LEFT FAQ */}
             <div className="space-y-4 text-left order-2 lg:order-1">
-
               {faqs.map((item, i) => {
                 const isOpen = open === i;
 
@@ -79,7 +76,6 @@ const SolutionsFAQ = () => {
                         : "bg-white/70 border-gray-200 hover:bg-white"
                     }`}
                   >
-
                     {/* Question */}
                     <div className="flex items-center justify-between gap-4">
                       <h4 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
@@ -94,7 +90,11 @@ const SolutionsFAQ = () => {
                             : "bg-gray-100 text-gray-600"
                         }`}
                       >
-                        {isOpen ? <FiArrowUp size={16} /> : <FiArrowRight size={16} />}
+                        {isOpen ? (
+                          <FiArrowUp size={16} />
+                        ) : (
+                          <FiArrowRight size={16} />
+                        )}
                       </div>
                     </div>
 
@@ -107,7 +107,6 @@ const SolutionsFAQ = () => {
                   </div>
                 );
               })}
-
             </div>
 
             {/* RIGHT IMAGE */}
@@ -120,9 +119,7 @@ const SolutionsFAQ = () => {
                 />
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>

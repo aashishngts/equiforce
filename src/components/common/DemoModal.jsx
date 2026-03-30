@@ -13,9 +13,9 @@ const DemoModal = ({ isOpen, onClose }) => {
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
       ></div>
 
-      {/* 🔥 RIGHT PANEL */}
+      {/* RIGHT PANEL */}
       <div
-        className={`absolute top-0 right-0 h-full w-full sm:w-[400px] bg-white shadow-2xl transition-transform duration-300 ${
+        className={`absolute top-0 right-0 h-full w-full sm:w-[420px] bg-white shadow-2xl transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -31,41 +31,74 @@ const DemoModal = ({ isOpen, onClose }) => {
 
           {/* Heading */}
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            Book your free demo
+            Request a Demo
           </h2>
 
           <p className="text-gray-600 mb-6">
-            Discover how our product can simplify your workflow. Schedule a free,
-            no-obligation demo today.
+            Explore how EquiForce can streamline your investment operations,
+            improve performance visibility, and ensure reporting accuracy.
           </p>
 
-          {/* Form */}
+          {/* FORM */}
           <div className="space-y-4">
 
+            {/* Full Name */}
             <input
               type="text"
-              placeholder="Your name"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 outline-none"
+              placeholder="Full Name"
+              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
             />
 
+            {/* Email */}
             <input
               type="email"
-              placeholder="Your email"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 outline-none"
+              placeholder="Work Email"
+              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
             />
 
+            {/* Company */}
+            <input
+              type="text"
+              placeholder="Company Name"
+              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
+            />
+
+            {/* Role */}
+            <input
+              type="text"
+              placeholder="Your Role (e.g. Portfolio Manager)"
+              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
+            />
+
+            {/* AUM */}
+            {/* <select className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 outline-none">
+              <option>Assets Under Management (AUM)</option>
+              <option>$0 - $100M</option>
+              <option>$100M - $1B</option>
+              <option>$1B - $10B</option>
+              <option>$10B+</option>
+            </select> */}
+
+            {/* Message */}
             <textarea
-              rows="5"
-              placeholder="Your message"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 outline-none"
+              rows="4"
+              placeholder="Tell us about your investment operations requirements"
+              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
             ></textarea>
 
+            {/* CTA */}
             <button className="w-full bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] 
-hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition">
-              Submit Request
+              hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition">
+              Request Demo
             </button>
 
+            {/* Trust */}
+            <p className="text-xs text-gray-500 text-center mt-2">
+              ✔ No obligation • ✔ Secure & confidential • ✔ Expert consultation
+            </p>
+
           </div>
+
         </div>
       </div>
     </div>

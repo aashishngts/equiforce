@@ -45,26 +45,27 @@ const Pricing = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 text-center">
-
       {/* Container */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Heading */}
-        <p className="text-[#007CF0] text-sm mb-3">
-          Engagement Models
-        </p>
+
+        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
+          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+            Engagement Models
+          </span>
+        </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
           Flexible Solutions Tailored to Your Needs
         </h2>
 
         <p className="text-gray-600 mb-8 md:mb-10 max-w-2xl mx-auto">
-          We offer customized engagement models based on your operational complexity, scale, and business requirements.
+          We offer customized engagement models based on your operational
+          complexity, scale, and business requirements.
         </p>
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
           {plans.map((plan, i) => (
             <div
               key={i}
@@ -76,7 +77,6 @@ const Pricing = () => {
                   : "bg-white/80 backdrop-blur-md text-gray-800 border-gray-200 shadow-md"
               }`}
             >
-
               {/* Badge */}
               {plan.highlight && (
                 <div className="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
@@ -86,9 +86,7 @@ const Pricing = () => {
 
               {/* Top */}
               <div className="text-left mb-6">
-                <p className="text-2xl md:text-3xl font-bold">
-                  {plan.price}
-                </p>
+                <p className="text-2xl md:text-3xl font-bold">{plan.price}</p>
 
                 <h3 className="mt-2 font-semibold text-base md:text-lg">
                   {plan.name}
@@ -137,12 +135,9 @@ const Pricing = () => {
               >
                 ✔ Tailored to your business requirements
               </p>
-
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
