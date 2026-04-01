@@ -50,18 +50,14 @@ const About = () => {
       </div>
 
       {/* Team feels better with slightly stronger entry */}
-      <div data-aos="fade-up" data-aos-delay="200">
-        <Team />
-      </div>
+    
 
       <div data-aos="fade-up" data-aos-delay="250">
         <AboutFeatures />
       </div>
 
       {/* Final section softer */}
-      <div data-aos="fade-up" data-aos-delay="300">
-        <AboutTestimonials />
-      </div>
+     
 
     </div>
   );

@@ -28,7 +28,7 @@ const Benefits = () => {
         {/* Label */}
 
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+          <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
             Key Benefits
           </span>
         </div>
@@ -59,7 +59,7 @@ const Benefits = () => {
 
         ${
           active === index
-            ? "bg-white border-[#0ea5a4] shadow-[0_10px_30px_rgba(14,165,164,0.25)] scale-105"
+            ? "bg-white border-[#233c6a] shadow-[0_10px_30px_rgba(14,165,164,0.25)] scale-105"
             : "bg-white/70 backdrop-blur-md border-gray-200 hover:bg-white hover:shadow-md"
         }`}
               >
@@ -69,8 +69,8 @@ const Benefits = () => {
 
           ${
             active === index
-              ? "bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white shadow-md"
-              : "bg-gray-100 text-[#0ea5a4]"
+              ? "bg-gradient-to-r from-[#233c6a] to-[#2e4a7f] text-white shadow-md"
+              : "bg-gray-100 text-[#233c6a]"
           }`}
                 >
                   <Icon size={18} />
@@ -109,7 +109,7 @@ const Benefits = () => {
               <li>✔ Leverage AI for smarter investment decisions</li>
             </ul>
 
-            <button className="w-full sm:w-auto bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
+            <button className="w-full sm:w-auto bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
               Request a Demo
             </button>
           </div>

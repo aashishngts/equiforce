@@ -38,7 +38,7 @@ const FAQ = () => {
         {/* Top */}
 
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+          <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
             Frequently Asked Questions
           </span>
         </div>
@@ -76,7 +76,7 @@ const FAQ = () => {
 
                   ${
                     open === i
-                      ? "bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white"
+                      ? "bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white"
                       : "bg-gray-100 text-gray-600"
                   }`}
                 >

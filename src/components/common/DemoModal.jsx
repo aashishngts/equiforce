@@ -87,7 +87,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             ></textarea>
 
             {/* CTA */}
-            <button className="w-full bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] 
+            <button className="w-full bg-gradient-to-r from-[#233c6a] to-[#233c6a] 
               hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition">
               Request Demo
             </button>

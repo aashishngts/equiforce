@@ -22,7 +22,7 @@ const DashboardPreview = () => {
         {/* TOP TEXT */}
         <div className="text-center mb-10 md:mb-12">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-            <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+            <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
               Platform Overview
             </span>
           </div>

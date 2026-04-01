@@ -27,7 +27,7 @@ const HowItWorks = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Label */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#0ea5a4] text-white px-2 py-1 rounded-full text-xs">
+          <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
             How It Works
           </span>
         </div>
@@ -55,7 +55,7 @@ const HowItWorks = () => {
                 className="bg-white rounded-2xl p-4 md:p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition"
               >
                 {/* Step Number */}
-                <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#0ea5a4] to-[#22d3ee] text-white font-bold text-sm">
+                <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white font-bold text-sm">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
