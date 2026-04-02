@@ -16,7 +16,6 @@ import SignIn from "./components/pages/SignIn";
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
   const location = useLocation();
-  // Define paths where you DON'T want the footer to appear
   const hideFooterPaths = ["/signin"];
 
   return (
