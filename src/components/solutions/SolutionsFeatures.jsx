@@ -57,7 +57,7 @@ const SolutionsFeatures = () => {
   return (
     <section className="pt-18 md:pt-20 lg:pt-25 pb-12 md:pb-16 lg:pb-20">
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16 text-center">
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">

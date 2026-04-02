@@ -4,7 +4,7 @@ const AboutIntro = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
 
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
 
         {/* Left */}
         <div className="text-center md:text-left order-2 md:order-1">

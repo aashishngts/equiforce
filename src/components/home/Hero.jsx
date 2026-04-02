@@ -19,7 +19,7 @@ function Hero() {
       <div className="absolute inset-0 bg-[#0a2240]/60"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 w-full">
+      <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-16 w-full">
         <div className="w-full lg:w-[60%] text-white pt-24 md:pt-48">
           <h1
             className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6"

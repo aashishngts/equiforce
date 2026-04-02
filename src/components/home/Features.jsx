@@ -56,7 +56,7 @@ const features = [
 const Features = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16 text-center">
         {/* Tag */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
           <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">

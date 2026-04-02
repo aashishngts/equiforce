@@ -17,7 +17,7 @@ const ContactHero = () => {
     "w-full h-[52px] px-4 border border-[#cfd4da] rounded-[4px] bg-[#fcfcfc] text-[#495057] placeholder:text-[#313131] outline-none focus:border-[#0070c0] focus:bg-white transition-all duration-200 shadow-sm";
 
   return (
-    <section className="relative min-h-screen pt-32 md:pt-44 pb-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="relative min-h-screen pt-32 md:pt-44 pb-20 px-4 sm:px-6 lg:px-16 bg-white overflow-hidden">
       
       {/* Background Gradient (Same as your Solutions page) */}
       <div className="absolute inset-0 z-0">
