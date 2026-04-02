@@ -50,7 +50,7 @@ const Team = () => {
               
               {/* Overlapping Circular Image with Gradient Border */}
               <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                <div className="w-36 h-36 md:w-40 md:h-40 rounded-full p-[3px] bg-gradient-to-tr from-orange-400 via-red-500 to-purple-600">
+                <div className="w-36 h-36 md:w-40 md:h-40 rounded-full p-[3px] bg-gradient-to-tr from-blue-700 via-blue-950 to-purple-600">
                   <div className="w-full h-full rounded-full border-[6px] border-white overflow-hidden">
                     <img
                       src={member.img}
