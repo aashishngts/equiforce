@@ -6,7 +6,7 @@ const Newsletter = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
       {/* Container */}
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         {/* Background Box */}
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12 py-12 md:py-16 lg:py-20 text-center">
           {/* Floating Shapes */}

@@ -33,7 +33,7 @@ const team = [
 const Team = () => {
   return (
     <section className="py-20 bg-gray-50 text-center">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-24">

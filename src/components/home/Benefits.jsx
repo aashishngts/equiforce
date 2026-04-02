@@ -24,7 +24,7 @@ const Benefits = () => {
       />
 
       {/* ✅ Container */}
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 text-center relative z-10">
         {/* Label */}
 
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">

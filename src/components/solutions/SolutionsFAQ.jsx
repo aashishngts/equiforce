@@ -35,7 +35,7 @@ const SolutionsFAQ = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
       {/* Container */}
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         {/* Inner Box */}
         <div className="text-center bg-white/40 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg">
           {/* Badge */}
