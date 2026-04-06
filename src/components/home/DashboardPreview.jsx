@@ -56,17 +56,35 @@ const badges = [
 const DashboardPreview = () => {
   return (
     <>
- 
-
-      <section className=" py-12 md:py-24 bg-white overflow-hidden">
+      {/* Added overflow-hidden to prevent horizontal scrolling during animation */}
+      <section className="py-12 md:py-24 bg-white overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-6">
+          
           {/* Heading Section */}
-          <div className="text-center mb-16 md:mb-24" data-aos="fade-up">
+          <div className="text-center mb-16 md:mb-24">
             <h2
-              className="text-xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto"
+              className="text-3xl md:text-5xl font-bold leading-tight max-w-4xl mx-auto flex flex-col gap-2 md:gap-4 overflow-hidden py-2"
               style={{ color: NAVY }}
             >
-              The Single Platform That Your Firm's Ambitions Deserve
+              {/* fade-right brings the text IN FROM THE LEFT */}
+              <span 
+                className="block" 
+                data-aos="fade-right" 
+                data-aos-duration="1200"
+                data-aos-easing="ease-out-cubic"
+              >
+                The Single Platform <span className="text-[#d97706]">That Your</span>
+              </span>
+              
+              {/* fade-left brings the text IN FROM THE RIGHT */}
+              <span 
+                className="block" 
+                data-aos="fade-left" 
+                data-aos-duration="1200" 
+                data-aos-easing="ease-out-cubic"
+              >
+                Firm's Ambitions <span className="text-[#d97706]">Deserve</span>
+              </span>
             </h2>
           </div>
 
@@ -76,6 +94,7 @@ const DashboardPreview = () => {
             <div
               className="relative z-10 shadow-2xl rounded-3xl overflow-hidden border border-gray-100"
               data-aos="zoom-in"
+              data-aos-duration="1000"
             >
               <img
                 src={SinglePlatformImg}
@@ -89,7 +108,7 @@ const DashboardPreview = () => {
               <div
                 key={index}
                 className={`absolute z-20 hidden sm:flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-xl border border-gray-50 whitespace-nowrap transition-transform hover:scale-105 ${badge.pos}`}
-                data-aos="fade-right"
+                data-aos="fade-up"
                 data-aos-delay={badge.delay}
               >
                 <span className="text-lg">{badge.icon}</span>
@@ -106,6 +125,8 @@ const DashboardPreview = () => {
               <div
                 key={index}
                 className="flex items-center gap-2 bg-gray-50 p-3 rounded-xl border border-gray-100"
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
               >
                 <span className="text-sm">{badge.icon}</span>
                 <span className="font-bold text-xs text-slate-700">

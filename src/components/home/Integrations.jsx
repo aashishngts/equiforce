@@ -34,8 +34,8 @@ const Integrations = () => {
         </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Built to Integrate Across <br className="hidden sm:block" />
-          Your Investment Ecosystem
+          Built to Integrate <span class="text-[#d97706]">  Across</span><br className="hidden sm:block" />
+          Your Investment <span class="text-[#d97706]"> Ecosystem</span>
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-12">

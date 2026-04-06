@@ -30,7 +30,7 @@ const HowItWorks = () => {
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
     Why Equiforce
-        Solutions
+        <span class="text-[#d97706]"> Solutions</span>
         </h2>
 
         {/* Subtext */}
@@ -68,13 +68,13 @@ const HowItWorks = () => {
           </div>
 
           {/* Dashboard */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
+          {/* <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
             <img
               src={dashboardImg}
               alt="Investment dashboard preview"
               className="w-full h-auto object-cover"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

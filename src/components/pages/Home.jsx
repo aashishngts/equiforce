@@ -28,7 +28,7 @@ const Home = () => {
         <HowItWorks />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="250">
+      {/* <div data-aos="fade-up" data-aos-delay="250">
         <Benefits />
       </div>
 
@@ -43,7 +43,7 @@ const Home = () => {
 
       <div data-aos="fade-up" data-aos-delay="400">
         <FAQ />
-      </div>
+      </div> */}
 
       <div data-aos="fade-up" data-aos-delay="450">
         <Integrations />

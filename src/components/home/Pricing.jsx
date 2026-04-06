@@ -56,7 +56,7 @@ const Pricing = () => {
         </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Flexible Solutions Tailored to Your Needs
+          Flexible Solutions Tailored to <span class="text-[#d97706]">Your Needs</span>
         </h2>
 
         <p className="text-gray-600 mb-8 md:mb-10 max-w-2xl mx-auto">

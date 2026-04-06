@@ -8,22 +8,15 @@ const NAVY = "#0a2240";
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Desktop menu states
-  const [aboutOpen, setAboutOpen] = useState(false);
   const [platformOpen, setPlatformOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   // Mobile menu states
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -36,61 +29,33 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled ? "shadow-xl py-2" : "bg-transparent py-4"
-        }`}
-        style={
-          scrolled
-            ? {
-                background:
-                  "linear-gradient(106deg, rgba(35, 60, 106, 1) 76%, rgba(25, 112, 125, 1) 100%)",
-              }
-            : {}
-        }
-      >
+      {/* Fixed Navbar with solid #0a2240 background - No Scroll Animation */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a2240] py-4 shadow-lg border-b border-white/10">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
-          <div
-            className={`flex items-center justify-between transition-all duration-500 ${
-              !scrolled
-                ? "bg-white backdrop-blur-md shadow-lg rounded-2xl px-4 md:px-6 py-3"
-                : "px-2 py-1"
-            }`}
-          >
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 shrink-0">
-              <img src={logo} className="h-10 md:h-15" alt="logo" />
-              <div className="flex flex-col leading-tight">
-                <span
-                  className="text-base md:text-xl font-bold transition-colors"
-                  style={{ color: scrolled ? "#FFFFFF" : NAVY }}
-                >
+          <div className="flex items-center justify-between">
+            {/* Logo matching the provided image exactly */}
+            <Link to="/" className="flex items-center gap-3 shrink-0">
+              <img src={logo} className="h-10 md:h-12" alt="EquiForce Logo" />
+              <div className="flex flex-col justify-center mt-1">
+                <span className="text-lg md:text-[22px] font-black tracking-widest text-white uppercase leading-none">
                   EquiForce
                 </span>
-                <span
-                  className={`text-[9px] md:text-xs -mt-1 ${
-                    scrolled ? "text-blue-100" : "text-gray-500"
-                  }`}
-                >
+                <span className="text-[10px] md:text-[11px] font-bold tracking-[0.15em] text-[#d97706] uppercase mt-1 leading-none">
                   Solutions
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div
-              className={`hidden md:flex gap-8 font-semibold items-center transition-colors ${
-                scrolled ? "text-white" : ""
-              }`}
-              style={!scrolled ? { color: NAVY } : {}}
-            >
-              {/* Platform Mega Menu */}
+            <div className="hidden md:flex gap-8 font-semibold items-center text-white">
+              
+              {/* PLATFORM MEGA MENU */}
               <div
-                className="relative h-full py-2"
+                className="relative h-full py-4"
                 onMouseEnter={() => setPlatformOpen(true)}
                 onMouseLeave={() => setPlatformOpen(false)}
               >
-                <button className="flex items-center gap-1 hover:opacity-70 transition-all">
+                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors">
                   Platform{" "}
                   <FiChevronDown
                     className={`transition-transform ${
@@ -100,83 +65,65 @@ const Navbar = () => {
                 </button>
 
                 {platformOpen && (
-                  <div className="absolute top-full -left-32 pt-4 cursor-default">
+                  <div className="absolute top-full -left-32 pt-2 cursor-default">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
-                      {/* Left Column Colored - Platform Image */}
-                      <div className="w-[35%] bg-[#eef7f8] p-6 flex flex-col border-r border-[#d4ecee]">
-                        <div className="rounded-xl overflow-hidden mb-6 shadow-md border border-gray-200">
-                          <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                            alt="Platform Dashboard Preview"
-                            className="w-full h-32 object-cover object-top hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-
-                        <h3 className="text-xl font-bold text-[#0a2240] mb-2">
+                      
+                      {/* Left Column - Platform Overview */}
+                      <div className="w-[35%] bg-[#eef7f8] p-8 flex flex-col border-r border-[#d4ecee]">
+                        <h3 className="text-xl font-bold text-[#0a2240] mb-3">
                           Platform Overview
                         </h3>
                         <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                          Explore the first front-to-back system of record for
-                          investment management.
+                          Explore the first front-to-back system of record for investment management
                         </p>
 
-                        <button className="bg-[#0a2240] text-white rounded-xl py-3 px-6 text-sm font-bold w-fit mt-auto hover:bg-blue-900 transition-colors flex items-center gap-2 group">
-                          Learn More{" "}
-                          <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        <Link to={"/platform"} className="bg-[#0a2240] text-white rounded-full py-3 px-6 text-sm font-bold w-full mb-8 hover:bg-[#d97706] transition-colors">
+                          Discover Our Platform
+                        </Link>
+
+                        <div className="flex flex-col gap-5 text-[15px] font-bold text-[#0a2240] mt-2">
+                          {/* <Link to="/" className="hover:text-[#d97706] transition-colors">Unified Data</Link>
+                          <Link to="/" className="hover:text-[#d97706] transition-colors">AI Agents</Link>
+                          <Link to="/" className="hover:text-[#d97706] transition-colors">Continuous Updates</Link>
+                          <Link to="/" className="hover:text-[#d97706] transition-colors">Global Search</Link>
+                          <Link to="/" className="hover:text-[#d97706] transition-colors">Workflows</Link>
+                          <Link to="/" className="hover:text-[#d97706] transition-colors">Integrations</Link> */}
+                        </div>
                       </div>
 
-                      {/* Right Column Links Grid */}
+                      {/* Right Column - Grid */}
                       <div className="w-[65%] bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Client Engagement
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Serve your investors with clarity.
-                            </p>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Performance Measurement
+</h4>
+                            <p className="text-sm text-gray-500 mt-1">Serve your investors with clarity.</p>
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Reconciliation
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Clear daily breaks with confidence.
-                            </p>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">GIPS Composite Management</h4>
+                            <p className="text-sm text-gray-500 mt-1">Clear daily breaks with confidence.</p>
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Portfolio Management
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Manage complexity at scale.
-                            </p>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Investment Operations & Reconciliation
+</h4>
+                            <p className="text-sm text-gray-500 mt-1">Manage complexity at scale.</p>
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Accounting
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Maintain accurate books across every account.
-                            </p>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">AI-Powered Reporting</h4>
+                            <p className="text-sm text-gray-500 mt-1">Maintain accurate books across every account.</p>
+                          </div>
+                          {/* <div>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Trading</h4>
+                            <p className="text-sm text-gray-500 mt-1">Execute trades with speed and control.</p>
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Trading
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Execute trades with speed and control.
-                            </p>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Reporting</h4>
+                            <p className="text-sm text-gray-500 mt-1">Deliver insights your team can trust.</p>
                           </div>
                           <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-blue-600 cursor-pointer transition-colors">
-                              Reporting
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Deliver insights your team can trust.
-                            </p>
-                          </div>
+                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Compliance</h4>
+                            <p className="text-sm text-gray-500 mt-1">Stay compliant with real-time oversight.</p>
+                          </div> */}
                         </div>
 
                         {/* Bottom AI Banner */}
@@ -184,17 +131,13 @@ const Navbar = () => {
                           <div className="flex items-center gap-3">
                             <span className="text-xl">✨</span>
                             <div>
-                              <h4 className="font-bold text-[#0a2240]">
-                                EquiForce AI
-                              </h4>
-                              <p className="text-sm text-gray-600 mt-1">
-                                See what’s possible with built-in intelligence.
-                              </p>
+                              <h4 className="font-bold text-[#0a2240]">EquiForce AI</h4>
+                              <p className="text-sm text-gray-600 mt-1">See what’s possible with built-in intelligence.</p>
                             </div>
                           </div>
-                          <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 transition-transform text-sm">
-                            Learn More <FiArrowRight />
-                          </span>
+                            {/* <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 group-hover:text-[#d97706] transition-all text-sm">
+                              Learn More <FiArrowRight />
+                            </span> */}
                         </div>
                       </div>
                     </div>
@@ -202,13 +145,13 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* About Mega Menu (NOW FORMATTED LIKE PLATFORM) */}
+              {/* ABOUT MEGA MENU */}
               <div
-                className="relative h-full py-2"
+                className="relative h-full py-4"
                 onMouseEnter={() => setAboutOpen(true)}
                 onMouseLeave={() => setAboutOpen(false)}
               >
-                <button className="flex items-center gap-1 hover:opacity-70 transition-all">
+                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors">
                   About{" "}
                   <FiChevronDown
                     className={`transition-transform ${
@@ -218,10 +161,8 @@ const Navbar = () => {
                 </button>
 
                 {aboutOpen && (
-                  <div className="absolute top-full -left-20 pt-4 cursor-default">
-                    {/* Matched width and overall layout structure from Platform */}
+                  <div className="absolute top-full -left-20 pt-2 cursor-default">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
-                      {/* Left Column - Matched width (35%), padding, and styling */}
                       <div className="w-[35%] bg-[#eef7f8] p-6 flex flex-col border-r border-[#d4ecee]">
                         <div className="rounded-xl overflow-hidden mb-6 shadow-md border border-gray-200">
                           <img
@@ -231,29 +172,23 @@ const Navbar = () => {
                           />
                         </div>
 
-                        <h3 className="text-md font-bold text-[#0a2240] mb-2">
+                        {/* <h3 className="text-md font-bold text-[#0a2240] mb-2">
                           Mission
-                        </h3>
-                        <p className="text-xs text-gray-600 mb-6 leading-relaxed">
-                          EquiForce Solutions empowers investment management
-                          firms with purpose-built technology — delivering
-                          precision-engineered solutions for performance
-                          measurement, composite management, fund accounting,
-                          reconciliation, and investment reporting.
+                        </h3> */}
+                        <p className="text-[11px] text-gray-600 mb-6 leading-relaxed">
+                          EquiForce Solutions empowers investment management firms with purpose-built technology — delivering precision-engineered solutions for performance measurement, composite management, fund accounting, reconciliation, and investment reporting. More than a software provider, we are a strategic partner and consultants with nearly three decades of investment operations expertise — integrating AI technologies that enable our clients to operate with accuracy, confidence, and a competitive edge.
                         </p>
 
-                        {/* Matched Button Style */}
-                        <button className="bg-[#0a2240] text-white rounded-xl py-3 px-6 text-sm font-bold w-fit mt-auto hover:bg-blue-900 transition-colors flex items-center gap-2 group">
+                        <button className="bg-[#0a2240] text-white rounded-xl py-3 px-6 text-sm font-bold w-fit mt-auto hover:bg-[#d97706] transition-colors flex items-center gap-2 group">
                           Learn More{" "}
                           <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </button>
                       </div>
 
-                      {/* Right Column Links Grid - Matched width (65%) and grid layout */}
                       <div className="w-[65%] bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
                           <Link to="/about" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-blue-600 transition-colors">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
                               About Company
                             </h4>
                             <p className="text-sm text-gray-500 mt-1">
@@ -261,15 +196,15 @@ const Navbar = () => {
                             </p>
                           </Link>
                           <Link to="/team" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-blue-600 transition-colors">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
                               Meet the Team
                             </h4>
                             <p className="text-sm text-gray-500 mt-1">
                               Get to know the experts behind EquiForce.
                             </p>
                           </Link>
-                          <Link to="/" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-blue-600 transition-colors">
+                          <Link to="/careers" className="group block">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
                               Careers
                             </h4>
                             <p className="text-sm text-gray-500 mt-1">
@@ -278,7 +213,6 @@ const Navbar = () => {
                           </Link>
                         </div>
 
-                        {/* Bottom Banner - Matched style */}
                         <div className="mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#e2f1f3] transition-colors">
                           <div className="flex items-center gap-3">
                             <span className="text-xl">🚀</span>
@@ -287,12 +221,11 @@ const Navbar = () => {
                                 Join EquiForce
                               </h4>
                               <p className="text-sm text-gray-600 mt-1">
-                                Explore open roles and build the future of
-                                finance.
+                                Explore open roles and build the future of finance.
                               </p>
                             </div>
                           </div>
-                          <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 transition-transform text-sm">
+                          <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 group-hover:text-[#d97706] transition-all text-sm">
                             View Openings <FiArrowRight />
                           </span>
                         </div>
@@ -302,10 +235,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              <Link to="/services" className="hover:opacity-70 transition-all">
-                Solutions
-              </Link>
-              <Link to="/contact" className="hover:opacity-70 transition-all">
+              <Link to="/contact" className="hover:text-[#d97706] transition-all">
                 Contact
               </Link>
             </div>
@@ -314,19 +244,13 @@ const Navbar = () => {
             <div className="flex items-center gap-2 md:gap-6">
               <Link
                 to="/signin"
-                className={`hidden sm:block text-sm font-bold hover:opacity-70 transition-all ${
-                  scrolled ? "text-white" : ""
-                }`}
-                style={!scrolled ? { color: '#000' } : {}}
+                className="hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
               >
                 Sign In
               </Link>
 
               <Link
-                className={`px-4 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-md hover:scale-105 transition-all ${
-                  scrolled ? "bg-white text-[#d97706]" : "text-white"
-                }`}
-                style={!scrolled ? { backgroundColor: "#d97706" } : {}}
+                className="px-4 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
                 to="/contact"
               >
                 Try for Free
@@ -335,13 +259,9 @@ const Navbar = () => {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="md:hidden text-2xl p-1 z-[60]"
-                style={{
-                  color:
-                    scrolled || menuOpen ? (menuOpen ? NAVY : "#FFFFFF") : NAVY,
-                }}
+                className="md:hidden text-2xl p-1 z-[60] text-white"
               >
-                {menuOpen ? <FiX /> : <FiMenu />}
+                {menuOpen ? <FiX className="text-[#0a2240]" /> : <FiMenu />}
               </button>
             </div>
           </div>
@@ -362,7 +282,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => setMobilePlatformOpen(!mobilePlatformOpen)}
-                  className="flex items-center justify-between w-full text-left"
+                  className="flex items-center justify-between w-full text-left hover:text-[#d97706] transition-colors"
                 >
                   Platform{" "}
                   <FiChevronDown
@@ -377,15 +297,10 @@ const Navbar = () => {
                   }`}
                 >
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600">
-                    <Link to="/" onClick={() => setMenuOpen(false)}>
-                      Platform Overview
-                    </Link>
-                    <Link to="/" onClick={() => setMenuOpen(false)}>
-                      Unified Data
-                    </Link>
-                    <Link to="/" onClick={() => setMenuOpen(false)}>
-                      AI Agents
-                    </Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Unified Data</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI Agents</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Client Engagement</Link>
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Portfolio Management</Link>
                   </div>
                 </div>
               </div>
@@ -394,7 +309,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                  className="flex items-center justify-between w-full text-left"
+                  className="flex items-center justify-between w-full text-left hover:text-[#d97706] transition-colors"
                 >
                   About{" "}
                   <FiChevronDown
@@ -409,20 +324,13 @@ const Navbar = () => {
                   }`}
                 >
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600">
-                    <Link to="/about" onClick={() => setMenuOpen(false)}>
-                      About Company
-                    </Link>
-                    <Link to="/team" onClick={() => setMenuOpen(false)}>
-                      Meet the Team
-                    </Link>
+                    <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">About Company</Link>
+                    <Link to="/team" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Meet the Team</Link>
                   </div>
                 </div>
               </div>
 
-              <Link to="/services" onClick={() => setMenuOpen(false)}>
-                Solutions
-              </Link>
-              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">
                 Contact
               </Link>
 
@@ -430,19 +338,18 @@ const Navbar = () => {
 
               <Link
                 to="/signin"
-                className="text-gray-500"
+                className="text-gray-500 hover:text-[#d97706] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 Sign In
               </Link>
               <button
-                className="w-full py-4 rounded-xl text-white shadow-lg active:scale-95 transition-transform"
-                style={{ backgroundColor: NAVY }}
+                className="w-full py-4 rounded-xl text-white shadow-lg active:scale-95 transition-transform bg-[#d97706] hover:bg-[#b46002]"
                 onClick={() => {
                   setMenuOpen(false);
                 }}
               >
-                Get Started
+                Try for Free
               </button>
             </div>
           </div>

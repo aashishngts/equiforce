@@ -44,8 +44,8 @@ const FAQ = () => {
         </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          Everything You Need to Know <br className="hidden sm:block" />
-          Before Getting Started
+          Everything You Need   <span class="text-[#d97706]"> to Know</span><br className="hidden sm:block" />
+          Before Getting <span class="text-[#d97706]"> Started</span>
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">

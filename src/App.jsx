@@ -12,6 +12,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
 import TeamPage from "./components/pages/TeamPage";
 import SignIn from "./components/pages/SignIn";
+import Platform from "./components/pages/Platform/Platform";
+import Careers from "./components/pages/Careers";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -51,10 +53,12 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
+              {/* <Route path="/services" element={<Services />} /> */}
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/platform" element={<Platform />} />
+              <Route path="/careers" element={<Careers />} />
             </Routes>
           </LayoutWrapper>
         </BrowserRouter>

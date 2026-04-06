@@ -42,8 +42,8 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-[#f0f9fa]">
-      {/* Changed max-w-full to max-w-[1400px] to prevent ultra-wide stretching */}
+    // Applied a clean, light gradient background (white fading into a very soft blue/cyan)
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-[#f0f9fa]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Tag */}
@@ -53,19 +53,19 @@ const Features = () => {
           </span>
         </div>
 
-        {/* Heading - Fixed 'class' to 'className' */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-4 sm:mb-6 leading-tight">
+        {/* Heading - Changed to dark navy for the light theme */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0a2240] mb-4 sm:mb-6 leading-tight">
           What we <span className="text-[#d97706]">Deliver</span>
         </h2>
 
-        {/* Subtext */}
+        {/* Subtext - Changed to a medium gray for readability */}
         <p className="text-gray-600 max-w-3xl mx-auto mb-10 sm:mb-16 text-sm md:text-base leading-relaxed px-2 sm:px-0">
           EquiForce delivers specialized solutions across performance
           measurement, fund accounting, reconciliation, and reporting — enhanced
           with AI-driven capabilities for superior operational control.
         </p>
 
-        {/* Grid - Naturally stacks to 1 column on mobile, 2 on tablet, 4 on desktop */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
           {features.map((item, index) => {
             const Icon = item.icon;
@@ -73,29 +73,29 @@ const Features = () => {
             return (
               <div
                 key={index}
-                // Added active:scale-[0.98] for better mobile tap feedback
-                className="bg-white rounded-3xl p-5 md:p-6 shadow-sm border border-gray-100 hover:shadow-md active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
+                // Light theme cards: solid white, soft border, and a nice elegant shadow
+                className="bg-white rounded-3xl p-5 md:p-6 shadow-xl shadow-gray-200/40 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/60 active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
               >
-                {/* Image (Inset Design) */}
+                {/* Image (Inset Design) - Updated border to match light theme */}
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-[180px] sm:h-[200px] md:h-[180px] object-cover rounded-2xl mb-5 sm:mb-6 border border-gray-50"
+                  className="w-full h-[180px] sm:h-[200px] md:h-[180px] object-cover rounded-2xl mb-5 sm:mb-6 border border-gray-100 shadow-sm"
                 />
 
                 {/* Content */}
                 <div className="flex flex-col flex-grow">
-                  {/* Icon */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-5 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-sm">
+                  {/* Icon - Kept the orange background as it contrasts nicely with white */}
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-5 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-md">
                     <Icon size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-[#1a365d] mb-2 sm:mb-3">
+                  {/* Title - Dark navy text */}
+                  <h3 className="text-lg sm:text-xl font-bold text-[#0a2240] mb-2 sm:mb-3">
                     {item.title}
                   </h3>
 
-                  {/* Desc */}
+                  {/* Desc - Medium gray text */}
                   <p className="text-gray-500 text-sm leading-relaxed">
                     {item.desc}
                   </p>

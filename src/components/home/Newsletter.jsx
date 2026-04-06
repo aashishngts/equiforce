@@ -35,7 +35,7 @@ const Newsletter = () => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-              Transform Your Investment Operations Today
+              Transform Your  <span class="text-[#d97706]"> Investment </span>Operations <span class="text-[#d97706]"> Today</span>
             </h2>
 
             <p className="text-gray-600 mb-8 md:mb-10">
