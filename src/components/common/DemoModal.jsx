@@ -31,7 +31,7 @@ const DemoModal = ({ isOpen, onClose }) => {
 
           {/* Heading */}
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            Request a Demo
+            Try for Free
           </h2>
 
           <p className="text-gray-600 mb-6">

@@ -32,7 +32,7 @@ const Footer = () => {
               className="bg-gradient-to-r from-[#d97706] to-[#d97706] 
               hover:shadow-lg hover:shadow-cyan-400/40 text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition"
             >
-              Request a Demo
+              Try for Free
             </button>
           </div>
 

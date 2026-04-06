@@ -122,7 +122,7 @@ const Benefits = () => {
             </ul>
 
             <button className="w-full sm:w-auto bg-[#d97706] text-white px-8 py-3.5 rounded-xl font-bold shadow-lg hover:bg-[#b46002] hover:scale-105 transition-all duration-300">
-              Request a Demo
+              Try for Free
             </button>
           </div>
 

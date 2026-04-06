@@ -26,7 +26,7 @@ enable our clients to operate with accuracy, confidence, and a competitive edge.
           </p>
 
           <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">
-            Request a Demo
+            Try for Free
           </button>
 
         </div>

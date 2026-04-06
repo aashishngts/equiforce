@@ -51,11 +51,11 @@ const Navbar = () => {
               
               {/* PLATFORM MEGA MENU */}
               <div
-                className="relative h-full py-4"
+                className="relative h-full py-4 flex items-center"
                 onMouseEnter={() => setPlatformOpen(true)}
                 onMouseLeave={() => setPlatformOpen(false)}
               >
-                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors">
+                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors cursor-pointer pb-1">
                   Platform{" "}
                   <FiChevronDown
                     className={`transition-transform ${
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </button>
 
                 {platformOpen && (
-                  <div className="absolute top-full -left-32 pt-2 cursor-default">
+                  <div className="absolute top-full -left-32 pt-4 cursor-default z-50">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
                       
                       {/* Left Column - Platform Overview */}
@@ -77,53 +77,40 @@ const Navbar = () => {
                           Explore the first front-to-back system of record for investment management
                         </p>
 
-                        <Link to={"/platform"} className="bg-[#0a2240] text-white rounded-full py-3 px-6 text-sm font-bold w-full mb-8 hover:bg-[#d97706] transition-colors">
+                        <Link 
+                          to="/platform" 
+                          onClick={() => setPlatformOpen(false)}
+                          className="bg-[#0a2240] text-white rounded-full py-3 px-6 text-sm font-bold w-full mb-8 hover:bg-[#d97706] transition-colors text-center"
+                        >
                           Discover Our Platform
                         </Link>
-
-                        <div className="flex flex-col gap-5 text-[15px] font-bold text-[#0a2240] mt-2">
-                          {/* <Link to="/" className="hover:text-[#d97706] transition-colors">Unified Data</Link>
-                          <Link to="/" className="hover:text-[#d97706] transition-colors">AI Agents</Link>
-                          <Link to="/" className="hover:text-[#d97706] transition-colors">Continuous Updates</Link>
-                          <Link to="/" className="hover:text-[#d97706] transition-colors">Global Search</Link>
-                          <Link to="/" className="hover:text-[#d97706] transition-colors">Workflows</Link>
-                          <Link to="/" className="hover:text-[#d97706] transition-colors">Integrations</Link> */}
-                        </div>
                       </div>
 
                       {/* Right Column - Grid */}
                       <div className="w-[65%] bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Performance Measurement
-</h4>
+                          
+                          {/* Converted these divs to Links to connect to the new pages */}
+                          <Link to="/performance-measurement" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Performance Measurement</h4>
                             <p className="text-sm text-gray-500 mt-1">Serve your investors with clarity.</p>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">GIPS Composite Management</h4>
+                          </Link>
+                          
+                          <Link to="/gips-composite" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">GIPS Composite Management</h4>
                             <p className="text-sm text-gray-500 mt-1">Clear daily breaks with confidence.</p>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Investment Operations & Reconciliation
-</h4>
+                          </Link>
+                          
+                          <Link to="/investment-operations" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Investment Operations</h4>
                             <p className="text-sm text-gray-500 mt-1">Manage complexity at scale.</p>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">AI-Powered Reporting</h4>
+                          </Link>
+                          
+                          <Link to="/ai-reporting" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">AI-Powered Reporting</h4>
                             <p className="text-sm text-gray-500 mt-1">Maintain accurate books across every account.</p>
-                          </div>
-                          {/* <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Trading</h4>
-                            <p className="text-sm text-gray-500 mt-1">Execute trades with speed and control.</p>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Reporting</h4>
-                            <p className="text-sm text-gray-500 mt-1">Deliver insights your team can trust.</p>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-[#0a2240] text-base hover:text-[#d97706] cursor-pointer transition-colors">Compliance</h4>
-                            <p className="text-sm text-gray-500 mt-1">Stay compliant with real-time oversight.</p>
-                          </div> */}
+                          </Link>
+                          
                         </div>
 
                         {/* Bottom AI Banner */}
@@ -135,9 +122,6 @@ const Navbar = () => {
                               <p className="text-sm text-gray-600 mt-1">See what’s possible with built-in intelligence.</p>
                             </div>
                           </div>
-                            {/* <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 group-hover:text-[#d97706] transition-all text-sm">
-                              Learn More <FiArrowRight />
-                            </span> */}
                         </div>
                       </div>
                     </div>
@@ -147,22 +131,22 @@ const Navbar = () => {
 
               {/* ABOUT MEGA MENU */}
               <div
-                className="relative h-full py-4"
+                className="relative h-full py-4 flex items-center"
                 onMouseEnter={() => setAboutOpen(true)}
                 onMouseLeave={() => setAboutOpen(false)}
               >
-                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors">
+                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors cursor-pointer pb-1">
                   About{" "}
                   <FiChevronDown
-                    className={`transition-transform ${
-                      aboutOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform ${aboutOpen ? "rotate-180" : ""}`}
                   />
                 </button>
 
                 {aboutOpen && (
-                  <div className="absolute top-full -left-20 pt-2 cursor-default">
+                  <div className="absolute top-full -left-[550px] pt-4 cursor-default z-50">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
+                      
+                      {/* Left Column - Image & Text */}
                       <div className="w-[35%] bg-[#eef7f8] p-6 flex flex-col border-r border-[#d4ecee]">
                         <div className="rounded-xl overflow-hidden mb-6 shadow-md border border-gray-200">
                           <img
@@ -171,61 +155,41 @@ const Navbar = () => {
                             className="w-full h-32 object-cover object-center hover:scale-105 transition-transform duration-500"
                           />
                         </div>
-
-                        {/* <h3 className="text-md font-bold text-[#0a2240] mb-2">
-                          Mission
-                        </h3> */}
                         <p className="text-[11px] text-gray-600 mb-6 leading-relaxed">
-                          EquiForce Solutions empowers investment management firms with purpose-built technology — delivering precision-engineered solutions for performance measurement, composite management, fund accounting, reconciliation, and investment reporting. More than a software provider, we are a strategic partner and consultants with nearly three decades of investment operations expertise — integrating AI technologies that enable our clients to operate with accuracy, confidence, and a competitive edge.
+                          EquiForce Solutions empowers investment management firms...
                         </p>
-
                         <button className="bg-[#0a2240] text-white rounded-xl py-3 px-6 text-sm font-bold w-fit mt-auto hover:bg-[#d97706] transition-colors flex items-center gap-2 group">
-                          Learn More{" "}
-                          <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                          Learn More <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </button>
                       </div>
 
+                      {/* Right Column - Links Grid */}
                       <div className="w-[65%] bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
-                          <Link to="/about" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              About Company
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Discover our mission, vision, and core values.
-                            </p>
+                          <Link to="/about" onClick={() => setAboutOpen(false)} className="group block">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706]">About Company</h4>
+                            <p className="text-sm text-gray-500 mt-1">Discover our mission and values.</p>
                           </Link>
-                          <Link to="/team" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              Meet the Team
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Get to know the experts behind EquiForce.
-                            </p>
+                          <Link to="/team" onClick={() => setAboutOpen(false)} className="group block">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706]">Meet the Team</h4>
+                            <p className="text-sm text-gray-500 mt-1">Get to know the experts.</p>
                           </Link>
-                          <Link to="/careers" className="group block">
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              Careers
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1">
-                              Join our growing team of innovators.
-                            </p>
+                          <Link to="/careers" onClick={() => setAboutOpen(false)} className="group block">
+                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706]">Careers</h4>
+                            <p className="text-sm text-gray-500 mt-1">Join our team.</p>
                           </Link>
                         </div>
 
-                        <div className="mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#e2f1f3] transition-colors">
+                        {/* Bottom CTA */}
+                        <div className="mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#e2f1f3]">
                           <div className="flex items-center gap-3">
                             <span className="text-xl">🚀</span>
                             <div>
-                              <h4 className="font-bold text-[#0a2240]">
-                                Join EquiForce
-                              </h4>
-                              <p className="text-sm text-gray-600 mt-1">
-                                Explore open roles and build the future of finance.
-                              </p>
+                              <h4 className="font-bold text-[#0a2240]">Join EquiForce</h4>
+                              <p className="text-sm text-gray-600">Explore open roles.</p>
                             </div>
                           </div>
-                          <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 group-hover:text-[#d97706] transition-all text-sm">
+                          <span className="font-bold text-[#0a2240] flex items-center gap-1 group-hover:translate-x-1 text-sm">
                             View Openings <FiArrowRight />
                           </span>
                         </div>
@@ -292,15 +256,16 @@ const Navbar = () => {
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    mobilePlatformOpen ? "max-h-64 mt-4 ml-4" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    mobilePlatformOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600">
-                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Unified Data</Link>
-                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI Agents</Link>
-                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Client Engagement</Link>
-                    <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Portfolio Management</Link>
+                  {/* Replaced placeholder links with actual Platform pages */}
+                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
+                    <Link to="/performance-measurement" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
+                    <Link to="/gips-composite" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite</Link>
+                    <Link to="/investment-operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations</Link>
+                    <Link to="/ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Reporting</Link>
                   </div>
                 </div>
               </div>
@@ -319,11 +284,11 @@ const Navbar = () => {
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    mobileAboutOpen ? "max-h-40 mt-4 ml-4" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    mobileAboutOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600">
+                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
                     <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">About Company</Link>
                     <Link to="/team" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Meet the Team</Link>
                   </div>
