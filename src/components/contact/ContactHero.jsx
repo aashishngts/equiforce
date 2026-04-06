@@ -1,115 +1,157 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { ChevronDown } from "lucide-react";
-
-const ContactHero = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-out",
-    });
-  }, []);
-
-  // Matching the subtle gray border and soft background from the screenshot
+import React from "react";
+import { MapPin, ChevronDown } from "lucide-react";
+import contactimg from "../../assets/images/bg.png";
+const ContactPage = () => {
   const inputStyle =
-    "w-full h-[52px] px-4 border border-[#cfd4da] rounded-[4px] bg-[#fcfcfc] text-[#495057] placeholder:text-[#313131] outline-none focus:border-[#0070c0] focus:bg-white transition-all duration-200 shadow-sm";
+    "w-full h-12 px-4 border border-gray-300 rounded-md bg-white text-gray-700 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all";
 
   return (
-    <section className="relative min-h-screen pt-32 md:pt-44 pb-20 px-4 sm:px-6 lg:px-16 bg-white overflow-hidden">
-      
-      {/* Background Gradient (Same as your Solutions page) */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] rounded-full bg-cyan-100/40 blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[50%] rounded-full bg-blue-100/30 blur-[100px]"></div>
-      </div>
-
-      <div className="relative z-10 max-w-5xl mx-auto" data-aos="fade-up">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-4">
-            Connect With Us For a Free Trial
+    <div className="bg-gray-50 min-h-screen mb-2">
+      {/* HERO SECTION */}
+      <section className="relative bg-[#0B2341] text-white py-10 md:py-44 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Contact <span class="text-[#d97706]">Us</span>
           </h1>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Secure office addresses and other ways to get in touch with us.
+          </p>
         </div>
 
-        {/* Form Area */}
-        <form className="max-w-4xl mx-auto space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-            <input type="text" placeholder="First Name*" className={inputStyle} />
-            <input type="text" placeholder="Last Name*" className={inputStyle} />
-            <input type="email" placeholder="Business Email*" className={inputStyle} />
-            <input type="tel" placeholder="Phone Number (exclude country code)*" className={inputStyle} />
-            <input type="text" placeholder="Company Name*" className={inputStyle} />
-            <input type="text" placeholder="Business Card Title*" className={inputStyle} />
+        {/* Bottom Background Image */}
+        <img
+          src={contactimg}
+          alt="background design"
+          className="absolute bottom-0 left-0 w-full object-cover opacity-40"
+        />
+      </section>
 
-            {/* Custom Styled Selects */}
-            <div className="relative">
-              <select className={`${inputStyle} appearance-none pr-10 cursor-pointer`}>
-                <option value="" disabled selected>Firm Description*</option>
-                <option>Hedge Fund</option>
-                <option>Asset Manager</option>
-                <option>Investment Bank</option>
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#0070c0] w-5 h-5 pointer-events-none" />
+      {/* FORM SECTION */}
+      <section className="-mt-10 pb-20 mt-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* LEFT FORM */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                Get in Touch with Us
+              </h2>
+
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name *"
+                    className={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name *"
+                    className={inputStyle}
+                  />
+                </div>
+
+                <input
+                  type="email"
+                  placeholder="Business Email *"
+                  className={inputStyle}
+                />
+
+                <input
+                  type="text"
+                  placeholder="Company Name *"
+                  className={inputStyle}
+                />
+
+                <div className="relative">
+                  <select className={`${inputStyle} appearance-none pr-10`}>
+                    <option>Select Service</option>
+                    <option>AI Solutions</option>
+                    <option>Cloud Services</option>
+                    <option>Consulting</option>
+                  </select>
+                  <ChevronDown className="absolute right-4 top-4 text-gray-500 w-5 h-5" />
+                </div>
+
+                <div className="relative">
+                  <select className={`${inputStyle} appearance-none pr-10`}>
+                    <option>Inquiry Type</option>
+                    <option>General</option>
+                    <option>Support</option>
+                    <option>Demo Request</option>
+                  </select>
+                  <ChevronDown className="absolute right-4 top-4 text-gray-500 w-5 h-5" />
+                </div>
+
+                <textarea
+                  rows="4"
+                  placeholder="Message"
+                  className="w-full p-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+
+                <button
+                  type="submit"
+                  className="bg-[#d97706] hover:bg-[#d97706] text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                  Contact Us
+                </button>
+              </form>
             </div>
 
-            <div className="relative">
-              <select className={`${inputStyle} appearance-none pr-10 cursor-pointer`}>
-                <option value="" disabled selected>Country*</option>
-                <option>India</option>
-                <option>USA</option>
-                <option>UK</option>
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-[#0070c0] w-5 h-5 pointer-events-none" />
+            {/* RIGHT OFFICE LOCATIONS */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-8">
+                Office Locations
+              </h3>
+
+              <div className="space-y-6">
+                {[
+                  "836 Southwood Boulevard, Indore, India",
+                  "1250 Broadway - 14th Floor, New York, USA",
+                  "New Delhi, India",
+                  "San Ramon, CA, USA",
+                ].map((location, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 p-4 rounded-xl border border-gray-200 hover:shadow-md transition-all"
+                  >
+                    <div className="text-[#d97706] p-2 rounded-full">
+                      <MapPin className="w-5 h-5 text-[#d97706]" />
+                    </div>
+                    <p className="text-gray-600">{location}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* FactSet Style Textarea with legend border */}
-          <fieldset className="border border-[#cfd4da] rounded-[4px] px-4 pb-2 pt-1 transition-all focus-within:border-[#0070c0] bg-[#fcfcfc]">
-            <legend className="text-[13px] text-[#6c757d] px-2 font-medium">
-              What Business Challenge can we help you solve?*
-            </legend>
-            <textarea
-              rows="3"
-              placeholder="Help us connect you to the right expert."
-              className="w-full bg-transparent border-none outline-none text-[#495057] placeholder:text-[#adb5bd] resize-none py-2 text-sm"
-            />
-          </fieldset>
-
-          {/* Checkbox Section */}
-          <div className="flex items-start gap-3 py-2">
-            <input 
-              type="checkbox" 
-              className="mt-1 w-[18px] h-[18px] border-[#cfd4da] rounded accent-[#0070c0] cursor-pointer" 
-              id="consent" 
-            />
-            <label htmlFor="consent" className="text-sm text-[#6c757d] leading-relaxed cursor-pointer">
-              I agree to receive communications from <strong>EquiForce</strong> and I can update my email preferences at any time.
-            </label>
-          </div>
-
-          {/* Submit Button - Left Aligned like image */}
-          <div className="pt-2">
-            <button
-              type="submit"
-              className="bg-[#0070c0] hover:bg-[#005fa3] text-white font-bold px-10 py-3 rounded-full transition-all duration-300 shadow-sm uppercase text-sm tracking-wide active:scale-95"
-            >
-              SUBMIT
+      {/* CTA SECTION */}
+      <section className="bg-[#0B2341] text-white py-16">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-3">Win with AI</h3>
+            <p className="text-gray-300 mb-6">
+              Discover how AI-driven solutions can transform your business.
+            </p>
+            <button className="bg-[#d97706] px-6 py-3 rounded-lg font-medium">
+              See How
             </button>
           </div>
 
-          {/* Disclaimer */}
-          <p className="text-[11px] text-[#adb5bd] pt-4">
-            By submitting my information, I acknowledge that I have read and understood EquiForce's{" "}
-            <span className="text-[#0070c0] cursor-pointer hover:underline">
-              Privacy Policy.
-            </span>
-          </p>
-        </form>
-      </div>
-    </section>
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-3">Request a Demo</h3>
+            <p className="text-gray-300 mb-6">
+              Schedule a live demo with our experts.
+            </p>
+            <button className="bg-[#d97706] px-6 py-3 rounded-lg font-medium">
+              See a Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default ContactHero;
+export default ContactPage;

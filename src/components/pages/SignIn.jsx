@@ -32,7 +32,7 @@ const SignIn = () => {
           <img src={logo} className="h-12 mb-8" alt="EquiForce Logo" />
           <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
             The Future of <br />
-            <span className="text-cyan-400">Investment Tech</span> <br />
+            <span className="text-[#d97706]">Investment Tech</span> <br />
             Starts Here.
           </h2>
           <p className="text-gray-400 text-lg max-w-md">

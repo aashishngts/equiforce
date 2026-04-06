@@ -29,7 +29,7 @@ const Newsletter = () => {
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-              <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
+              <span className="bg-[#d97706] text-white px-2 py-1 rounded-full text-xs">
                 Get Started with EquiForce
               </span>
             </div>
@@ -57,7 +57,7 @@ const Newsletter = () => {
                   className="px-5 py-3 rounded-xl w-full sm:w-80 outline-none border border-gray-200"
                 />
 
-                <button className="w-full sm:w-auto bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition">
+                <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition">
                   Request a Demo
                 </button>
               </div>

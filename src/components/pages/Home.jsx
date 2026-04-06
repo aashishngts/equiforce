@@ -36,10 +36,7 @@ const Home = () => {
         <Pricing />
       </div>
 
-       <div data-aos="fade-up" data-aos-delay="500">
-        <SinglePlatform/>
-      </div>
-
+      
       <div data-aos="fade-up" data-aos-delay="350">
         <Testimonials />
       </div>

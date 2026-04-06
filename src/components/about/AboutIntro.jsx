@@ -21,7 +21,7 @@ const AboutIntro = () => {
             EquiForce Solutions is more than a technology provider — we are a strategic partner to investment management firms. With nearly three decades of industry expertise, we deliver precision-engineered solutions that streamline operations, enhance accuracy, and drive better investment outcomes.
           </p>
 
-          <button className="w-full sm:w-auto bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">
+          <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">
             Request a Demo
           </button>
 

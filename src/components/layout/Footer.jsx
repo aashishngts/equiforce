@@ -29,7 +29,7 @@ const Footer = () => {
             </h2>
 
             <button
-              className="bg-gradient-to-r from-[#233c6a] to-[#233c6a] 
+              className="bg-gradient-to-r from-[#d97706] to-[#d97706] 
               hover:shadow-lg hover:shadow-cyan-400/40 text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition"
             >
               Request a Demo
@@ -91,7 +91,7 @@ const Footer = () => {
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="w-12 h-12 flex items-center justify-center rounded-full 
-              bg-gradient-to-r from-[#233c6a] to-[#233c6a] 
+              bg-gradient-to-r from-[#d97706] to-[#d97706] 
               hover:shadow-lg hover:shadow-cyan-400/40 text-white shadow-lg 
               hover:scale-110 transition"
             >
