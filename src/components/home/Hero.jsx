@@ -25,8 +25,8 @@ function Hero() {
             className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6"
             data-aos="fade-up"
           >
-            Manage Investments. <br />
-            Deliver Precision. <br />
+           Your Strategic <span className="text-[#d97706]">Partner</span>  <br />
+            in Investment Ops. <br />
           </h1>
 
           <p
@@ -41,12 +41,10 @@ function Hero() {
 
           {/* FIX: Removed data-aos to ensure buttons are visible immediately */}
           <div className="flex flex-col sm:flex-row gap-6">
-            <button className="bg-cyan-400 text-[#0a2240] font-semibold px-8 py-4 rounded-full hover:scale-105 transition shadow-lg shadow-cyan-400/20">
-              See a Demo
-            </button>
+        
 
             <button className="border border-white/40 text-white px-8 py-4 rounded-full hover:bg-white/10 transition backdrop-blur-sm">
-              See Customer Stories
+              Request for Demo
             </button>
           </div>
         </div>

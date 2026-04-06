@@ -3,23 +3,18 @@ import wave from "../../assets/images/bg-wave.png";
 
 const steps = [
   {
-    title: "Data Integration & Ingestion",
-    desc: "Seamlessly integrate data from multiple sources including custodians, fund administrators, and internal systems.",
+    title: "Consultants, Not Just Vendors",
+    desc: "We are investment operations practitioners with nearly 30 years of hands-on experience — advising, implementing, and optimizing alongside our clients.",
   },
   {
-    title: "Automated Processing & Validation",
-    desc: "Process and validate large volumes of financial data with precision-engineered workflows to ensure accuracy.",
+    title: "Purpose-Built Technology",
+    desc: "Every feature is engineered for investment management workflows — not adapted from generic software or retrofitted from another industry.",
   },
   {
-    title: "Reconciliation & Compliance",
-    desc: "Identify discrepancies and ensure data consistency across systems while maintaining compliance with industry standards.",
-  },
-  {
-    title: "Reporting & AI-Driven Insights",
-    desc: "Generate detailed investment reports and leverage AI-driven insights to support smarter decision-making.",
+    title: "AI at the Core",
+    desc: "Embedded AI technologies that automate repetitive tasks, surface actionable insights, and give clients a measurable competitive edge.",
   },
 ];
-
 const HowItWorks = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
@@ -27,15 +22,15 @@ const HowItWorks = () => {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 text-center">
         {/* Label */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
+          <span className="bg-[#d97706] text-white px-2 py-1 rounded-full text-xs">
             How It Works
           </span>
         </div>
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          From Data to Insights — <br className="hidden sm:block" />
-          Simplified Investment Operations
+    Why Equiforce
+        Solutions
         </h2>
 
         {/* Subtext */}
@@ -48,14 +43,14 @@ const HowItWorks = () => {
         {/* Main Box */}
         <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-3xl p-4 sm:p-6 md:p-10 shadow-lg">
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
             {steps.map((step, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-4 md:p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition"
               >
                 {/* Step Number */}
-                <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white font-bold text-sm">
+                <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#d97706] to-[#d97706] text-white font-bold text-sm">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 

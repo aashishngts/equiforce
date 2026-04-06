@@ -27,7 +27,7 @@ const SolutionsSteps = () => {
 
         {/* Label */}
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-            <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
+            <span className="bg-[#d97706] text-white px-2 py-1 rounded-full text-xs">
               Workflow
             </span>
             
@@ -53,7 +53,7 @@ const SolutionsSteps = () => {
               className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-md transition"
             >
               {/* Step Number */}
-              <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white font-bold text-sm">
+              <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#d97706] to-[#d97706] text-white font-bold text-sm">
                 {String(index + 1).padStart(2, "0")}
               </div>
 

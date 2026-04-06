@@ -28,7 +28,7 @@ const Benefits = () => {
         {/* Label */}
 
         <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#233c6a] text-white px-2 py-1 rounded-full text-xs">
+          <span className="bg-[#d97706] text-white px-2 py-1 rounded-full text-xs">
             Key Benefits
           </span>
         </div>
@@ -59,7 +59,7 @@ const Benefits = () => {
 
         ${
           active === index
-            ? "bg-white border-[#233c6a] shadow-[0_10px_30px_rgba(14,165,164,0.25)] scale-105"
+            ? "bg-white border-[#d97706] shadow-[0_10px_30px_rgba(14,165,164,0.25)] scale-105"
             : "bg-white/70 backdrop-blur-md border-gray-200 hover:bg-white hover:shadow-md"
         }`}
               >
@@ -69,8 +69,8 @@ const Benefits = () => {
 
           ${
             active === index
-              ? "bg-gradient-to-r from-[#233c6a] to-[#2e4a7f] text-white shadow-md"
-              : "bg-gray-100 text-[#233c6a]"
+              ? "bg-gradient-to-r from-[#d97706] to-[#2e4a7f] text-white shadow-md"
+              : "bg-gray-100 text-[#d97706]"
           }`}
                 >
                   <Icon size={18} />
@@ -109,24 +109,37 @@ const Benefits = () => {
               <li>✔ Leverage AI for smarter investment decisions</li>
             </ul>
 
-            <button className="w-full sm:w-auto bg-gradient-to-r from-[#233c6a] to-[#233c6a] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
+            <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:scale-105 transition">
               Request a Demo
             </button>
           </div>
 
           {/* Right */}
           <div className="relative flex justify-center items-center">
-            {/* Glow */}
-            <div className="absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] bg-[#a78bfa] opacity-20 blur-[100px] rounded-full"></div>
+  {/* Glow Background */}
+  <div className="absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] bg-[#a78bfa] opacity-20 blur-[100px] rounded-full"></div>
 
-            {/* Image */}
-            <img
-              src={benefitImg}
-              alt="investment benefits"
-              className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px] rounded-2xl shadow-xl 
-              "
-            />
-          </div>
+  {/* Image */}
+  <img
+    src={benefitImg}
+    alt="investment benefits"
+    className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px] rounded-2xl shadow-xl"
+  />
+
+  {/* Play Button Pulse Overlay */}
+  <div className="absolute flex items-center justify-center">
+    {/* Outer pulse ring */}
+    <span className="absolute inline-flex h-20 w-20 rounded-full bg-white/40 animate-ping"></span>
+
+    {/* Second ring */}
+    <span className="absolute inline-flex h-16 w-16 rounded-full bg-white/30 animate-pulse"></span>
+
+    {/* Main button */}
+    <button className="relative z-10 w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
+      <div className="ml-1 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-[#7c3aed]"></div>
+    </button>
+  </div>
+</div>
         </div>
       </div>
     </section>
