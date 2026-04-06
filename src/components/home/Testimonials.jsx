@@ -49,7 +49,7 @@ const Testimonials = () => {
         </div>
 
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-          What Our Clients Say
+          What Our <span class="text-[#d97706]"> Clients Say</span>
         </h2>
 
         <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">

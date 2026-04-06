@@ -1,3 +1,4 @@
+import React from "react";
 import f1 from "../../assets/images/features1.jpg";
 import f2 from "../../assets/images/features2.jpg";
 import f3 from "../../assets/images/features3.jpg";
@@ -17,74 +18,80 @@ const features = [
     title: "Performance Measurement",
     desc: "Precision return calculations and attribution analysis across all strategies and composites.",
     icon: BarChart3,
-    img:f1
+    img: f1
   },
   {
     title: "Composite Management",
     desc: "Structured composite construction and maintenance built for investment operations workflows.",
-    icon: PieChart,  img:f2
+    icon: PieChart,  
+    img: f2
   },
   {
     title: "Fund Accounting & Reconciliation",
     desc: "Accurate books and seamless data reconciliation across custodians and systems of record.",
-    icon: Wallet,  img:f3
+    icon: Wallet,  
+    img: f3
   },
   {
     title: "AI-Powered Reporting",
     desc: "Intelligent, automated investment reporting that surfaces insights and reduces manual effort.",
-    icon: Cpu,  img:f4
+    icon: Cpu,  
+    img: f4
   },
 ];
 
 const Features = () => {
   return (
-    <section className="py-16 md:py-24 bg-[#f0f9fa]">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-12 sm:py-16 md:py-24 bg-[#f0f9fa]">
+      {/* Changed max-w-full to max-w-[1400px] to prevent ultra-wide stretching */}
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
         {/* Tag */}
-        <div className="inline-block mb-4">
+        <div className="inline-block mb-3 sm:mb-4">
           <span className="bg-[#d97706] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide shadow-sm">
             Core Solutions
           </span>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-6 leading-tight">
-          What we Deliver
+        {/* Heading - Fixed 'class' to 'className' */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a365d] mb-4 sm:mb-6 leading-tight">
+          What we <span className="text-[#d97706]">Deliver</span>
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-600 max-w-3xl mx-auto mb-16 text-sm md:text-base leading-relaxed">
+        <p className="text-gray-600 max-w-3xl mx-auto mb-10 sm:mb-16 text-sm md:text-base leading-relaxed px-2 sm:px-0">
           EquiForce delivers specialized solutions across performance
           measurement, fund accounting, reconciliation, and reporting — enhanced
           with AI-driven capabilities for superior operational control.
         </p>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {/* Grid - Naturally stacks to 1 column on mobile, 2 on tablet, 4 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
           {features.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={index}
-                className="bg-white rounded-3xl p-5 md:p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col text-left"
+                // Added active:scale-[0.98] for better mobile tap feedback
+                className="bg-white rounded-3xl p-5 md:p-6 shadow-sm border border-gray-100 hover:shadow-md active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
               >
                 {/* Image (Inset Design) */}
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-[180px] object-cover rounded-2xl mb-6 border border-gray-50"
+                  className="w-full h-[180px] sm:h-[200px] md:h-[180px] object-cover rounded-2xl mb-5 sm:mb-6 border border-gray-50"
                 />
 
                 {/* Content */}
                 <div className="flex flex-col flex-grow">
                   {/* Icon */}
-                  <div className="w-10 h-10 mb-5 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0">
-                    <Icon size={20} strokeWidth={2} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-5 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-sm">
+                    <Icon size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-[#1a365d] mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#1a365d] mb-2 sm:mb-3">
                     {item.title}
                   </h3>
 

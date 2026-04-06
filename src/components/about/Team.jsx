@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import img2 from "../../assets/images/PushpendraThakur.jpeg";
 import img1 from "../../assets/images/1.png";
 import img3 from "../../assets/images/3.jpeg";
-import img4 from "../../assets/images/PushpendraThakur.jpeg";
+import img4 from "../../assets/images/demoImg.png";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
 

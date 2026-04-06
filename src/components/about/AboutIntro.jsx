@@ -18,7 +18,11 @@ const AboutIntro = () => {
           </h2>
 
           <p className="text-gray-600 mb-6 leading-relaxed max-w-lg mx-auto md:mx-0">
-            EquiForce Solutions is more than a technology provider — we are a strategic partner to investment management firms. With nearly three decades of industry expertise, we deliver precision-engineered solutions that streamline operations, enhance accuracy, and drive better investment outcomes.
+EquiForce Solutions empowers investment management firms with purpose-built technology — delivering
+precision-engineered solutions for performance measurement, composite management, fund accounting,
+reconciliation, and investment reporting. More than a software provider, we are a strategic partner and
+consultants with nearly three decades of investment operations expertise — integrating AI technologies that
+enable our clients to operate with accuracy, confidence, and a competitive edge.
           </p>
 
           <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">

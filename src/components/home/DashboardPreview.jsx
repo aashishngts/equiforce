@@ -58,12 +58,12 @@ const DashboardPreview = () => {
     <>
  
 
-      <section className="py-24 bg-white overflow-hidden">
+      <section className=" py-12 md:py-24 bg-white overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-6">
           {/* Heading Section */}
           <div className="text-center mb-16 md:mb-24" data-aos="fade-up">
             <h2
-              className="text-3xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto"
+              className="text-xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto"
               style={{ color: NAVY }}
             >
               The Single Platform That Your Firm's Ambitions Deserve
