@@ -15,7 +15,8 @@ function Hero() {
 
       <p className="max-w-lg text-gray-300 mb-8">
         <span className="text-[#d97706]">
-          EMPOWERING INVESTMENT MANAGEMENT WITH DATA REPORTING PRECISION & TECHNOLOGY EDGE.
+Empowering investment management with practitioner expertise & technology edge.
+
         </span>
       </p>
 

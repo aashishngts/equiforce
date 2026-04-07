@@ -17,7 +17,7 @@ const team = [
 
 
 
-    {
+  {
 
     name: "Jane Atmodjojo, CFA®, CIPM",
 
@@ -101,7 +101,7 @@ const team = [
 
 
 
-   {
+  {
 
     name: "Edmund J. Woo",
 
@@ -111,7 +111,7 @@ const team = [
 
     bio: [
 
-      "As Head of Client Relations at EquiForce Solutions (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.","Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.","Edmund holds an MBA and B.S. from the University of Arizona."
+      "As Head of Client Relations at EquiForce Solutions (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.", "Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.", "Edmund holds an MBA and B.S. from the University of Arizona."
 
     ]
 
@@ -121,7 +121,7 @@ const team = [
 
 
 
-    {
+  {
 
     name: "Dylan Tran",
 
@@ -131,7 +131,7 @@ const team = [
 
     bio: [
 
-      "As an Analyst at EquiForce Solutions (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.","Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
+      "As an Analyst at EquiForce Solutions (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.", "Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
 
     ]
 
@@ -150,7 +150,7 @@ const Team = () => {
   return (
     <section className="bg-gray-50 py-10 text-center relative">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section 1: Executive Leadership */}
         <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-30">
           Executive Leadership
@@ -167,39 +167,73 @@ const Team = () => {
           Client Relations
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
-            {/* Empty divs to center the bottom two if needed, or just map them */}
-            <div className="hidden lg:block"></div> 
-            {team.slice(4).map((member, i) => (
-              <MemberCard key={i} member={member} onSelect={setSelectedMember} />
-            ))}
+          {/* Empty divs to center the bottom two if needed, or just map them */}
+          <div className="hidden lg:block"></div>
+          {team.slice(4).map((member, i) => (
+            <MemberCard key={i} member={member} onSelect={setSelectedMember} />
+          ))}
         </div>
       </div>
 
       {/* MODAL PORTAL */}
       {selectedMember && createPortal(
-        <div className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto" onClick={() => setSelectedMember(null)}>
+        <div
+          className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto"
+          onClick={() => setSelectedMember(null)}
+        >
           <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
-            <div className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-16 flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
-              <button onClick={() => setSelectedMember(null)} className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black">
+            <div
+              className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-16"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedMember(null)}
+                className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black"
+              >
                 <IoClose />
               </button>
-              
-              <div className="w-48 h-48 md:w-64 md:h-64 mb-10 rounded-full overflow-hidden border-8 border-gray-50">
-                <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
+
+              {/* Top Section: Image + Name/Role */}
+              <div className="flex items-start gap-6 md:gap-10 mb-8 align-center">
+                {/* Left Image */}
+                <div className="w-24 h-24 md:w-25 md:h-25 rounded-full overflow-hidden border-4 border-gray-200 flex-shrink-0">
+                  <img
+                    src={selectedMember.img}
+                    alt={selectedMember.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Right Name/Role */}
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-xl md:text-3xl text-gray-800 font-semibold mb-1">
+                    {selectedMember.name}
+                  </h3>
+                  <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
+                    {selectedMember.role}
+                  </p>
+                  {selectedMember.subRole && (
+                    <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
+                      {selectedMember.subRole}
+                    </p>
+                  )}
+                </div>
               </div>
 
-              <div className="text-center mb-2">
-                <h3 className="text-2xl md:text-4xl text-gray-800 font-normal mb-2">{selectedMember.name}</h3>
-                <p className="text-xs text-[#0066a1] font-bold uppercase tracking-widest">{selectedMember.role}</p>
-                {selectedMember.subRole && <p className="text-xs text-[#0066a1] font-bold uppercase tracking-widest">{selectedMember.subRole}</p>}
-              </div>
+              {/* Bio Section */}
+              <div className="text-left text-gray-600 space-y-6 text-base md:text-lg leading-relaxed border-t border-gray-100 pt-6 font-light max-w-3xl">
+                {selectedMember.bio.map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))}
 
-              <div className="text-left text-gray-600 space-y-6 text-base md:text-lg leading-relaxed border-t border-gray-100 pt-8 font-light max-w-3xl">
-                {selectedMember.bio.map((para, idx) => <p key={idx}>{para}</p>)}
-                
                 {/* Highlighted Footer Text */}
                 <p className="mt-12 text-sm italic pt-6 border-t border-gray-50">
-                  Building the future of <span className="text-[#d97706] font-semibold">scalable, cost-efficient technology and advisory services</span>.
+                  Building the future of{" "}
+                  <span className="text-[#d97706] font-semibold">
+                    scalable, cost-efficient technology and advisory services
+                  </span>
+                  .
                 </p>
               </div>
             </div>
