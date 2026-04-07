@@ -77,7 +77,7 @@ const Navbar = () => {
                         </p>
 
                         <Link
-                          to="/platform"
+                          to="/performance-measurement"
                           onClick={() => setPlatformOpen(false)}
                           className="bg-[#0a2240] text-white rounded-full py-3 px-6 text-sm font-bold w-full mb-8 hover:bg-[#d97706] transition-colors text-center"
                         >
@@ -152,7 +152,7 @@ const Navbar = () => {
                             MISSION
                           </h3>
                         </div>
-                        <p className="text-[10px] text-gray-600 mb-6 leading-relaxed">
+                        <p className="text-[10px] text-black font-medium mb-6 leading-relaxed">
                           EquiForce Solutions empowers investment management firms with <span className="text-[#d97706]">purpose-built technology</span> — delivering
                           precision-engineered solutions for performance measurement, composite management, fund accounting,
                           reconciliation, and investment reporting. More than a software provider, we are a <span className="text-[#d97706]">strategic partner and
