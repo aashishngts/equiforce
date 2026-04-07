@@ -31,7 +31,7 @@ const Navbar = () => {
     <>
       {/* Fixed Navbar with solid #0a2240 background - No Scroll Animation */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a2240] py-2 shadow-lg border-b border-white/10">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="max-w-screen-2xl mx-auto px- 2:px-4 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo matching the provided image exactly */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
@@ -55,7 +55,7 @@ const Navbar = () => {
               {/* ABOUT MEGA MENU */}
 
 
-              <Link to="/" className="uppercase hover:text-[#d97706] transition-all">
+              <Link to="/" className="text-xs  uppercase hover:text-[#d97706] transition-all">
                 Home
               </Link>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
               >
 
 
-                <button className="uppercase flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none">
+                <button className="text-xs  uppercase flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none">
                   Solutions
                   <FiChevronDown
                     className={`transition-transform duration-300 ${platformOpen ? "rotate-180" : ""}`}
@@ -139,7 +139,7 @@ const Navbar = () => {
                         <Link
                           to="/contact"
                           onClick={() => setPlatformOpen(false)}
-                          className="mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#d4ecee] transition-all duration-300"
+                          className="text-xs mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#d4ecee] transition-all duration-300"
                         >
                           <div className="flex items-start  gap-3">
                             <FiPhone className="text-[#0a2240] text-lg mt-2" />
@@ -155,15 +155,15 @@ const Navbar = () => {
                 )}
               </div>
 
-              <Link to="/about" className="uppercase hover:text-[#d97706] transition-all">
+              <Link to="/about" className="text-xs uppercase hover:text-[#d97706] transition-all">
                 Our Company
               </Link>
 
-              <Link to="/team" className="uppercase hover:text-[#d97706] transition-all">
+              <Link to="/team" className="text-xs  uppercase hover:text-[#d97706] transition-all">
                 Meet Our Team
               </Link>
 
-              <Link to="/contact" className="uppercase hover:text-[#d97706] transition-all">
+              <Link to="/contact" className="text-xs  uppercase hover:text-[#d97706] transition-all">
                 Contact
               </Link>
 
@@ -175,13 +175,13 @@ const Navbar = () => {
             <div className="flex items-center gap-2 md:gap-6">
               <Link
                 to="/signin"
-                className="uppercase hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
+                className="text-xs  uppercase hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
               >
                 Sign In
               </Link>
 
               <Link
-                className="uppercase px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
+                className="text-xs uppercase px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-xs font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
                 to="/contact"
               >
                 Try for Free
