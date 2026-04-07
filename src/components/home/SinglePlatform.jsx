@@ -6,7 +6,7 @@ const SinglePlatform = () => {
 
   const badges = [
     // Left Side
-    { text: "Cloud Native", icon: "☁️", pos: "top-[15%] -left-4 md:-left-12", delay: "100" },
+    { text: "Performance Measurement", icon: "☁️", pos: "top-[15%] -left-4 md:-left-12", delay: "100" },
     { text: "Real-time data", icon: "🕒", pos: "top-[40%] -left-8 md:-left-20", delay: "200" },
     { text: "Enterprise scale", icon: "🏢", pos: "bottom-[20%] -left-4 md:-left-12", delay: "300" },
     // Right Side

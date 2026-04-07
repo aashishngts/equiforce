@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Navbar with solid #0a2240 background - No Scroll Animation */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a2240] py-4 shadow-lg border-b border-white/10">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a2240] py-2 shadow-lg border-b border-white/10">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="flex items-center justify-between">
             {/* Logo matching the provided image exactly */}
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex gap-8 font-semibold items-center text-white">
-              
+
               {/* PLATFORM MEGA MENU */}
               <div
                 className="relative h-full py-4 flex items-center"
@@ -56,18 +56,17 @@ const Navbar = () => {
                 onMouseLeave={() => setPlatformOpen(false)}
               >
                 <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors cursor-pointer pb-1">
-                  Platform{" "}
+                  Solutions
                   <FiChevronDown
-                    className={`transition-transform ${
-                      platformOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform ${platformOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 {platformOpen && (
-                  <div className="absolute top-full -left-32 pt-4 cursor-default z-50">
+                  <div className="absolute top-full -left-[150px] pt-4 cursor-default z-50">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
-                      
+
                       {/* Left Column - Platform Overview */}
                       <div className="w-[35%] bg-[#eef7f8] p-8 flex flex-col border-r border-[#d4ecee]">
                         <h3 className="text-xl font-bold text-[#0a2240] mb-3">
@@ -77,8 +76,8 @@ const Navbar = () => {
                           Explore the first front-to-back system of record for investment management
                         </p>
 
-                        <Link 
-                          to="/platform" 
+                        <Link
+                          to="/platform"
                           onClick={() => setPlatformOpen(false)}
                           className="bg-[#0a2240] text-white rounded-full py-3 px-6 text-sm font-bold w-full mb-8 hover:bg-[#d97706] transition-colors text-center"
                         >
@@ -89,28 +88,28 @@ const Navbar = () => {
                       {/* Right Column - Grid */}
                       <div className="w-[65%] bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
-                          
+
                           {/* Converted these divs to Links to connect to the new pages */}
                           <Link to="/performance-measurement" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Performance Measurement</h4>
                             <p className="text-sm text-gray-500 mt-1">Serve your investors with clarity.</p>
                           </Link>
-                          
+
                           <Link to="/gips-composite" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">GIPS Composite Management</h4>
                             <p className="text-sm text-gray-500 mt-1">Clear daily breaks with confidence.</p>
                           </Link>
-                          
+
                           <Link to="/investment-operations" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Investment Operations</h4>
                             <p className="text-sm text-gray-500 mt-1">Manage complexity at scale.</p>
                           </Link>
-                          
+
                           <Link to="/ai-reporting" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">AI-Powered Reporting</h4>
                             <p className="text-sm text-gray-500 mt-1">Maintain accurate books across every account.</p>
                           </Link>
-                          
+
                         </div>
 
                         {/* Bottom AI Banner */}
@@ -143,20 +142,23 @@ const Navbar = () => {
                 </button>
 
                 {aboutOpen && (
-                  <div className="absolute top-full -left-[550px] pt-4 cursor-default z-50">
+                  <div className="absolute top-full -left-[350px] pt-4 cursor-default z-50">
                     <div className="w-[850px] bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden text-left">
-                      
+
                       {/* Left Column - Image & Text */}
                       <div className="w-[35%] bg-[#eef7f8] p-6 flex flex-col border-r border-[#d4ecee]">
-                        <div className="rounded-xl overflow-hidden mb-6 shadow-md border border-gray-200">
-                          <img
-                            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
-                            alt="EquiForce Team Collaboration"
-                            className="w-full h-32 object-cover object-center hover:scale-105 transition-transform duration-500"
-                          />
+                        <div className="rounded-xl overflow-hidden">
+                          <h3 className="text-xl font-bold text-[#0a2240] mb-3">
+                            MISSION
+                          </h3>
                         </div>
-                        <p className="text-[11px] text-gray-600 mb-6 leading-relaxed">
-                          EquiForce Solutions empowers investment management firms...
+                        <p className="text-[10px] text-gray-600 mb-6 leading-relaxed">
+                          EquiForce Solutions empowers investment management firms with <span className="text-[#d97706]">purpose-built technology</span> — delivering
+                          precision-engineered solutions for performance measurement, composite management, fund accounting,
+                          reconciliation, and investment reporting. More than a software provider, we are a <span className="text-[#d97706]">strategic partner and
+                          consultants</span> with nearly three decades of investment operations expertise — integrating <span className="text-[#d97706]">AI technologies</span> that
+                          enable our clients to operate with accuracy, confidence, and a competitive edge.
+
                         </p>
                         <button className="bg-[#0a2240] text-white rounded-xl py-3 px-6 text-sm font-bold w-fit mt-auto hover:bg-[#d97706] transition-colors flex items-center gap-2 group">
                           Learn More <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -233,9 +235,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`fixed inset-0 bg-white z-[55] transform transition-transform duration-300 ease-in-out md:hidden ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed inset-0 bg-white z-[55] transform transition-transform duration-300 ease-in-out md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="flex flex-col h-full pt-24 px-8 overflow-y-auto pb-10">
             <div
@@ -250,15 +251,13 @@ const Navbar = () => {
                 >
                   Platform{" "}
                   <FiChevronDown
-                    className={`transition-transform ${
-                      mobilePlatformOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform ${mobilePlatformOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    mobilePlatformOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${mobilePlatformOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                   {/* Replaced placeholder links with actual Platform pages */}
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
@@ -278,15 +277,13 @@ const Navbar = () => {
                 >
                   About{" "}
                   <FiChevronDown
-                    className={`transition-transform ${
-                      mobileAboutOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform ${mobileAboutOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    mobileAboutOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${mobileAboutOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
                     <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">About Company</Link>

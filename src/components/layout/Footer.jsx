@@ -1,5 +1,6 @@
 import { FiArrowUp } from "react-icons/fi";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [show, setShow] = useState(false);
@@ -55,10 +56,9 @@ const Footer = () => {
             <div>
               <h4 className="text-gray-900 font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
-                <li>About Us</li>
-                <li>Our Expertise</li>
-                <li>Careers</li>
-                <li>Contact</li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/team">Our Team</Link></li>
+                <li><Link to="/careers">Careers</Link></li>
               </ul>
             </div>
 

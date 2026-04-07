@@ -81,11 +81,11 @@ const Team = () => {
   }, [selectedMember]);
 
   return (
-    <section className="bg-gray-50 py-16 text-center relative">
+    <section className="bg-gray-50 py-10 text-center relative">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section 1: Executive Leadership */}
-        <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-28">
+        <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-30">
           Executive Leadership
         </h2>
 
@@ -145,9 +145,9 @@ const Team = () => {
 };
 
 const MemberCard = ({ member, onSelect }) => (
-  <div className="relative bg-white rounded-sm shadow-md pt-24 pb-8 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
+  <div className="relative bg-white rounded-sm shadow-md pt-18 pb-5 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
     <div onClick={() => onSelect(member)} className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer">
-      <div className="w-36 h-36 rounded-full p-[3px] bg-gradient-to-tr from-[#0066a1] to-cyan-500">
+      <div className="w-34 h-34 rounded-full p-[3px] bg-gradient-to-tr from-[#0066a1] to-cyan-500">
         <div className="w-full h-full rounded-full border-[6px] border-white overflow-hidden">
           <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
         </div>
