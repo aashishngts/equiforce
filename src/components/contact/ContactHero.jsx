@@ -9,7 +9,7 @@ const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* HERO SECTION - Adjusted padding and removed fixed height */}
-      <section className="relative bg-[#0B2341] text-white pt-24 pb-20 md:pt-44 md:pb-44 overflow-hidden">
+      <section className="relative bg-[#0B2341] text-white pt-24 pb-20 md:pt-30 md:pb-40 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Contact <span className="text-[#d97706]">Us</span>
