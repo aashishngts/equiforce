@@ -50,23 +50,23 @@ const Navbar = () => {
             <div className="hidden md:flex gap-8 font-semibold items-center text-white">
 
               {/* PLATFORM MEGA MENU */}
-             
+
 
               {/* ABOUT MEGA MENU */}
 
-            
-             <Link to="/" className="hover:text-[#d97706] transition-all">
-               Home
+
+              <Link to="/" className="uppercase hover:text-[#d97706] transition-all">
+                Home
               </Link>
 
-               <div
+              <div
                 className="relative h-full py-4 flex items-center"
                 onMouseEnter={() => setPlatformOpen(true)}
                 onMouseLeave={() => setPlatformOpen(false)}
               >
 
-                
-                <button className="flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none">
+
+                <button className="uppercase flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none">
                   Solutions
                   <FiChevronDown
                     className={`transition-transform duration-300 ${platformOpen ? "rotate-180" : ""}`}
@@ -135,7 +135,7 @@ const Navbar = () => {
                         {/* Bottom AI Banner */}
 
 
-                        
+
                         <Link
                           to="/contact"
                           onClick={() => setPlatformOpen(false)}
@@ -155,33 +155,33 @@ const Navbar = () => {
                 )}
               </div>
 
-              <Link to="/about" className="hover:text-[#d97706] transition-all">
+              <Link to="/about" className="uppercase hover:text-[#d97706] transition-all">
                 Our Company
               </Link>
 
-              <Link to="/team" className="hover:text-[#d97706] transition-all">
+              <Link to="/team" className="uppercase hover:text-[#d97706] transition-all">
                 Meet Our Team
               </Link>
 
-                <Link to="/contact" className="hover:text-[#d97706] transition-all">
+              <Link to="/contact" className="uppercase hover:text-[#d97706] transition-all">
                 Contact
               </Link>
 
             </div>
 
-            
+
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-2 md:gap-6">
               <Link
                 to="/signin"
-                className="hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
+                className="uppercase hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
               >
                 Sign In
               </Link>
 
               <Link
-                className="px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
+                className="uppercase px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-xs md:text-sm font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
                 to="/contact"
               >
                 Try for Free
