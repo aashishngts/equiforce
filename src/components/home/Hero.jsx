@@ -25,7 +25,7 @@ function Hero() {
             data-aos="fade-up"
           >
             Your Strategic Partner in 
-             <span className="text-[#d97706]"> Investment Ops.,Performance,& GIPS </span> 
+             <span className="text-[#d97706]"> Investment Ops,Performance,& GIPS </span> 
 
           </h1>
 

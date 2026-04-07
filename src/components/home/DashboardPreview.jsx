@@ -49,7 +49,7 @@ const DashboardPreview = () => {
               data-aos-duration="1200"
               data-aos-easing="ease-out-cubic"
             >
-              The Single <span className="text-[#d97706]"> Investment Operations Platform & Consulting Partner </span> For Your Firm
+              The Single <span className="text-[#d97706]"> Investment Operations Platform & Consulting Partner </span> for your firm
             </span>
 
             {/* <span
@@ -67,7 +67,7 @@ const DashboardPreview = () => {
         <div className="relative max-w-5xl mx-auto">
           {/* Main Dashboard Image with Mac-like frame */}
           <div
-            className="relative z-10 shadow-2xl rounded-3xl overflow-hidden border border-gray-100"
+            className="relative z-10 shadow-xl rounded-2xl overflow-hidden border border-gray-100"
             data-aos="zoom-in"
             data-aos-duration="1000"
           >

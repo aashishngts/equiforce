@@ -54,7 +54,7 @@ const Integrations = () => {
               shadow-sm hover:shadow-md hover:scale-105 transition"
             >
               {/* Icon */}
-              <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 text-sm">
+              <div className="ml[-10px] w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 text-sm">
                 {tool.icon}
               </div>
 

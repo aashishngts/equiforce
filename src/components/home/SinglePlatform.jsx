@@ -31,7 +31,7 @@ const SinglePlatform = () => {
         {/* Image & Badges Container */}
         <div className="relative max-w-5xl mx-auto">
           {/* Main Dashboard Image */}
-          <div className="relative z-10 shadow-2xl rounded-3xl overflow-hidden border border-gray-100" data-aos="zoom-in">
+          <div className="relative z-10 shadow-xl rounded-lg overflow-hidden border border-gray-100" data-aos="zoom-in">
             <img 
               src={SinglePlatformImg} 
               alt="EquiForce Dashboard" 
