@@ -1,4 +1,4 @@
-import dashboard from "../../assets/images/dashboard-banner1.png";
+import dashboard from "../../assets/images/dashboard.jpeg";
 import stat1 from "../../assets/images/benefit-image-left.png";
 import stat2 from "../../assets/images/benefit-image-right2.png";
 

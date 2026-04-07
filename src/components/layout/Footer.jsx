@@ -45,10 +45,10 @@ const Footer = () => {
             <div>
               <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
               <ul className="space-y-4">
-                <li><Link to="/platform#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
-                <li><Link to="/platform#gips" className="hover:text-[#d97706] transition-colors">Composite Management</Link></li>
-                <li><Link to="/platform#operations" className="hover:text-[#d97706] transition-colors">Investment Operations</Link></li>
-                <li><Link to="/platform#ai-reporting" className="hover:text-[#d97706] transition-colors">AI Reporting</Link></li>
+                <li><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
+                <li><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Composite Management</Link></li>
+                <li><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">Investment Operations</Link></li>
+                <li><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI Reporting</Link></li>
               </ul>
             </div>
 
