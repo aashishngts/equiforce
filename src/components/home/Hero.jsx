@@ -14,7 +14,7 @@ function Hero() {
       </h1>
 
       <p className="max-w-lg text-gray-300 mb-8">
-        <span className="text-[#d97706]">
+        <span className="text-[#d97706] uppercase text-600">
 Empowering investment management with practitioner expertise & technology edge.
 
         </span>

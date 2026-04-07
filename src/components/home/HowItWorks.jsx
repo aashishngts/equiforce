@@ -17,7 +17,7 @@ const differentiators = [
 
 const Differentiators = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#f8fafc]">
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#fff]">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-24">
         
         {/* Label - Updated to Differentiators */}
@@ -39,11 +39,11 @@ const Differentiators = () => {
         </p>
 
         {/* Differentiators Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 ">
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm transition-all duration-300 group overflow-hidden"
+              className="relative border border-gray-200 bg-[#f4f6f8] rounded-2xl p-8 shadow-sm transition-all duration-300 group overflow-hidden"
             >
               {/* Top Border Accent */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-[#08636b] group-hover:bg-[#d97706] transition-colors" />
