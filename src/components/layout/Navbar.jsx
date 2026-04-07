@@ -66,7 +66,7 @@ const Navbar = () => {
               >
 
                 
-                <button className="flex items-center gap-1 hover:text-[#d97706] transition-colors cursor-pointer pb-1 outline-none">
+                <button className="flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none">
                   Solutions
                   <FiChevronDown
                     className={`transition-transform duration-300 ${platformOpen ? "rotate-180" : ""}`}
