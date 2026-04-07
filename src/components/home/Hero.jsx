@@ -20,23 +20,22 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 w-full">
-        <div className="w-full lg:w-[65%] xl:w-[60%] text-white pt-28 sm:pt-32 md:pt-40">
+        <div className="w-full lg:w-[65%] xl:w-[65%] text-white pt-28 sm:pt-32 md:pt-40">
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight sm:leading-tight"
             data-aos="fade-up"
           >
-            Your Strategic <span className="text-[#d97706]">Partner</span> <br className="hidden sm:block" />
-            in Investment Ops.
+            Your Strategic Partner in 
+             <span className="text-[#d97706]"> Investment Ops.,Performance,& GIPS </span> 
+
           </h1>
 
           <p
-            className="max-w-xl text-base sm:text-md md:text-lg text-gray-200 leading-relaxed mb-8 sm:mb-10"
+            className="max-w-xl text-base sm:text-md md:text-md text-gray-200 leading-relaxed mb-8 sm:mb-10"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            EquiForce Solutions empowers investment management firms with purpose-built solutions 
-            for performance measurement, composite management, fund accounting, reconciliation, 
-            and investment reporting.
+           EMPOWERING INVESTMENT MANAGEMENT WITH DATA REPORTING PRECISION & TECHNOLOGY EDGE.
           </p>
 
           {/* FIX: Removed data-aos to ensure buttons are visible immediately */}

@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-12 md:py-16 lg:py-20 rounded-3xl mx-4 md:mx-6 lg:mx-10">
+    <footer className="py-6 md:py-8 lg:py-8 rounded-3xl mx-4 md:mx-6 lg:mx-10">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
 
         {/* TOP SECTION */}
@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* LEFT */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
               Transform Your Investment <br className="hidden sm:block" />
               Operations with <br className="hidden sm:block" />
               EquiForce Solutions
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           {/* RIGHT LINKS */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 text-gray-600 text-sm text-center md:text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 text-gray-600 text-sm text-center md:text-left">
 
             {/* Solutions */}
             <div>
@@ -63,15 +63,7 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div className="col-span-2 sm:col-span-1">
-              <h4 className="text-gray-900 font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>Case Studies</li>
-                <li>Insights & Blog</li>
-                <li>Help Center</li>
-                <li>Documentation</li>
-              </ul>
-            </div>
+           
 
           </div>
         </div>
