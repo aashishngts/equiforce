@@ -46,7 +46,7 @@ const Differentiators = () => {
               className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm transition-all duration-300 group overflow-hidden"
             >
               {/* Top Border Accent */}
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#0a2240]/10 group-hover:bg-[#d97706] transition-colors" />
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#08636b] group-hover:bg-[#d97706] transition-colors" />
 
               {/* Number Index */}
               <div className="text-2xl font-black text-[#00C2CB] mb-6">

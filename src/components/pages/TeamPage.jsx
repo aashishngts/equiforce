@@ -7,7 +7,7 @@ const TeamPage = () => {
     <div className="min-h-screen bg-white">
       
       {/* Spacer for Fixed Navbar */}
-      <div className="h-24 bg-[#0a2240]"></div>
+      <div className="h-18 bg-[#0a2240]"></div>
 
       {/* Header Section */}
       <section className="bg-[#0a2240] py-8 text-center">
@@ -16,9 +16,8 @@ const TeamPage = () => {
             Meet the Experts Behind <span className="text-[#d97706]">EquiForce</span>
           </h1>
           <p className="text-gray-300 text-md md:text-sm leading-relaxed" data-aos="fade-up">
-            Our team combines decades of experience in fintech,<br></br> investment management, 
-            and AI to build the future of financial operations.
-          </p>
+  Our team blends fintech, investment, and AI expertise to shape the future of finance.
+</p>
         </div>
       </section>
 

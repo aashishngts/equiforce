@@ -195,7 +195,8 @@ const Team = () => {
               </button>
 
               {/* Top Section: Image + Name/Role */}
-              <div className="flex items-start gap-6 md:gap-10 mb-8 align-center">
+             <div className="flex items-center gap-6 md:gap-6 mb-2">
+
                 {/* Left Image */}
                 <div className="w-24 h-24 md:w-25 md:h-25 rounded-full overflow-hidden border-4 border-gray-200 flex-shrink-0">
                   <img
@@ -222,7 +223,7 @@ const Team = () => {
               </div>
 
               {/* Bio Section */}
-              <div className="text-left text-gray-600 space-y-6 text-base md:text-lg leading-relaxed border-t border-gray-100 pt-6 font-light max-w-3xl">
+              <div className="text-left text-gray-600 space-y-6 text-base md:text-md leading-relaxed border-t border-gray-100 pt-2 font-light max-w-3xl">
                 {selectedMember.bio.map((para, idx) => (
                   <p key={idx}>{para}</p>
                 ))}
