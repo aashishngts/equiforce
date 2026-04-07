@@ -17,7 +17,7 @@ const differentiators = [
 
 const Differentiators = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#fff]">
+    <section className="py-12 md:py- 8:py-10 relative overflow-hidden bg-[#fff]">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-24">
         
         {/* Label - Updated to Differentiators */}
@@ -28,7 +28,7 @@ const Differentiators = () => {
         </div> */}
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-black text-[#0a2240] mb-6 text-center md:text-center">
+        <h2 className="text-3xl md:text-3xl font-black text-[#0a2240] mb-6 text-center md:text-center">
          Our  <span className="text-[#d97706]">Differentiators</span>
         </h2>
 

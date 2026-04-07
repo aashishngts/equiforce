@@ -108,11 +108,11 @@ const Features = () => {
           </span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-3xl font-black text-white mb-6 leading-tight">
           What we <span className="text-[#d97706]">Deliver</span>
         </h2>
 
-        <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-lg leading-relaxed">
+        <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-sm leading-relaxed">
           EquiForce delivers specialized solutions across performance measurement, composite management,
           investment operations, and reporting — enhanced with AI-driven capabilities for superior operational control.
         </p>
@@ -124,7 +124,7 @@ const Features = () => {
               <Link
                 to={item.link}
                 key={index}
-                className="group bg-white rounded-3xl p-8 border border-white/10 hover:border-[#d97706]/50 hover:shadow-2xl hover:shadow-[#d97706]/10 transition-all duration-300 flex flex-col text-left relative overflow-hidden"
+                className="group bg-white rounded-3xl p-5 border border-white/10 hover:border-[#d97706]/50 hover:shadow-2xl hover:shadow-[#d97706]/10 transition-all duration-300 flex flex-col text-left relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#eef7f8] rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500 opacity-50" />
 
@@ -133,11 +133,11 @@ const Features = () => {
                     <Icon />
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#0a2240] mb-4 group-hover:text-[#d97706] transition-colors">
+                  <h3 className="text-md font-bold text-[#0a2240] mb-4 group-hover:text-[#d97706] transition-colors">
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">{item.desc}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-3 flex-grow">{item.desc}</p>
 
                   <div className="flex items-center gap-2 text-[#d97706] font-bold text-xs uppercase tracking-widest">
                     Explore Solution

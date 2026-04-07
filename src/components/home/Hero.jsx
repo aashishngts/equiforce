@@ -14,7 +14,7 @@ function Hero() {
 
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 text-white z-10">
-          <p className="uppercase text-[#d97706] tracking-widest mb-3 text-sm md:text-base font-semibold">
+          <p className="uppercase text-[#d97706] tracking-widest mt-10 mb-3 text-sm md:text-sm font-semibold">
             Nearly 3 Decades of Industry Expertise
           </p>
 
