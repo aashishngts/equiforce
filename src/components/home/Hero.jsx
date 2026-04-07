@@ -3,8 +3,7 @@ import heroVideo from "../../assets/video/HeroVideo.mp4";
 
 function Hero() {
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden flex items-center">
-      {/* Background Video */}
+<div class="relative min-h-[50vh] md:min-h-[100dvh] flex items-center justify-center overflow-hidden px-4">      {/* Background Video */}
       <video
         autoPlay
         muted
@@ -20,9 +19,9 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 w-full">
-        <div className="w-full lg:w-[65%] xl:w-[65%] text-white pt-28 sm:pt-32 md:pt-40">
+        <div className="w-full lg:w-[65%] xl:w-[65%] text-white pt-15 sm:pt-32 md:pt-40">
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight sm:leading-tight"
+            className="text-2xl sm:text-3xl md:text-6xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight sm:leading-tight"
             data-aos="fade-up"
           >
             Your Strategic Partner in 
@@ -46,7 +45,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
