@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Animation helpers (from your original code)
 const makeVariants = (fromX, delay = 0) => ({
@@ -398,13 +398,49 @@ const FeatureSection = ({ feature, index ,id}) => {
 
 // ─── Main page component ────────────────────────────────────────────────
 const PlatformAllFeaturesPage = () => {
-  const allData = [performanceData, gipsData, operationsData, aiReportingData];
+  const allData = [
+    performanceData,
+    gipsData,
+    operationsData,
+    aiReportingData,
+  ];
+
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const sectionId = hash.replace("#", "");
+
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+          const navbarOffset = 100;
+
+          const top =
+            element.getBoundingClientRect().top +
+            window.pageYOffset -
+            navbarOffset;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    }
+  }, [hash]);
 
   return (
     <div className="min-h-screen bg-white pt-28 pb-20">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
         {allData.map((data, index) => (
-          <FeatureSection   id={data.id}   key={data.id} feature={data} index={index} />
+          <FeatureSection
+            key={data.id}
+            id={data.id}
+            feature={data}
+            index={index}
+          />
         ))}
       </div>
     </div>

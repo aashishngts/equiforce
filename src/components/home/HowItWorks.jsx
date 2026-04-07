@@ -1,84 +1,73 @@
-import dashboardImg from "../../assets/images/dashboard-banner1.png";
-import wave from "../../assets/images/bg-wave.png";
+import React from "react";
 
-const steps = [
+const differentiators = [
   {
     title: "Consultants, Not Just Vendors",
     desc: "We are investment operations practitioners with nearly 30 years of hands-on experience — advising, implementing, and optimizing alongside our clients.",
   },
   {
     title: "Purpose-Built Technology",
-    desc: "Every feature is engineered for investment management workflows — not adapted from generic software or retrofitted from another industry.",
+    desc: "Every feature is engineered for investment management workflows — back- and middle-office enterprise reporting.",
   },
   {
     title: "AI at the Core",
     desc: "Embedded AI technologies that automate repetitive tasks, surface actionable insights, and give clients a measurable competitive edge.",
   },
 ];
-const HowItWorks = () => {
+
+const Differentiators = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      {/* ✅ Container */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 text-center">
-        {/* Label */}
-        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full text-sm text-gray-800 mb-6 border border-gray-200 shadow-sm">
-          <span className="bg-[#d97706] text-white px-2 py-1 rounded-full text-xs">
-            How It Works
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#f8fafc]">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-24">
+        
+        {/* Label - Updated to Differentiators */}
+        {/* <div className="flex justify-center md:justify-start mb-4">
+          <span className="text-[#d97706] text-sm font-black tracking-[0.2em] uppercase">
+            Our Differentiators
           </span>
-        </div>
+        </div> */}
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-    Why Equiforce
-        <span class="text-[#d97706]"> Solutions</span>
+        <h2 className="text-3xl md:text-5xl font-black text-[#0a2240] mb-6 text-center md:text-center">
+         Our  <span className="text-[#d97706]">Differentiators</span>
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-600 max-w-2xl mx-auto mb-10 md:mb-14">
-          EquiForce streamlines the entire investment lifecycle — from data
-          aggregation to reporting — delivering accuracy, efficiency, and
-          intelligent insights.
+        <p className="text-gray-600 max-w-7xl mb-12 text-center md:text-center text-lg">
+          We combine deep industry expertise with next-generation technology to 
+          transform your investment operations.
         </p>
 
-        {/* Main Box */}
-        <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-3xl p-4 sm:p-6 md:p-10 shadow-lg">
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-4 md:p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition"
-              >
-                {/* Step Number */}
-                <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-[#d97706] to-[#d97706] text-white font-bold text-sm">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+        {/* Differentiators Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {differentiators.map((item, index) => (
+            <div
+              key={index}
+              className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm transition-all duration-300 group overflow-hidden"
+            >
+              {/* Top Border Accent */}
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#0a2240]/10 group-hover:bg-[#d97706] transition-colors" />
 
-                {/* Title */}
-                <h3 className="text-gray-800 font-semibold mb-2 text-sm md:text-base leading-snug">
-                  {step.title}
-                </h3>
-
-                {/* Desc */}
-                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
-                  {step.desc}
-                </p>
+              {/* Number Index */}
+              <div className="text-2xl font-black text-[#00C2CB] mb-6">
+                {index + 1}
               </div>
-            ))}
-          </div>
 
-          {/* Dashboard */}
-          {/* <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-            <img
-              src={dashboardImg}
-              alt="Investment dashboard preview"
-              className="w-full h-auto object-cover"
-            />
-          </div> */}
+              {/* Title */}
+              <h3 className="text-[#0a2240] text-xl font-bold mb-4 leading-tight">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-500 leading-relaxed text-sm md:text-base">
+                {item.item ? item.item : item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default HowItWorks;
+export default Differentiators;

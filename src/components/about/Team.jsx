@@ -14,62 +14,129 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
 const team = [
-  {
+
+
+
+    {
+
     name: "Jane Atmodjojo, CFA®, CIPM",
-    role: "CEO",
-    subRole: "Senior Consultant",
-    email: "jane@equiforcesolutions.com",
+
+    role: "CEO/Senior Consultant",
+
     img: img1,
+
     bio: [
-      "Jane co-founded EquiForce Solutions (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid-sized asset managers. EFS combines purpose-built, cost-efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
-      "Before launching EFS, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back and middle office functions, modernizing reporting infrastructures, and implementing scalable, high-impact data and reporting solutions.",
+
+      "Jane co founded EquiForce Solutions (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
+
+      "Before launching EFS, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back  and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
+
       "She holds a B.S. from the University of Southern California (cum laude) and has earned both the Chartered Financial Analyst® (CFA®) and the Certificate in Investment Performance Measurement (CIPM) designations."
+
     ]
+
   },
+
+
+
+
+
   {
-    name: "Vincent Tran, CIPM",
-    role: "Chief Product Officer",
-    subRole: "Senior Consultant",
-    email: "vincent@equiforcesolutions.com",
-    img: img3,
-    bio: [
-      "Vincent co-founded EquiForce Solutions (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite.",
-      "Before launching EFS, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, and GIPS compliance. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, and ACR Alpine Capital Research.",
-      "Vincent holds an MBA from the New York Institute of Technology, a B.S. from Baylor University, and the CIPM designation."
-    ]
-  },
-  {
+
     name: "Pushpendra Thakur",
+
     role: "Chief Technology Officer",
-    subRole: null, // Spacer will be added in UI
-    email: "pushpendra@equiforcesolutions.com",
+
     img: img2,
-    bio: ["Pushpendra Thakur is the Co-Founder and CTO of EFS, defining the firm’s technology vision and leading the architecture of scalable platforms."]
+
+    bio: [
+
+      "Pushpendra Thakur is the Co-Founder and Chief Technology Officer of EquiForce Solutions (EFS), where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for investment operations, performance measurement, and enterprise reporting. Since co-founding EFS in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EFS, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
+
+      "With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
+
+    ]
+
   },
+
+
+
   {
-    name: "Steve",
+
+    name: "Vincent Tran, CIPM",
+
+    role: "Chief Product Officer/Senior Consultant",
+
+    img: img3,
+
+    bio: [
+
+      "Vincent co founded EquiForce Solutions (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
+
+      "Before launching EFS, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, reconciliation, performance measurement, analytics, GIPS compliance, and reporting automation. He has a long track record of designing and implementing technology that automates processes, enhances data integrity, and enables firms to scale efficiently. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, Kayne Anderson Rudnick Investment Management, and ACR Alpine Capital Research.",
+
+      "Vincent holds an MBA (with Distinction) from the New York Institute of Technology, a B.S. from Baylor University, and the Certificate in Investment Performance Measurement (CIPM) designation."
+
+    ]
+
+  },
+
+  {
+
+    name: "Steve (TBD)",
+
     role: "Head of Business Development",
-    subRole: null, 
-    email: "steve@equiforcesolutions.com",
+
     img: img4,
-    bio: ["Steve leads our market expansion and strategic partnerships at EquiForce."]
+
+    bio: [
+
+      ""
+
+    ]
+
   },
-  {
+
+
+
+
+
+   {
+
     name: "Edmund J. Woo",
+
     role: "Head of Client Relations",
-    subRole: null,
-    email: "edmund@equiforcesolutions.com",
+
     img: img5,
-    bio: ["Edmund leads all aspects of client engagement and relationship management."]
+
+    bio: [
+
+      "As Head of Client Relations at EquiForce Solutions (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.","Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.","Edmund holds an MBA and B.S. from the University of Arizona."
+
+    ]
+
   },
-  {
+
+
+
+
+
+    {
+
     name: "Dylan Tran",
+
     role: "Analyst",
-    subRole: null,
-    email: "dylan@equiforcesolutions.com",
+
     img: img6,
-    bio: ["Dylan supports the firm’s data operations and implementation efforts."]
-  }
+
+    bio: [
+
+      "As an Analyst at EquiForce Solutions (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.","Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
+
+    ]
+
+  },
+
 ];
 
 const Team = () => {

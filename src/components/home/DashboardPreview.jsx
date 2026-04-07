@@ -49,17 +49,17 @@ const DashboardPreview = () => {
               data-aos-duration="1200"
               data-aos-easing="ease-out-cubic"
             >
-              The Single Platform <span className="text-[#d97706]">That Your</span>
+              The Single <span className="text-[#d97706]"> Investment Operations Platform & Consulting Partner </span> For Your Firm
             </span>
 
-            <span
+            {/* <span
               className="block"
               data-aos="fade-left"
               data-aos-duration="1200"
               data-aos-easing="ease-out-cubic"
             >
               Firm's <span className="text-[#d97706]">Deserve</span>
-            </span>
+            </span> */}
           </h2>
         </div>
 

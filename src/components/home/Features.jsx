@@ -1,11 +1,5 @@
 import React from "react";
-import f1 from "../../assets/images/features1.jpg";
-import f2 from "../../assets/images/features2.jpg";
-import f3 from "../../assets/images/features3.jpg";
-import f4 from "../../assets/images/features4.jpg";
-import f5 from "../../assets/images/features5.jpg";
-import f6 from "../../assets/images/features6.jpg";
-
+import { Link } from "react-router-dom";
 import {
   BarChart3,
   PieChart,
@@ -16,91 +10,91 @@ import {
 const features = [
   {
     title: "Performance Measurement",
-    desc: "Precision return calculations and attribution analysis across all strategies and composites.",
+    desc: "Holdings-based (IBOR) and Transaction-based (ABOR/PBOR) return and attribution at security-, portfolio-, and composite levels.",
     icon: BarChart3,
-    img: f1
+    link: "/performance-measurement#performance"
   },
   {
-    title: "Composite Management",
+    title: "GIPS Composite Management",
     desc: "Structured composite construction and maintenance built for investment operations workflows.",
     icon: PieChart,  
-    img: f2
+    link: "/performance-measurement#gips"
   },
   {
-    title: "Fund Accounting & Reconciliation",
-    desc: "Accurate books and seamless data reconciliation across custodians and systems of record.",
+    title: "Investment Operations",
+    desc: "Investment data reconciliation across custodians and systems of record to ensure accurate books.",
     icon: Wallet,  
-    img: f3
+    link: "/performance-measurement#operations"
   },
   {
     title: "AI-Powered Reporting",
-    desc: "Intelligent, automated investment reporting that surfaces insights and reduces manual effort.",
+    desc: "Intelligent, automated investment reporting that surfaces insights and streamlines manual effort.",
     icon: Cpu,  
-    img: f4
+    link: "/performance-measurement#ai-reporting"
   },
 ];
 
 const Features = () => {
   return (
-    // Applied a clean, light gradient background (white fading into a very soft blue/cyan)
-    <section className="bg-[#0a2240] py-12 sm:py-16 md:py-24">
+    <section className="bg-[#0a2240] py-16 md:py-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Tag */}
-        <div className="inline-block mb-3 sm:mb-4">
-          <span className="bg-[#d97706] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide shadow-sm">
+        <div className="inline-block mb-4">
+          <span className="bg-[#d97706] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase shadow-sm">
             Core Solutions
           </span>
         </div>
 
-        {/* Heading - Changed to dark navy for the light theme */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fff] mb-3 sm:mb-4 leading-tight">
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
           What we <span className="text-[#d97706]">Deliver</span>
         </h2>
 
-        {/* Subtext - Changed to a medium gray for readability */}
-        <p className="text-white-600 max-w-3xl mx-auto mb-10 sm:mb-15 text-sm md:text-base leading-relaxed px-2 sm:px-0">
+        {/* Subtext */}
+        <p className="text-blue-100/80 max-w-3xl mx-auto mb-16 text-base md:text-lg leading-relaxed">
           EquiForce delivers specialized solutions across performance
-          measurement, fund accounting, reconciliation, and reporting — enhanced
-          with AI-driven capabilities for superior operational control.
+          measurement, composite management, investment operations, and reporting — 
+          enhanced with AI-driven capabilities for superior operational control.
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item, index) => {
             const Icon = item.icon;
 
             return (
-              <div
+              <Link
+                to={item.link}
                 key={index}
-                // Light theme cards: solid white, soft border, and a nice elegant shadow
-                className="bg-white rounded-3xl p-2 md:p-5 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/60 active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
+                className="group bg-white rounded-3xl p-8 border border-white/10 hover:border-[#d97706]/50 hover:shadow-2xl hover:shadow-[#d97706]/10 transition-all duration-300 flex flex-col text-left relative overflow-hidden"
               >
-                {/* Image (Inset Design) - Updated border to match light theme */}
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-[180px] sm:h-[200px] md:h-[180px] object-cover rounded-2xl mb-5 sm:mb-6 border border-gray-100 shadow-sm"
-                />
+                {/* Subtle Hover Effect Background */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#eef7f8] rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500 opacity-50" />
 
-                {/* Content */}
-                <div className="flex flex-col flex-grow">
-                  {/* Icon - Kept the orange background as it contrasts nicely with white */}
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-3 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-md">
-                    <Icon size={15} className="sm:w-6 sm:h-6" strokeWidth={2} />
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon */}
+                  <div className="w-12 h-12 mb-6 rounded-2xl bg-[#0a2240] group-hover:bg-[#d97706] flex items-center justify-center text-white transition-colors shadow-lg">
+                    <Icon size={24} strokeWidth={2} />
                   </div>
 
-                  {/* Title - Dark navy text */}
-                  <h3 className="text-md sm:text-lg font-bold text-[#0a2240] mb-2 sm:mb-3">
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-[#0a2240] mb-4 group-hover:text-[#d97706] transition-colors">
                     {item.title}
                   </h3>
 
-                  {/* Desc - Medium gray text */}
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  {/* Desc */}
+                  <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                     {item.desc}
                   </p>
+
+                  {/* "Learn More" link mimic */}
+                  <div className="flex items-center gap-2 text-[#d97706] font-bold text-xs uppercase tracking-widest">
+                    Explore Solution 
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
