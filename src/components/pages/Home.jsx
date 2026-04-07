@@ -45,13 +45,13 @@ const Home = () => {
         <FAQ />
       </div> */}
 
-      <div data-aos="fade-up" data-aos-delay="450">
+      {/* <div data-aos="fade-up" data-aos-delay="450">
         <Integrations />
       </div>
 
       <div data-aos="fade-up" data-aos-delay="500">
         <Newsletter />
-      </div>
+      </div> */}
      
     </>
   );

@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-10 md:py-16 bg-white border-t border-gray-100 rounded-t-[3rem] mx-4 md:mx-6 lg:mx-10 mt-20">
+    <footer className="py-6 md:py-8 bg-white border-t border-gray-100 rounded-t-[3rem] mx-4 md:mx-6 lg:mx-10 mt-10">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
 
         {/* TOP SECTION */}
