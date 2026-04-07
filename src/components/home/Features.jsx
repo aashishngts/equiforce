@@ -36,7 +36,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-[#0a2240] py-16 md:py-24">
+    <section className="bg-[#0a2240] py-8 md:py-10">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Tag */}
@@ -52,7 +52,7 @@ const Features = () => {
         </h2>
 
         {/* Subtext */}
-        <p className="text-blue-100/80 max-w-3xl mx-auto mb-16 text-base md:text-lg leading-relaxed">
+        <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-lg leading-relaxed">
           EquiForce delivers specialized solutions across performance
           measurement, composite management, investment operations, and reporting — 
           enhanced with AI-driven capabilities for superior operational control.

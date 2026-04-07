@@ -35,10 +35,10 @@ const badges = [
 
 const DashboardPreview = () => {
   return (
-    <section className="py-6 md:py-12 bg-white overflow-hidden">
+    <section className="py-2 md:py-12 bg-white overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-6">
         {/* Heading Section */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-5">
           <h2
             className="text-2xl md:text-4xl font-bold leading-tight max-w-4xl mx-auto flex flex-col  overflow-hidden py-2"
             style={{ color: NAVY }}
