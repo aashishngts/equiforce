@@ -15,12 +15,13 @@ import SignIn from "./components/pages/SignIn";
 import Platform from "./components/pages/Platform/Platform";
 import Careers from "./components/pages/Careers";
 import PlatformFeatureTemplate from "./components/pages/Platform/PlatformFeatureTemplate";
-import { 
-  performanceData, 
-  gipsData, 
-  operationsData, 
-  aiReportingData 
+import {
+  performanceData,
+  gipsData,
+  operationsData,
+  aiReportingData
 } from "./components/pages/Platform/platformData";
+import PrivacyNotice from "./components/pages/Notice";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -66,11 +67,12 @@ function App() {
               <Route path="/signin" element={<SignIn />} />
               <Route path="/platform" element={<Platform />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/policy" element={<PrivacyNotice />} />
 
               <Route path="/performance-measurement" element={<PlatformFeatureTemplate data={performanceData} />} />
-    <Route path="/gips-composite" element={<PlatformFeatureTemplate data={gipsData} />} />
-    <Route path="/investment-operations" element={<PlatformFeatureTemplate data={operationsData} />} />
-    <Route path="/ai-reporting" element={<PlatformFeatureTemplate data={aiReportingData} />} />
+              <Route path="/gips-composite" element={<PlatformFeatureTemplate data={gipsData} />} />
+              <Route path="/investment-operations" element={<PlatformFeatureTemplate data={operationsData} />} />
+              <Route path="/ai-reporting" element={<PlatformFeatureTemplate data={aiReportingData} />} />
             </Routes>
           </LayoutWrapper>
         </BrowserRouter>

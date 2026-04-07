@@ -20,8 +20,9 @@ const team = [
   {
 
     name: "Jane Atmodjojo, CFA®, CIPM",
-
-    role: "CEO/Senior Consultant",
+    email: "jane@equiforcesolutions.com",
+    role: "CEO",
+    role1: "Senior Consultant",
 
     img: img1,
 
@@ -44,6 +45,7 @@ const team = [
   {
 
     name: "Pushpendra Thakur",
+    email: "pushpendra@equiforcesolutions.com",
 
     role: "Chief Technology Officer",
 
@@ -65,7 +67,13 @@ const team = [
 
     name: "Vincent Tran, CIPM",
 
-    role: "Chief Product Officer/Senior Consultant",
+
+    email:
+
+      "vince@equiforcesolutions.com",
+
+    role: "Chief Product Officer",
+    role1: "Senior Consultant",
 
     img: img3,
 
@@ -83,8 +91,8 @@ const team = [
 
   {
 
-    name: "Steve (TBD)",
-
+    name: "Steve",
+    email:"Steve@equiforcesolutions.com",
     role: "Head of Business Development",
 
     img: img4,
@@ -104,7 +112,7 @@ const team = [
   {
 
     name: "Edmund J. Woo",
-
+email:"Edmund@equiforcesolutions.com",
     role: "Head of Client Relations",
 
     img: img5,
@@ -124,7 +132,7 @@ const team = [
   {
 
     name: "Dylan Tran",
-
+email:"dylan@equiforcesolutions.com",
     role: "Analyst",
 
     img: img6,
@@ -195,7 +203,7 @@ const Team = () => {
               </button>
 
               {/* Top Section: Image + Name/Role */}
-             <div className="flex items-center gap-6 md:gap-6 mb-2">
+              <div className="flex items-center gap-6 md:gap-6 mb-2">
 
                 {/* Left Image */}
                 <div className="w-24 h-24 md:w-25 md:h-25 rounded-full overflow-hidden border-4 border-gray-200 flex-shrink-0">
@@ -214,9 +222,9 @@ const Team = () => {
                   <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
                     {selectedMember.role}
                   </p>
-                  {selectedMember.subRole && (
+                  {selectedMember.role1 && (
                     <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
-                      {selectedMember.subRole}
+                      {selectedMember.role1}
                     </p>
                   )}
                 </div>
@@ -247,33 +255,47 @@ const Team = () => {
 };
 
 const MemberCard = ({ member, onSelect }) => (
-  <div className="relative bg-white rounded-sm shadow-md pt-18 pb-5 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
-    <div onClick={() => onSelect(member)} className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer">
-      <div className="w-34 h-34 rounded-full p-[3px] bg-gradient-to-tr from-[#0066a1] to-cyan-500">
-        <div className="w-full h-full rounded-full border-[6px] border-white overflow-hidden">
-          <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+  <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
+    {/* Profile Image */}
+    <div
+      onClick={() => onSelect(member)}
+      className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer"
+    >
+      <div className="w-36 h-36 rounded-full p-1 bg-gradient-to-tr from-blue-900 to-[#d97706]">
+        <div className="w-full h-full rounded-full border-4 border-white overflow-hidden">
+          <img
+            src={member.img}
+            alt={member.name}
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
 
-    {/* Name Resized to fit credentials on one line */}
-    <h4 className="text-[#0066a1] text-sm font-semibold
-  font-sm mb-2 mt-2 leading-tight h-14 flex items-center text-center">
+    {/* Name */}
+    <h4 className="text-[#0a2240] text-sm font-semibold mb-1 mt-10 text-center truncate max-w-full">
       {member.name}
     </h4>
 
-    {/* Title Logic with Spacer */}
-    <div className="text-[10px] text-gray-500 uppercase tracking-widest leading-tight mb-4 min-h-[40px] flex flex-col justify-center">
+    {/* Roles */}
+    <div className="text-xs text-gray-500 uppercase tracking-widest mb-4 min-h-[40px] flex flex-col justify-center text-center">
       <p>{member.role}</p>
-      {member.subRole ? <p className="mt-1">{member.subRole}</p> : <p className="mt-1 opacity-0">-</p>}
+      <p className={member.role1 ? "mt-1" : "mt-1 opacity-0"}>{member.role1 || "-"}</p>
     </div>
 
-    {/* Email Address */}
-    <a href={`mailto:${member.email}`} className="text-[11px] text-[#d97706] font-bold mb-6 hover:underline flex items-center gap-1">
+    {/* Email */}
+    <a
+      href={`mailto:${member.email}`}
+      className="text-yellow-600 text-xs font-semibold mb-6 hover:underline flex items-center gap-1"
+    >
       <FaRegEnvelope /> {member.email}
     </a>
 
-    <button onClick={() => onSelect(member)} className="text-[#0066a1] text-[10px] font-bold uppercase flex items-center hover:opacity-70 transition">
+    {/* View Bio Button */}
+    <button
+      onClick={() => onSelect(member)}
+      className="text-[#0a2240] text-xs font-bold uppercase flex items-center hover:opacity-80 transition"
+    >
       View Bio <span className="ml-1 text-lg">›</span>
     </button>
   </div>
