@@ -3,57 +3,67 @@ import heroVideo from "../../assets/video/HeroVideo.mp4";
 
 function Hero() {
   return (
-<div className="relative w-full bg-gradient-to-r from-[#0a2240] to-[#0f2f5c] py-16 md:py-24 px-4">
-  <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-10 py-10">
+    <div className="relative w-full bg-gradient-to-b from-[#0a2240] to-[#0f2f5c] overflow-hidden">
 
-    {/* LEFT CONTENT */}
-    <div className="w-full lg:w-1/2 text-white">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-        Your Strategic <span className="text-[#d97706]"> Partner </span> in 
-        Investment Ops, Performance & GIPS
-      </h1>
+      {/* Subtle Animated Background Lines */}
+      <div className="absolute inset-0">
+        <div className="w-full h-full bg-[url('/lines.svg')] bg-no-repeat bg-center bg-cover opacity-10 animate-[backgroundMove_60s_linear_infinite]"></div>
+      </div>
 
-      <p className="max-w-lg text-gray-300 mb-8">
-        <span className="text-[#d97706] uppercase text-600">
-Empowering investment management with practitioner expertise & technology edge.
+      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-10 py-24">
 
-        </span>
-      </p>
+        {/* LEFT CONTENT */}
+        <div className="w-full lg:w-1/2 text-white z-10">
+          <p className="uppercase text-[#d97706] tracking-widest mb-3 text-sm md:text-base font-semibold">
+            Nearly 3 Decades of Industry Expertise
+          </p>
 
-      <button className="border border-white/30 px-7 py-3 rounded-full hover:bg-white/10 transition backdrop-blur-md">
-        Request for Demo
-      </button>
-    </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Your Strategic <span className="text-[#d97706]">Partner</span> in<br />
+            Investment Ops, Performance & GIPS
+          </h1>
 
-    {/* RIGHT VIDEO (SMALLER + MODERN CARD STYLE) */}
-    <div className="w-full lg:w-1/2 flex justify-center">
+          <p className="max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
+            <span className="text-[#d97706]">
+              Empowering investment management with practitioner expertise & technology edge.
+            </span>
+          </p>
 
-      <div className="relative w-full max-w-md"> {/* 👈 controls size */}
+          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#d97706] to-[#3b82f6] hover:scale-105 transition-transform duration-300 font-medium shadow-lg">
+            Request a Demo
+          </button>
+        </div>
 
-        {/* Glow */}
-        <div className="absolute -inset-1 bg-blue-500/20 blur-xl rounded-2xl"></div>
-
-        {/* Card */}
-        <div className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg shadow-xl p-2">
-
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-[220px] sm:h-[260px] object-cover rounded-xl"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-
+        {/* RIGHT SIDE VIDEO CARD */}
+        <div className="w-full lg:w-1/2 flex justify-center relative z-10">
+          <div className="relative w-full max-w-lg">
+            {/* Glassmorphic Video Card */}
+            <div className="relative rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-[280px] sm:h-[320px] object-cover transition-transform duration-500 hover:scale-105"
+              >
+                <source src={heroVideo} type="video/mp4" />
+              </video>
+              {/* Subtle Neon Glow */}
+              <div className="absolute inset-0 pointer-events-none rounded-3xl border border-gradient-to-tr from-[#d97706]/50 to-[#3b82f6]/50 opacity-50 animate-pulse"></div>
+            </div>
+          </div>
         </div>
 
       </div>
 
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes backgroundMove {
+          0% { background-position: 0 0; }
+          100% { background-position: 1000px 0; }
+        }
+      `}</style>
     </div>
-
-  </div>
-</div>
   );
 }
 
