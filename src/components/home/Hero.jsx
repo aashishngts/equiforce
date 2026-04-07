@@ -3,49 +3,56 @@ import heroVideo from "../../assets/video/HeroVideo.mp4";
 
 function Hero() {
   return (
-<div class="relative min-h-[50vh] md:min-h-[100dvh] flex items-center justify-center overflow-hidden px-4">      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+<div className="relative w-full bg-gradient-to-r from-[#0a2240] to-[#0f2f5c] py-16 md:py-24 px-4">
+  <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-10 py-10">
 
-      {/* Dark Navy Overlay */}
-      <div className="absolute inset-0 bg-[#0a2240]/60"></div>
+    {/* LEFT CONTENT */}
+    <div className="w-full lg:w-1/2 text-white">
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+        Your Strategic <span className="text-[#d97706]"> Partner </span> in 
+        Investment Ops, Performance & GIPS
+      </h1>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 w-full">
-        <div className="w-full lg:w-[65%] xl:w-[65%] text-white pt-15 sm:pt-32 md:pt-40">
-          <h1
-            className="text-2xl sm:text-3xl md:text-6xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight sm:leading-tight"
-            data-aos="fade-up"
-          >
-            Your Strategic Partner in 
-             <span className="text-[#d97706]"> Investment Ops,Performance,& GIPS </span> 
+      <p className="max-w-lg text-gray-300 mb-8">
+        <span className="text-[#d97706]">
+          EMPOWERING INVESTMENT MANAGEMENT WITH DATA REPORTING PRECISION & TECHNOLOGY EDGE.
+        </span>
+      </p>
 
-          </h1>
-
-          <p
-            className="max-w-xl text-base sm:text-md md:text-md text-gray-200 leading-relaxed mb-8 sm:mb-10"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-           EMPOWERING INVESTMENT MANAGEMENT WITH DATA REPORTING PRECISION & TECHNOLOGY EDGE.
-          </p>
-
-          {/* FIX: Removed data-aos to ensure buttons are visible immediately */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <button className="w-full sm:w-auto text-center border border-white/40 text-white px-8 py-3.5 sm:py-4 rounded-full hover:bg-white/10 transition backdrop-blur-sm text-sm sm:text-base font-medium shadow-sm">
-              Request for Demo
-            </button>
-          </div>
-        </div>
-      </div>
+      <button className="border border-white/30 px-7 py-3 rounded-full hover:bg-white/10 transition backdrop-blur-md">
+        Request for Demo
+      </button>
     </div>
+
+    {/* RIGHT VIDEO (SMALLER + MODERN CARD STYLE) */}
+    <div className="w-full lg:w-1/2 flex justify-center">
+
+      <div className="relative w-full max-w-md"> {/* 👈 controls size */}
+
+        {/* Glow */}
+        <div className="absolute -inset-1 bg-blue-500/20 blur-xl rounded-2xl"></div>
+
+        {/* Card */}
+        <div className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-lg shadow-xl p-2">
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-[220px] sm:h-[260px] object-cover rounded-xl"
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
   );
 }
 
