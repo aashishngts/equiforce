@@ -37,6 +37,7 @@ const VP = { once: false, margin: "-90px" };
 
 // ─── Updated Feature Data ──────────────────────────────────────────────
 const performanceData = {
+  id:"performance",
   badge: "Performance",
   titleStart: "Performance",
   titleHighlight: "Measurement",
@@ -46,6 +47,7 @@ const performanceData = {
   features: [
     {
       tag: "Performance",
+      
       title: "Performance Measurement",
       description:
         "Holdings-based (IBOR) and Transaction-based (ABOR/PBOR) return and attribution at security-, portfolio-, and composite levels.",
@@ -66,6 +68,7 @@ const performanceData = {
 };
 
 const gipsData = {
+    id:"gips",
   badge: "Compliance",
   titleStart: "GIPS Composite",
   titleHighlight: "Management",
@@ -95,6 +98,7 @@ const gipsData = {
 };
 
 const operationsData = {
+  id:"operations",
   badge: "Operations",
   titleStart: "Investment",
   titleHighlight: "Operations",
@@ -124,6 +128,7 @@ const operationsData = {
 };
 
 const aiReportingData = {
+  id:"ai-reporting",
   badge: "AI",
   titleStart: "AI-Powered",
   titleHighlight: "Reporting",
@@ -242,14 +247,14 @@ const FeatureVisualCard = ({ feature, isEven }) => {
 };
 
 // ─── Single feature section with zig-zag layout ───────────────────────────────
-const FeatureSection = ({ feature, index }) => {
+const FeatureSection = ({ feature, index ,id}) => {
    const isEven = index % 2 === 0;
   const textFromX = isEven ? -70 : 70;
   const cardFromX = isEven ? 70 : -70;
   const highlights = feature.features[0]?.highlights || [];
 
   return (
-    <div className="relative py-16 md:py-24">
+    <div className="relative py-16 md:py-24"  id={id}>
       {/* Connector line */}
       {index > 0 && (
         <motion.div
@@ -265,7 +270,7 @@ const FeatureSection = ({ feature, index }) => {
       <div
         className={`grid md:grid-cols-2 gap-10 lg:gap-20 items-center ${
           isEven ? "" : "md:[direction:rtl]"
-        }`}
+        }`} 
       >
         {/* Text side */}
         <motion.div
@@ -399,7 +404,7 @@ const PlatformAllFeaturesPage = () => {
     <div className="min-h-screen bg-white pt-28 pb-20">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
         {allData.map((data, index) => (
-          <FeatureSection  id={data.id}  key={data.id} feature={data} index={index} />
+          <FeatureSection   id={data.id}   key={data.id} feature={data} index={index} />
         ))}
       </div>
     </div>

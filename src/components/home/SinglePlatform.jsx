@@ -1,5 +1,5 @@
 import React from "react";
-import SinglePlatformImg from "../../assets/images/SinglePlatform.svg";
+import SinglePlatformImg from "../../assets/images/dashboard.jpeg";
 
 const SinglePlatform = () => {
   const NAVY = "#0a2240";
