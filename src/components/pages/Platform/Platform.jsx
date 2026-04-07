@@ -17,6 +17,7 @@ const itemVariants = {
 // --- Data ---
 const SOLUTIONS = [
   {
+    id: "performance",
     icon: TrendingUp,
     link: "/performance-measurement",
     title: "Performance Measurement",
@@ -24,6 +25,7 @@ const SOLUTIONS = [
     features: ["Daily Returns", "Benchmark Comparisons", "Attribution Analysis"]
   },
   {
+    id: "composite",
     icon: Layers,
     link: "/gips-composite",
     title: "Composite Management",
@@ -31,6 +33,7 @@ const SOLUTIONS = [
     features: ["Automated Assignment", "Audit-Ready Trails", "Account Disclosures"]
   },
   {
+    id: "operations",
     icon: RefreshCcw,
     link: "/investment-operations",
     title: "Investment Operations",
@@ -38,6 +41,7 @@ const SOLUTIONS = [
     features: ["Trade Matching", "Cash Management", "Position Reconciliation"]
   },
   {
+    id: "ai-reporting",
     icon: BrainCircuit,
     link: "/ai-reporting",
     title: "AI-Powered Reporting",
@@ -49,9 +53,9 @@ const SOLUTIONS = [
 const Platform = () => {
   return (
     <div className="min-h-screen bg-white text-[#0a2240] overflow-hidden pt-28 pb-10">
-      
+
       {/* ─── HERO SECTION ─── */}
-      <section className="relative px-6 lg:px-16 pb-20 max-w-screen-xl mx-auto text-center">
+      <section id="hero" className="relative px-6 lg:px-16 pb-20 max-w-screen-xl mx-auto text-center">
         {/* Background Glows */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#d97706] rounded-full opacity-10 blur-[100px] -z-10 animate-pulse"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#0a2240] rounded-full opacity-10 blur-[80px] -z-10"></div>
@@ -86,8 +90,8 @@ const Platform = () => {
         </motion.div>
       </section>
 
-      {/* ─── SOLUTIONS GRID (Animated on Scroll) ─── */}
-      <section className="bg-gray-50 py-24 px-6 lg:px-16">
+      {/* ─── SOLUTIONS ZIG-ZAG ─── */}
+      <section id="solutions" className="bg-gray-50 py-24 px-6 lg:px-16">
         <div className="max-w-screen-xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }}
@@ -97,41 +101,48 @@ const Platform = () => {
             <p className="text-gray-600 text-lg">Click to explore our purpose-built solutions in detail.</p>
           </motion.div>
 
-          <motion.div 
-            variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}
-            className="grid md:grid-cols-2 gap-8"
-          >
-            {SOLUTIONS.map((s, i) => (
-              <motion.div key={i} variants={itemVariants}>
-                <Link to={s.link} className="block group bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-xl hover:-translate-y-2 hover:border-[#d97706]/30 transition-all duration-300 h-full flex flex-col">
-                  
-                  <div className="w-14 h-14 bg-[#fff8f0] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <s.icon size={28} className="text-[#d97706]" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-[#0a2240] mb-3 group-hover:text-[#d97706] transition-colors">{s.title}</h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{s.desc}</p>
-                  
-                  <div className="space-y-3 mb-8">
-                    {s.features.map((f, j) => (
-                      <div key={j} className="flex items-center gap-3 text-sm font-semibold text-[#0a2240]">
-                        <CheckCircle size={16} className="text-[#d97706] shrink-0" /> {f}
-                      </div>
-                    ))}
+          <div className="space-y-24">
+            {SOLUTIONS.map((s, i) => {
+              const isEven = i % 2 === 0;
+              return (
+                <motion.div 
+                  key={s.id}
+                  id={s.id}
+                  variants={itemVariants}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 ${!isEven ? "md:flex-row-reverse" : ""}`}
+                >
+                  {/* Image / Icon */}
+                  <div className="flex-shrink-0 w-48 h-48 bg-[#fff8f0] rounded-3xl flex items-center justify-center text-[#d97706] text-6xl md:text-7xl">
+                    <s.icon size={64} />
                   </div>
 
-                  <div className="mt-auto flex items-center gap-2 text-[#d97706] font-bold group-hover:translate-x-2 transition-transform">
-                    Learn More <ArrowRight size={18} />
+                  {/* Content */}
+                  <div className="max-w-xl text-center md:text-left">
+                    <h3 className="text-3xl font-bold text-[#0a2240] mb-4">{s.title}</h3>
+                    <p className="text-gray-600 mb-6">{s.desc}</p>
+                    <ul className="space-y-2 mb-6">
+                      {s.features.map((f, j) => (
+                        <li key={j} className="flex items-center gap-2 text-[#0a2240] font-semibold">
+                          <CheckCircle size={16} className="text-[#d97706]" /> {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link to={s.link} className="text-[#d97706] font-bold flex items-center gap-2 group hover:translate-x-2 transition-transform">
+                      Learn More <ArrowRight size={18} />
+                    </Link>
                   </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="py-24 px-6 text-center">
+      <section id="cta" className="py-24 px-6 text-center">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           className="max-w-3xl mx-auto"

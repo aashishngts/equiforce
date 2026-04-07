@@ -90,22 +90,22 @@ const Navbar = () => {
                         <div className="grid grid-cols-2 gap-x-6 gap-y-8">
 
                           {/* Converted these divs to Links to connect to the new pages */}
-                          <Link to="/performance-measurement" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                          <Link to="/performance-measurement#performance" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Performance Measurement</h4>
                             <p className="text-sm text-gray-500 mt-1">Serve your investors with clarity.</p>
                           </Link>
 
-                          <Link to="/gips-composite" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                          <Link to="/performance-measurement#gips" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">GIPS Composite Management</h4>
                             <p className="text-sm text-gray-500 mt-1">Clear daily breaks with confidence.</p>
                           </Link>
 
-                          <Link to="/investment-operations" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                          <Link to="/performance-measurement#operations" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">Investment Operations</h4>
                             <p className="text-sm text-gray-500 mt-1">Manage complexity at scale.</p>
                           </Link>
 
-                          <Link to="/ai-reporting" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
+                          <Link to="/performance-measurement#ai-reporting" onClick={() => setPlatformOpen(false)} className="group block cursor-pointer">
                             <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">AI-Powered Reporting</h4>
                             <p className="text-sm text-gray-500 mt-1">Maintain accurate books across every account.</p>
                           </Link>

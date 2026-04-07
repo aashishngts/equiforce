@@ -9,9 +9,9 @@ const ContactPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* HERO SECTION */}
-      <section className="relative bg-[#0B2341] text-white py-10 md:py-44 overflow-hidden">
+      <section className="relative bg-[#0B2341] text-white py-10 md:py-30 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10 h-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Contact <span className="text-[#d97706]">Us</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
