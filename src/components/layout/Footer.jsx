@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
 
         {/* TOP SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start pb-16 border-b border-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start pb-4 border-b border-gray-100">
 
           {/* LEFT: MISSION STATEMENT */}
           <div className="md:col-span-5 text-center md:text-left">
@@ -45,10 +45,10 @@ const Footer = () => {
             <div>
               <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
               <ul className="space-y-4">
-                <li><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
-                <li><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Composite Management</Link></li>
-                <li><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">Investment Operations</Link></li>
-                <li><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI Reporting</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Composite Management</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">Investment Operations</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI Reporting</Link></li>
               </ul>
             </div>
 
@@ -56,10 +56,9 @@ const Footer = () => {
             <div>
               <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
               <ul className="space-y-4">
-                <li><Link to="/about" className="hover:text-[#d97706] transition-colors">About Us</Link></li>
-                <li><Link to="/team" className="hover:text-[#d97706] transition-colors">Our Team</Link></li>
-                <li><Link to="/careers" className="hover:text-[#d97706] transition-colors">Careers</Link></li>
-                <li><Link to="/contact" className="hover:text-[#d97706] transition-colors">Contact</Link></li>
+                <li className="mb-2"><Link to="/about" className="hover:text-[#d97706] transition-colors">About Us</Link></li>
+                <li className="mb-2"><Link to="/team" className="hover:text-[#d97706] transition-colors">Our Team</Link></li>
+                <li className="mb-2"><Link to="/contact" className="hover:text-[#d97706] transition-colors">Contact</Link></li>
               </ul>
             </div>
 

@@ -148,7 +148,7 @@ const Team = () => {
   }, [selectedMember]);
 
   return (
-    <section className="bg-gray-50 py-10 text-center relative">
+    <section className="bg-gray-50 py-6 text-center relative">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section 1: Executive Leadership */}
@@ -183,7 +183,7 @@ const Team = () => {
         >
           <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
             <div
-              className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-16"
+              className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-8"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -257,7 +257,8 @@ const MemberCard = ({ member, onSelect }) => (
     </div>
 
     {/* Name Resized to fit credentials on one line */}
-    <h4 className="text-[#0066a1] text-lg font-medium mb-2 mt-2 leading-tight h-14 flex items-center text-center">
+    <h4 className="text-[#0066a1] text-sm font-semibold
+  font-sm mb-2 mt-2 leading-tight h-14 flex items-center text-center">
       {member.name}
     </h4>
 

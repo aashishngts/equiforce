@@ -17,7 +17,7 @@ const Benefits = () => {
 
   return (
     <section 
-      className="relative py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="relative  overflow-hidden"
       style={{ background: "radial-gradient(circle, rgba(35, 60, 106, 1) 40%, rgba(25, 112, 125, 1) 100%)" }}
     >
       {/* Wave */}

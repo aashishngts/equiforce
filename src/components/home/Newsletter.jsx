@@ -4,11 +4,11 @@ import stat2 from "../../assets/images/benefit-image-right2.png";
 
 const Newsletter = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20">
+    <section className="">
       {/* Container */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         {/* Background Box */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12 py-12 md:py-16 lg:py-20 text-center">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12  text-center">
           {/* Floating Shapes */}
           <div className="hidden sm:block absolute top-10 left-10 animate-[float_6s_ease-in-out_infinite]">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-orange-400 rounded-lg rotate-12 shadow-md"></div>

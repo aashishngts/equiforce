@@ -109,7 +109,9 @@ const Features = () => {
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-3xl font-black text-white mb-6 leading-tight">
-          What we <span className="text-[#d97706]">Deliver</span>
+         Our Firm 
+
+ <span className="text-[#d97706]"> Solutions</span>
         </h2>
 
         <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-sm leading-relaxed">

@@ -32,7 +32,7 @@ const FAQ = () => {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 text-center">
+    <section className=" text-center">
       {/* Container */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         {/* Top */}

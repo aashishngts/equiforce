@@ -29,7 +29,7 @@ const Differentiators = () => {
 
         {/* Heading */}
         <h2 className="text-3xl md:text-3xl font-black text-[#0a2240] mb-6 text-center md:text-center">
-         Our  <span className="text-[#d97706]">Differentiators</span>
+         Our   <span className="text-[#d97706]">Differentiators</span>
         </h2>
 
         {/* Subtext */}

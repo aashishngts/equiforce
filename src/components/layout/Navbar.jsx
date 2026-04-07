@@ -36,7 +36,7 @@ const Navbar = () => {
             {/* Logo matching the provided image exactly */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img src={logo} className="h-10 md:h-12" alt="EquiForce Logo" />
-              <div className="flex flex-col justify-center mt-1">
+              <div className="flex flex-col justify-center mt-1 ml[-10px]">
                 <span className="text-lg md:text-[22px] font-black tracking-widest text-white uppercase leading-none">
                   EquiForce
                 </span>
@@ -142,7 +142,7 @@ const Navbar = () => {
                           className="text-xs mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#d4ecee] transition-all duration-300"
                         >
                           <div className="flex items-start  gap-3">
-                            <FiPhone className="text-[#0a2240] text-lg mt-2" />
+                            <FiPhone className="text-[#0a2240] text-lg " />
                             <div>
                               <h4 className="font-bold text-[#0a2240]">Discover / Contact</h4>
                             </div>

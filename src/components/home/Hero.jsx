@@ -23,7 +23,7 @@ function Hero() {
             Investment Ops, Performance & GIPS
           </h1>
 
-          <p className="max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
+          <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
               Empowering investment management with practitioner expertise & technology edge.
             </span>
