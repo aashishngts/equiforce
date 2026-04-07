@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 // Note: Ensure these paths remain correct for your local environment
-import img2 from "../../assets/images/PushpendraThakur.jpeg";
+import img2 from "../../assets/images/pt.png";
 import img1 from "../../assets/images/1.png";
 import img3 from "../../assets/images/3.jpeg";
 import img4 from "../../assets/images/default-avatar.jpeg";
