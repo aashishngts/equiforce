@@ -43,7 +43,7 @@ const features = [
 const Features = () => {
   return (
     // Applied a clean, light gradient background (white fading into a very soft blue/cyan)
-    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-[#f0f9fa]">
+    <section className="bg-[#0a2240] py-12 sm:py-16 md:py-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Tag */}
@@ -54,12 +54,12 @@ const Features = () => {
         </div>
 
         {/* Heading - Changed to dark navy for the light theme */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0a2240] mb-4 sm:mb-6 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fff] mb-3 sm:mb-4 leading-tight">
           What we <span className="text-[#d97706]">Deliver</span>
         </h2>
 
         {/* Subtext - Changed to a medium gray for readability */}
-        <p className="text-gray-600 max-w-3xl mx-auto mb-10 sm:mb-16 text-sm md:text-base leading-relaxed px-2 sm:px-0">
+        <p className="text-white-600 max-w-3xl mx-auto mb-10 sm:mb-15 text-sm md:text-base leading-relaxed px-2 sm:px-0">
           EquiForce delivers specialized solutions across performance
           measurement, fund accounting, reconciliation, and reporting — enhanced
           with AI-driven capabilities for superior operational control.
@@ -74,7 +74,7 @@ const Features = () => {
               <div
                 key={index}
                 // Light theme cards: solid white, soft border, and a nice elegant shadow
-                className="bg-white rounded-3xl p-5 md:p-6 shadow-xl shadow-gray-200/40 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/60 active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
+                className="bg-white rounded-3xl p-2 md:p-5 border border-gray-100 hover:shadow-2xl hover:shadow-gray-200/60 active:scale-[0.98] md:active:scale-100 hover:-translate-y-1 transition-all duration-300 flex flex-col text-left"
               >
                 {/* Image (Inset Design) - Updated border to match light theme */}
                 <img
@@ -86,12 +86,12 @@ const Features = () => {
                 {/* Content */}
                 <div className="flex flex-col flex-grow">
                   {/* Icon - Kept the orange background as it contrasts nicely with white */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-5 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-md">
-                    <Icon size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-3 rounded-xl bg-[#d97706] flex items-center justify-center text-white shrink-0 shadow-md">
+                    <Icon size={15} className="sm:w-6 sm:h-6" strokeWidth={2} />
                   </div>
 
                   {/* Title - Dark navy text */}
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0a2240] mb-2 sm:mb-3">
+                  <h3 className="text-md sm:text-lg font-bold text-[#0a2240] mb-2 sm:mb-3">
                     {item.title}
                   </h3>
 
