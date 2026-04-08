@@ -2,7 +2,7 @@ import React from "react";
 import SinglePlatformImg from "../../assets/images/dashboard.jpeg";
 
 const SinglePlatform = () => {
-  const NAVY = "#0a2240";
+  const NAVY = "#000E24";
 
   const badges = [
     // Left Side

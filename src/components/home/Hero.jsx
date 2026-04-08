@@ -3,7 +3,7 @@ import heroVideo from "../../assets/images/homebanner.mp4";
 
 function Hero() {
   return (
-    <div className="relative w-full bg-gradient-to-b from-[#0a2240] to-[#0f2f5c] overflow-hidden">
+    <div className="relative w-full bg-gradient-to-b from-[#000E24] to-[#0f2f5c] overflow-hidden">
 
       {/* Subtle Animated Background Lines */}
       <div className="absolute inset-0">

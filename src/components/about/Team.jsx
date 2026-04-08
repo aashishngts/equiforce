@@ -273,7 +273,7 @@ const MemberCard = ({ member, onSelect }) => (
     </div>
 
     {/* Name */}
-    <h4 className="text-[#0a2240] text-sm font-semibold mb-1 mt-10 text-center truncate max-w-full">
+    <h4 className="text-[#000E24] text-sm font-semibold mb-1 mt-10 text-center truncate max-w-full">
       {member.name}
     </h4>
 
@@ -294,7 +294,7 @@ const MemberCard = ({ member, onSelect }) => (
     {/* View Bio Button */}
     <button
       onClick={() => onSelect(member)}
-      className="text-[#0a2240] text-xs font-bold uppercase flex items-center hover:opacity-80 transition"
+      className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition"
     >
       View Bio <span className="ml-1 text-lg">›</span>
     </button>

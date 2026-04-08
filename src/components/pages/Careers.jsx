@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 
 // Theme Colors
-const NAVY = "#0a2240";
+const NAVY = "#000E24";
 const ORANGE = "#d97706";
 const MINT_BG = "#eff9fb";
 const MINT_LABEL_BG = "#ccf1f5";

@@ -4,7 +4,7 @@ import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone } from "react-icons/f
 import logo from "../../assets/images/logo2.png";
 import DemoModal from "../common/DemoModal";
 
-const NAVY = "#0a2240";
+const NAVY = "#000E24";
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -29,8 +29,8 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Fixed Navbar with solid #0a2240 background - No Scroll Animation */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#0a2240] py-2 shadow-lg border-b border-white/10">
+      {/* Fixed Navbar with solid #000E24 background - No Scroll Animation */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#000E24] py-2 shadow-lg border-b border-white/10">
         <div className="max-w-screen-2xl mx-auto px- 2:px-4 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo matching the provided image exactly */}
@@ -91,8 +91,8 @@ const Navbar = () => {
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              Performance Measurement
+                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
+                           Investment Operations & Reconciliation
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Serve your investors with clarity.</p>
                           </Link>
@@ -102,8 +102,8 @@ const Navbar = () => {
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              GIPS Composite Management
+                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
+                             Performance Measurement
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Clear daily breaks with confidence.</p>
                           </Link>
@@ -113,8 +113,8 @@ const Navbar = () => {
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              Investment Operations
+                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
+                            GIPS Composite Management
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Manage complexity at scale.</p>
                           </Link>
@@ -124,8 +124,8 @@ const Navbar = () => {
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
-                            <h4 className="font-bold text-[#0a2240] text-base group-hover:text-[#d97706] transition-colors">
-                              AI-Powered Reporting
+                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
+                             AI-Powered Investment Reporting
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Maintain accurate books across every account.</p>
                           </Link>
@@ -142,12 +142,12 @@ const Navbar = () => {
                           className="text-xs mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#d4ecee] transition-all duration-300"
                         >
                           <div className="flex items-start  gap-3">
-                            <FiPhone className="text-[#0a2240] text-lg " />
+                            <FiPhone className="text-[#000E24] text-lg " />
                             <div>
-                              <h4 className="font-bold text-[#0a2240]">Discover / Contact</h4>
+                              <h4 className="font-bold text-[#000E24]">Discover / Contact</h4>
                             </div>
                           </div>
-                          <FiChevronDown className="rotate-[270deg] text-[#0a2240] group-hover:translate-x-1 transition-transform" />
+                          <FiChevronDown className="rotate-[270deg] text-[#000E24] group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </div>
                     </div>
@@ -192,7 +192,7 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="md:hidden text-2xl p-1 z-[60] text-white"
               >
-                {menuOpen ? <FiX className="text-[#0a2240]" /> : <FiMenu />}
+                {menuOpen ? <FiX className="text-[#000E24]" /> : <FiMenu />}
               </button>
             </div>
           </div>

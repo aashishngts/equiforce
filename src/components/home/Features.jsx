@@ -100,7 +100,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-[#0a2240] py-8 md:py-10">
+    <section className="bg-[#000E24] py-8 md:py-10">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-block mb-4">
           <span className="bg-[#d97706] text-white px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase shadow-sm">
@@ -126,7 +126,7 @@ const Features = () => {
               <Link
                 to={item.link}
                 key={index}
-                className="group bg-white rounded-3xl p-5 border border-white/10 hover:border-[#d97706]/50 hover:shadow-2xl hover:shadow-[#d97706]/10 transition-all duration-300 flex flex-col text-left relative overflow-hidden"
+                className="group bg-white rounded-3xl p-6 border border-white/10 hover:border-[#d97706]/50 hover:shadow-2xl hover:shadow-[#d97706]/10 transition-all duration-300 flex flex-col text-left relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#eef7f8] rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500 opacity-50" />
 
@@ -135,7 +135,7 @@ const Features = () => {
                     <Icon />
                   </div>
 
-                  <h3 className="text-md font-bold text-[#0a2240] mb-4 group-hover:text-[#d97706] transition-colors">
+                  <h3 className="text-lg font-bold text-[#000E24] mb-4 group-hover:text-[#d97706] transition-colors">
                     {item.title}
                   </h3>
 

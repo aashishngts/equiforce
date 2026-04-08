@@ -7,10 +7,10 @@ const TeamPage = () => {
     <div className="min-h-screen bg-white">
       
       {/* Spacer for Fixed Navbar */}
-      <div className="h-18 bg-[#0a2240]"></div>
+      <div className="h-18 bg-[#000E24]"></div>
 
       {/* Header Section */}
-      <section className="bg-[#0a2240] py-8 text-center">
+      <section className="bg-[#000E24] py-8 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-2" data-aos="fade-down">
             Meet the Experts Behind <span className="text-[#d97706]">EquiForce</span>

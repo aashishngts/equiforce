@@ -28,7 +28,7 @@ const Differentiators = () => {
         </div> */}
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-3xl font-black text-[#0a2240] mb-6 text-center md:text-center">
+        <h2 className="text-3xl md:text-3xl font-black text-[#000E24] mb-6 text-center md:text-center">
          Our   <span className="text-[#d97706]">Differentiators</span>
         </h2>
 
@@ -54,7 +54,7 @@ const Differentiators = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-[#0a2240] text-xl font-bold mb-4 leading-tight">
+              <h3 className="text-[#000E24] text-xl font-bold mb-4 leading-tight">
                 {item.title}
               </h3>
 

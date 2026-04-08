@@ -52,13 +52,13 @@ const SOLUTIONS = [
 
 const Platform = () => {
   return (
-    <div className="min-h-screen bg-white text-[#0a2240] overflow-hidden pt-28 pb-10">
+    <div className="min-h-screen bg-white text-[#000E24] overflow-hidden pt-28 pb-10">
 
       {/* ─── HERO SECTION ─── */}
       <section id="hero" className="relative px-6 lg:px-16 pb-20 max-w-screen-xl mx-auto text-center">
         {/* Background Glows */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#d97706] rounded-full opacity-10 blur-[100px] -z-10 animate-pulse"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#0a2240] rounded-full opacity-10 blur-[80px] -z-10"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#000E24] rounded-full opacity-10 blur-[80px] -z-10"></div>
 
         <motion.div 
           variants={containerVariants} initial="hidden" animate="show"
@@ -66,7 +66,7 @@ const Platform = () => {
         >
           <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-[#eef7f8] border border-[#d0f0f5] rounded-full px-5 py-2 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#d97706]"></span>
-            <span className="text-sm font-bold tracking-widest text-[#0a2240] uppercase">The EquiForce Platform</span>
+            <span className="text-sm font-bold tracking-widest text-[#000E24] uppercase">The EquiForce Platform</span>
           </motion.div>
           
           <motion.div variants={itemVariants}>
@@ -83,7 +83,7 @@ const Platform = () => {
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="bg-[#0a2240] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#d97706] hover:-translate-y-1 transition-all">
+            <Link to="/contact" className="bg-[#000E24] text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-[#d97706] hover:-translate-y-1 transition-all">
               Request a Demo
             </Link>
           </motion.div>
@@ -97,7 +97,7 @@ const Platform = () => {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-black text-[#0a2240] mb-4">Core Capabilities</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-[#000E24] mb-4">Core Capabilities</h2>
             <p className="text-gray-600 text-lg">Click to explore our purpose-built solutions in detail.</p>
           </motion.div>
 
@@ -121,11 +121,11 @@ const Platform = () => {
 
                   {/* Content */}
                   <div className="max-w-xl text-center md:text-left">
-                    <h3 className="text-3xl font-bold text-[#0a2240] mb-4">{s.title}</h3>
+                    <h3 className="text-3xl font-bold text-[#000E24] mb-4">{s.title}</h3>
                     <p className="text-gray-600 mb-6">{s.desc}</p>
                     <ul className="space-y-2 mb-6">
                       {s.features.map((f, j) => (
-                        <li key={j} className="flex items-center gap-2 text-[#0a2240] font-semibold">
+                        <li key={j} className="flex items-center gap-2 text-[#000E24] font-semibold">
                           <CheckCircle size={16} className="text-[#d97706]" /> {f}
                         </li>
                       ))}
@@ -147,7 +147,7 @@ const Platform = () => {
           initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-[#0a2240] mb-6">Ready to Modernize?</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-[#000E24] mb-6">Ready to Modernize?</h2>
           <p className="text-lg text-gray-600 mb-10">
             Join investment management firms who trust EquiForce for precision-engineered operations.
           </p>

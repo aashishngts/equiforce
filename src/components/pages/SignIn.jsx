@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiArrowLeft, FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
 
-const NAVY = "#0a2240";
+const NAVY = "#000E24";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +18,7 @@ const SignIn = () => {
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white">
       {/* Left Side: Branding/Info (Hidden on small mobile) */}
-      <div className="hidden md:flex md:w-1/2 bg-[#0a2240] relative overflow-hidden flex-col justify-between p-12 lg:p-20">
+      <div className="hidden md:flex md:w-1/2 bg-[#000E24] relative overflow-hidden flex-col justify-between p-12 lg:p-20">
         {/* Abstract Background Decoration */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full -ml-48 -mb-48 blur-3xl"></div>

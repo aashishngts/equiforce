@@ -205,7 +205,7 @@ const FeatureVisualCard = ({ feature, isEven }) => {
               whileInView="show"
               exit="exit"
               viewport={VP}
-              className="inline-flex items-center gap-1 bg-white/70 backdrop-blur-sm border border-white/60 text-[#0a2240] text-xs font-semibold px-3 py-1.5 rounded-full"
+              className="inline-flex items-center gap-1 bg-white/70 backdrop-blur-sm border border-white/60 text-[#000E24] text-xs font-semibold px-3 py-1.5 rounded-full"
             >
               <span className="text-[#d97706]">{s.icon}</span>
               {s.label}
@@ -236,7 +236,7 @@ const FeatureVisualCard = ({ feature, isEven }) => {
               exit="exit"
               viewport={VP}
             >
-              <p className="text-2xl font-black text-[#0a2240]">{m.value}</p>
+              <p className="text-2xl font-black text-[#000E24]">{m.value}</p>
               <p className="text-xs text-gray-500 mt-0.5">{m.label}</p>
             </motion.div>
           ))}
@@ -304,7 +304,7 @@ const FeatureSection = ({ feature, index ,id}) => {
             whileInView="show"
             exit="exit"
             viewport={VP}
-            className="text-3xl md:text-4xl font-black text-[#0a2240] leading-tight"
+            className="text-3xl md:text-4xl font-black text-[#000E24] leading-tight"
           >
             {feature.features[0]?.title || feature.titleStart + " " + feature.titleHighlight}
           </motion.h2>

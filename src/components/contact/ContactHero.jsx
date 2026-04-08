@@ -103,10 +103,10 @@ const ContactPage = () => {
               {/* OFFICE LOCATIONS */}
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Our Offices</h3>
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 gap-2">
                   {[
-                    { city: "Indore, India", address: "EquiForce Operations Hub, Indore, MP" },
-                    { city: "California, USA", address: "Strategic Office, San Ramon, CA" },
+               { city: "Los Angeles, CA" },
+{ city: "Indore, India" }
                   ].map((loc, index) => (
                     <div
                       key={index}
@@ -117,7 +117,6 @@ const ContactPage = () => {
                       </div>
                       <div>
                         <p className="font-bold text-gray-800">{loc.city}</p>
-                        <p className="text-sm text-gray-600 leading-relaxed">{loc.address}</p>
                       </div>
                     </div>
                   ))}

@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* LEFT: MISSION STATEMENT */}
           <div className="md:col-span-5 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0a2240] leading-tight mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#000E24] leading-tight mb-8">
               Transform Your Investment <br className="hidden sm:block" />
               Operations with <br className="hidden sm:block" />
               EquiForce Solutions
@@ -43,18 +43,18 @@ const Footer = () => {
 
             {/* Solutions */}
             <div>
-              <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
+              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
               <ul className="space-y-4">
-                <li className="mb-2"><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
-                <li className="mb-2"><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Composite Management</Link></li>
-                <li className="mb-2"><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">Investment Operations</Link></li>
-                <li className="mb-2"><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI Reporting</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
+              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-6">Company</h4>
               <ul className="space-y-4">
                 <li className="mb-2"><Link to="/about" className="hover:text-[#d97706] transition-colors">About Us</Link></li>
                 <li className="mb-2"><Link to="/team" className="hover:text-[#d97706] transition-colors">Our Team</Link></li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
             {/* Contact Info (As requested by Jane) */}
             <div>
-              <h4 className="text-[#0a2240] font-bold uppercase tracking-widest text-xs mb-6">Get in Touch</h4>
+              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-6">Get in Touch</h4>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 justify-center md:justify-start group">
                   <FiMail className="text-[#d97706]" />
@@ -99,7 +99,7 @@ const Footer = () => {
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="w-12 h-12 flex items-center justify-center rounded-full 
-              bg-[#0a2240] hover:bg-[#d97706] text-white shadow-xl 
+              bg-[#000E24] hover:bg-[#d97706] text-white shadow-xl 
               hover:scale-110 transition-all duration-300"
               aria-label="Scroll to top"
             >
