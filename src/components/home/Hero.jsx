@@ -1,5 +1,5 @@
 import React from "react";
-import heroVideo from "../../assets/images/homebanner.mp4";
+import heroVideo from "../../assets/video/Heroivideo.mp4";
 
 function Hero() {
   return (
