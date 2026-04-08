@@ -81,7 +81,7 @@ const Navbar = () => {
                     <div className="w-[600px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
 
                       {/* Right Column - Now the Main Content */}
-                      <div className="bg-white p-8 flex flex-col justify-between">
+                      <div className="bg-white p-10 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-10 gap-y-8">
 
 
@@ -103,7 +103,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                             Performance Measurement
+                             Performance<br></br> Measurement
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Clear daily breaks with confidence.</p>
                           </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                            GIPS Composite Management
+                            GIPS Composite<br></br> Management
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Manage complexity at scale.</p>
                           </Link>

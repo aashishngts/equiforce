@@ -7,11 +7,11 @@ const differentiators = [
   },
   {
     title: "Purpose-Built Technology",
-    desc: "Every feature is engineered for investment management workflows — back- and middle-office enterprise reporting.",
+    desc: "Every feature is engineered for back- and middle-office investment management workflows — covering reconciliation, performance, composites, and reporting.",
   },
   {
     title: "AI at the Core",
-    desc: "Embedded AI technologies that automate repetitive tasks, surface actionable insights, and give clients a measurable competitive edge.",
+    desc: "AI technologies natively embedded — automating reporting workflows and surfacing deep insights into every layer of investment reporting.",
   },
 ];
 

@@ -79,8 +79,8 @@ const ContactPage = () => {
                 <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Direct Contact</h3>
                 <div className="grid grid-cols-1 gap-3">
                   {[
-                    { name: "Jane Atmodjojo", email: "jane@equiforcesolutions.com" },
-                    { name: "Vincent Tran", email: "vince@equiforcesolutions.com" },
+                    { name: "Jane Atmodjojo, CFA®, CIPM", email: "jane@equiforcesolutions.com" },
+                    { name: "Vincent Tran, CIPM", email: "vince@equiforcesolutions.com" },
                     { name: "Pushpendra Thakur", email: "pushpendra@equiforcesolutions.com" },
                   ].map((contact, idx) => (
                     <a 

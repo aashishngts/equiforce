@@ -89,9 +89,9 @@ const Footer = () => {
 
           {/* PRIVACY & TERMS */}
           <div className="flex gap-6 flex-wrap justify-center md:justify-start font-medium">
-            <span className="hover:text-gray-600 cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-gray-600 cursor-pointer transition-colors">Terms of Use</span>
-            <span className="hover:text-gray-600 cursor-pointer transition-colors">Security & Compliance</span>
+            <p className="text-center md:text-right">
+            ©2026 <span className="font-bold text-gray-600">EquiForce Solutions</span> · All rights reserved.
+          </p>
           </div>
 
           {/* SCROLL BUTTON */}
@@ -107,10 +107,6 @@ const Footer = () => {
             </button>
           </div>
 
-          {/* COPYRIGHT */}
-          <p className="text-center md:text-right">
-            ©2026 <span className="font-bold text-gray-600">EquiForce Solutions</span> · All rights reserved.
-          </p>
 
         </div>
       </div>

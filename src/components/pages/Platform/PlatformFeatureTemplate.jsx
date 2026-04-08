@@ -48,7 +48,7 @@ const performanceData = {
     {
       tag: "Performance",
       
-      title: "Performance Measurement",
+      title: "Investment Operations & Reconciliation",
       description:
         "Holdings-based (IBOR) and Transaction-based (ABOR/PBOR) return and attribution at security-, portfolio-, and composite levels.",
       emoji: "📊",
@@ -78,7 +78,7 @@ const gipsData = {
   features: [
     {
       tag: "Construction",
-      title: "GIPS Composite Management",
+      title: "Performance Measurement",
       description:
         "Structured composite construction and maintenance built for investment operations workflows.",
       emoji: "🏗️",
@@ -108,7 +108,7 @@ const operationsData = {
   features: [
     {
       tag: "Trading",
-      title: "Investment Operations & Reconciliation",
+      title: "GIPS Composite Management",
       description:
         "Investment data reconciliation across custodians and systems of record.",
       emoji: "🔀",
@@ -138,7 +138,7 @@ const aiReportingData = {
   features: [
     {
       tag: "AI Insights",
-      title: "AI-Powered Reporting",
+      title: "AI-Powered Investment Reporting",
       description:
         "Intelligent, automated investment reporting that surfaces insights and streamlines manual effort.",
       emoji: "💬",

@@ -73,12 +73,12 @@ const AiPoweredReportingIcon = () => (
 const features = [
    {
     title: "Investment Operations & Reconciliation",
-    desc: "Investment data reconciliation across custodians and systems of record to ensure accurate books.",
+    desc: "Investment data reconciliation across internal systems and custodian sources.",
     icon: InvestmentOpsIcon,
     link: "/performance-measurement#operations",
   }, {
     title: "Performance Measurement",
-    desc: "Holdings-based (IBOR) and Transaction-based (ABOR/PBOR) return and attribution at security-, portfolio-, and composite levels.",
+    desc: "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
     icon: PerformanceMeasurementIcon,
     link: "/performance-measurement#performance",
   },
@@ -86,13 +86,13 @@ const features = [
 
    {
     title: "GIPS Composite Management",
-    desc: "Structured composite construction and maintenance built for investment operations workflows.",
+    desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
     icon: GipsCompositeIcon,
     link: "/performance-measurement#gips",
   },
   {
     title: "AI-Powered Investment Reporting",
-    desc: "Intelligent, automated investment reporting that surfaces insights and streamlines manual effort.",
+    desc: "Intelligent investment reporting that surfaces accurate insights into every reporting layer.",
     icon: AiPoweredReportingIcon,
     link: "/performance-measurement#ai-reporting",
   },
