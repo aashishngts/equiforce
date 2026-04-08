@@ -129,7 +129,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <img src={bgchatboat}   className=" img-fluid"/>
+      <img src={bgchatboat}   className="hidden img-fluid"/>
 
       {/* CTA SECTION - Mobile stacking optimized */}
       <section className="bg-[#0B2341] text-white py-12 md:py-20">
