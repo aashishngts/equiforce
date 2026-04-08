@@ -8,7 +8,7 @@ export const performanceData = {
   iconEmoji: "📈",
   features: [
     {
-      tag: "Performance",
+      tag: "",
       title: "Performance Measurement",
       description:
         "Holdings-based (IBOR) and Transaction-based (ABOR/PBOR) return and attribution at security-, portfolio-, and composite levels.",
@@ -68,7 +68,7 @@ export const operationsData = {
   iconEmoji: "⚙️",
   features: [
     {
-      tag: "Trading",
+      tag: "",
       title: "Investment Operations & Reconciliation",
       description:
         "Investment data reconciliation across custodians and systems of record.",
@@ -98,7 +98,7 @@ export const aiReportingData = {
   iconEmoji: "✨",
   features: [
     {
-      tag: "AI Insights",
+      tag: "",
       title: "AI-Powered Reporting",
       description:
         "Intelligent, automated investment reporting that surfaces insights and streamlines manual effort.",

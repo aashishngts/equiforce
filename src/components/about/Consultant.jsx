@@ -80,89 +80,103 @@ const Consultant = () => {
     }, [selectedMember]);
 
     return (
-        <section className="bg-gray-50 py-6 text-center relative">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Section 1: Executive Leadership */}
-                <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-30">
-                    Executive Leadership
-                </h2>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
-                    {team.slice(0, 4).map((member, i) => (
-                        <MemberCard key={i} member={member} onSelect={setSelectedMember} />
-                    ))}
+        <>
+            <section className="bg-[#000E24] mt-12 py-12 text-center">
+                <div className="max-w-4xl mx-auto px-6">
+                    <h1 className="text-2xl md:text-3xl font-bold text-white mb-2" data-aos="fade-down">
+                        Meet the Experts Behind <span className="text-[#d97706]">EquiForce</span>
+                    </h1>
+                    <p className="text-gray-300 text-md md:text-sm leading-relaxed" data-aos="fade-up">
+                        Our team blends fintech, investment, and AI expertise to shape the future of finance.
+                    </p>
                 </div>
-            </div>
+            </section>
+            <section className="bg-gray-50 py-6 text-center relative">
+                <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            {/* MODAL PORTAL */}
-            {selectedMember && createPortal(
-                <div
-                    className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto"
-                    onClick={() => setSelectedMember(null)}
-                >
-                    <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
-                        <div
-                            className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-8"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            {/* Close Button */}
-                            <button
-                                onClick={() => setSelectedMember(null)}
-                                className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black"
+                    {/* Section 1: Executive Leadership */}
+                    <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-30">
+                        Consulting Solutions
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
+                        {team.slice(0, 4).map((member, i) => (
+                            <MemberCard key={i} member={member} onSelect={setSelectedMember} />
+                        ))}
+                    </div>
+                </div>
+
+                {/* MODAL PORTAL */}
+                {selectedMember && createPortal(
+                    <div
+                        className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto"
+                        onClick={() => setSelectedMember(null)}
+                    >
+                        <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
+                            <div
+                                className="bg-white w-full max-w-4xl rounded-lg relative shadow-2xl p-8 md:p-8"
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                <IoClose />
-                            </button>
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => setSelectedMember(null)}
+                                    className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black"
+                                >
+                                    <IoClose />
+                                </button>
 
-                            {/* Top Section: Image + Name/Role */}
-                            <div className="flex items-center gap-6 md:gap-6 mb-2">
+                                {/* Top Section: Image + Name/Role */}
+                                <div className="flex items-center gap-6 md:gap-6 mb-2">
 
-                                {/* Left Image */}
-                                <div className="w-24 h-24 md:w-25 md:h-25 rounded-full overflow-hidden border-4 border-gray-200 flex-shrink-0">
-                                    <img
-                                        src={selectedMember.img}
-                                        alt={selectedMember.name}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
+                                    {/* Left Image */}
+                                    <div className="w-24 h-24 md:w-25 md:h-25 rounded-full overflow-hidden border-4 border-gray-200 flex-shrink-0">
+                                        <img
+                                            src={selectedMember.img}
+                                            alt={selectedMember.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
 
-                                {/* Right Name/Role */}
-                                <div className="flex flex-col justify-center">
-                                    <h3 className="text-xl md:text-3xl text-gray-800 font-semibold mb-1">
-                                        {selectedMember.name}
-                                    </h3>
-                                    <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
-                                        {selectedMember.role}
-                                    </p>
-                                    {selectedMember.role1 && (
+                                    {/* Right Name/Role */}
+                                    <div className="flex flex-col justify-center">
+                                        <h3 className="text-xl md:text-3xl text-gray-800 font-semibold mb-1">
+                                            {selectedMember.name}
+                                        </h3>
                                         <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
-                                            {selectedMember.role1}
+                                            {selectedMember.role}
                                         </p>
-                                    )}
+                                        {selectedMember.role1 && (
+                                            <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
+                                                {selectedMember.role1}
+                                            </p>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* Bio Section */}
-                            <div className="text-left text-gray-600 space-y-6 text-base md:text-md leading-relaxed border-t border-gray-100 pt-2 font-light max-w-3xl">
-                                {selectedMember.bio.map((para, idx) => (
-                                    <p key={idx}>{para}</p>
-                                ))}
+                                {/* Bio Section */}
+                                <div className="text-left text-gray-600 space-y-6 text-base md:text-md leading-relaxed border-t border-gray-100 pt-2 font-light max-w-3xl">
+                                    {selectedMember.bio.map((para, idx) => (
+                                        <p key={idx}>{para}</p>
+                                    ))}
 
-                                {/* Highlighted Footer Text */}
-                                <p className="mt-12 text-sm italic pt-6 border-t border-gray-50">
-                                    Building the future of{" "}
-                                    <span className="text-[#d97706] font-semibold">
-                                        scalable, cost-efficient technology and advisory services
-                                    </span>
-                                    .
-                                </p>
+                                    {/* Highlighted Footer Text */}
+                                    <p className="mt-12 text-sm italic pt-6 border-t border-gray-50">
+                                        Building the future of{" "}
+                                        <span className="text-[#d97706] font-semibold">
+                                            scalable, cost-efficient technology and advisory services
+                                        </span>
+                                        .
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>,
-                document.body
-            )}
-        </section>
+                    </div>,
+                    document.body
+                )}
+            </section>
+        </>
+
     );
 };
 

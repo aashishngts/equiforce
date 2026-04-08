@@ -46,7 +46,7 @@ const performanceData = {
   iconEmoji: "📈",
   features: [
     {
-      tag: "Performance",
+      tag: "",
       
       title: "Investment Operations & Reconciliation",
       description:
@@ -77,7 +77,7 @@ const gipsData = {
   iconEmoji: "🛡️",
   features: [
     {
-      tag: "Construction",
+      tag: "",
       title: "Performance Measurement",
       description:
         "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
@@ -107,7 +107,7 @@ const operationsData = {
   iconEmoji: "⚙️",
   features: [
     {
-      tag: "Trading",
+      tag: "",
       title: "GIPS Composite Management",
       description:
         "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
@@ -137,7 +137,7 @@ const aiReportingData = {
   iconEmoji: "✨",
   features: [
     {
-      tag: "AI Insights",
+      tag: "",
       title: "AI-Powered Investment Reporting",
       description:
         "Intelligent investment reporting that surfaces accurate insights into every reporting layer.",
@@ -294,7 +294,7 @@ const FeatureSection = ({ feature, index ,id}) => {
               {String(index + 1).padStart(2, "0")}
             </span>
             <span className="text-[#d97706] text-sm font-semibold tracking-widest uppercase">
-              {feature.features[0]?.tag || "Feature"}
+              {feature.features[0]?.tag || ""}
             </span>
           </motion.div>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone ,FiUsers} from "react-icons/fi";
 import logo from "../../assets/images/logo2.png";
 import DemoModal from "../common/DemoModal";
 
@@ -94,7 +94,7 @@ const Navbar = () => {
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
                            Investment Operations & Reconciliation
                             </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">Serve your investors with clarity.</p>
+                            <p className="text-sm text-gray-500 mt-1 leading-snug">Investment data reconciliation across internal systems and custodian sources.</p>
                           </Link>
 
                           <Link
@@ -105,7 +105,7 @@ const Navbar = () => {
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
                              Performance Measurement
                             </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">Clear daily breaks with confidence.</p>
+                            <p className="text-sm text-gray-500 mt-1 leading-snug">IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.</p>
                           </Link>
 
                           <Link
@@ -116,7 +116,7 @@ const Navbar = () => {
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
                             GIPS Composite Management
                             </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">Manage complexity at scale.</p>
+                            <p className="text-sm text-gray-500 mt-1 leading-snug">End-to-end composite management — built to deliver reliable, compliant performance reporting.</p>
                           </Link>
 
                           <Link
@@ -127,7 +127,7 @@ const Navbar = () => {
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
                              AI-Powered Investment Reporting
                             </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">Maintain accurate books across every account.</p>
+                            <p className="text-sm text-gray-500 mt-1 leading-snug">Intelligent investment reporting that surfaces accurate insights into every reporting layer.</p>
                           </Link>
                         </div>
 
@@ -135,20 +135,55 @@ const Navbar = () => {
                         {/* Bottom AI Banner */}
 
 
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  
+  {/* Consulting Solutions */}
+  <Link
+    to="/contact"
+    onClick={() => setPlatformOpen(false)}
+    className="bg-[#eef7f8] rounded-2xl p-5 flex justify-between items-center group hover:bg-[#d4ecee] hover:shadow-md transition-all duration-300"
+  >
+    <div className="flex items-start gap-4">
+      <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-105 transition">
+        <FiUsers className="text-[#000E24] text-lg" />
+      </div>
+      <div>
+        <h4 className="font-semibold text-[#000E24] text-sm">
+          Consulting Solutions
+        </h4>
+        <p className="text-xs text-gray-500">
+          Get expert guidance
+        </p>
+      </div>
+    </div>
 
-                        <Link
-                          to="/contact"
-                          onClick={() => setPlatformOpen(false)}
-                          className="text-xs mt-8 bg-[#eef7f8] rounded-xl p-5 flex justify-between items-center group cursor-pointer hover:bg-[#d4ecee] transition-all duration-300"
-                        >
-                          <div className="flex items-start  gap-3">
-                            <FiPhone className="text-[#000E24] text-lg " />
-                            <div>
-                              <h4 className="font-bold text-[#000E24]">Discover / Contact</h4>
-                            </div>
-                          </div>
-                          <FiChevronDown className="rotate-[270deg] text-[#000E24] group-hover:translate-x-1 transition-transform" />
-                        </Link>
+    <FiArrowRight className="text-[#000E24] text-lg group-hover:translate-x-1 transition-transform" />
+  </Link>
+
+  {/* Book Meeting */}
+  <Link
+    to="/contact"
+    onClick={() => setPlatformOpen(false)}
+    className="bg-[#eef7f8] rounded-2xl p-5 flex justify-between items-center group hover:bg-[#d4ecee] hover:shadow-md transition-all duration-300"
+  >
+    <div className="flex items-start gap-4">
+      <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-105 transition">
+        <FiPhone className="text-[#000E24] text-lg" />
+      </div>
+      <div>
+        <h4 className="font-semibold text-[#000E24] text-sm">
+          Book a Meeting
+        </h4>
+        <p className="text-xs text-gray-500">
+          Schedule a call
+        </p>
+      </div>
+    </div>
+
+    <FiArrowRight className="text-[#000E24] text-lg group-hover:translate-x-1 transition-transform" />
+  </Link>
+
+</div>
                       </div>
                     </div>
                   </div>
