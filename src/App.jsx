@@ -22,6 +22,7 @@ import {
   aiReportingData
 } from "./components/pages/Platform/platformData";
 import PrivacyNotice from "./components/pages/Notice";
+import Consultant from "./components/about/Consultant";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -68,6 +69,7 @@ function App() {
               <Route path="/platform" element={<Platform />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/policy" element={<PrivacyNotice />} />
+              <Route path="/consultant" element={<Consultant />} />
 
               <Route path="/performance-measurement" element={<PlatformFeatureTemplate data={performanceData} />} />
               <Route path="/gips-composite" element={<PlatformFeatureTemplate data={gipsData} />} />

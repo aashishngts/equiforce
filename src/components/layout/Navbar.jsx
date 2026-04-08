@@ -78,7 +78,7 @@ const Navbar = () => {
                      FIX 2: Reduced width to 600px for a better look without the sidebar
                   */
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 cursor-default z-50">
-                    <div className="w-[600px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
+                    <div className="w-[740px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
 
                       {/* Right Column - Now the Main Content */}
                       <div className="bg-white p-10 flex flex-col justify-between">
@@ -103,7 +103,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                             Performance<br></br> Measurement
+                             Performance Measurement
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Clear daily breaks with confidence.</p>
                           </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                            GIPS Composite<br></br> Management
+                            GIPS Composite Management
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Manage complexity at scale.</p>
                           </Link>
@@ -214,7 +214,7 @@ const Navbar = () => {
                   onClick={() => setMobilePlatformOpen(!mobilePlatformOpen)}
                   className="flex items-center justify-between w-full text-left hover:text-[#d97706] transition-colors"
                 >
-                  Platform{" "}
+                  Solutions{" "}
                   <FiChevronDown
                     className={`transition-transform ${mobilePlatformOpen ? "rotate-180" : ""
                       }`}
@@ -226,36 +226,19 @@ const Navbar = () => {
                 >
                   {/* Replaced placeholder links with actual Platform pages */}
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
-                    <Link to="/performance-measurement" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
-                    <Link to="/gips-composite" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite</Link>
-                    <Link to="/investment-operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations</Link>
-                    <Link to="/ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Reporting</Link>
+                    <Link to="/performance-measurement" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link>
+                    <Link to="/gips-composite" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
+                    <Link to="/investment-operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link>
+                    <Link to="/ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
                   </div>
                 </div>
               </div>
 
               {/* Mobile Accordion for About */}
-              <div>
-                <button
-                  onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                  className="flex items-center justify-between w-full text-left hover:text-[#d97706] transition-colors"
-                >
-                  About{" "}
-                  <FiChevronDown
-                    className={`transition-transform ${mobileAboutOpen ? "rotate-180" : ""
-                      }`}
-                  />
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${mobileAboutOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                >
-                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
+              
+               
                     <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Our Company</Link>
                     <Link to="/team" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Meet our Team</Link>
-                  </div>
-                </div>
-              </div>
 
               <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">
                 Contact
