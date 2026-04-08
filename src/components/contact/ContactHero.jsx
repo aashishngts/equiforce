@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin, ChevronDown, Mail } from "lucide-react";
 import contactimg from "../../assets/images/bg.png";
-import bgchatboat from "../../assets/images/bgchatbot.jpeg"
+import bgchatboat from "../../assets/images/bgchat.jpeg"
 
 const ContactPage = () => {
   const inputStyle =
