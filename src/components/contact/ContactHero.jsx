@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin, ChevronDown, Mail } from "lucide-react";
 import contactimg from "../../assets/images/bg.png";
+import bgchatboat from "../../assets/images/bgchatbot.jpeg"
 
 const ContactPage = () => {
   const inputStyle =
@@ -127,6 +128,8 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+
+      <img src={bgchatboat}   className="img-fluid"/>
 
       {/* CTA SECTION - Mobile stacking optimized */}
       <section className="bg-[#0B2341] text-white py-12 md:py-20">
